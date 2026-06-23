@@ -2,6 +2,8 @@
 
 An editorial travel project about when cities feel most alive — and how places change the way you live.
 
+> "Travel isn't just where you go. It's how a place changes the way you live."
+
 ## Current prototype
 
 **Copenhagen — June** · *The Longest Evenings*
