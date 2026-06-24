@@ -80,6 +80,19 @@ Generic signs:
 
 ---
 
+## Disqualifiers
+
+Reject expansion if any of these are true.
+
+- **The month only changes weather.** Warmer, clearer, cooler — these are conditions, not behavioral mechanisms. A thesis built on weather is a postcard.
+- **The routine could apply to another city unchanged.** If the behavior described would be equally true of three other cities in the same month, it has not found its subject.
+- **The local word feels decorative rather than behavioral.** A local word that names a mood, a landscape, or a dish is atmosphere. A local word must name something people *do* — or the feeling that drives them to do it.
+- **The ritual could exist without the season.** If the food or drink described could happen any month, it is a recommendation, not a ritual. The ritual must be inseparable from the conditions that produce it.
+- **The page produces admiration but not yearning.** Admiration says: "That sounds nice." Yearning says: "I want to be there right now." A page that produces only admiration has not found the right emotional mechanism.
+- **The city-month feels like a postcard instead of a temporary routine.** If the concept is primarily visual — light, color, landscape — it belongs in a photograph. A page earns its existence by describing how behavior changes, not how things look.
+
+---
+
 ## Stage 3 — Expand
 
 Only after human approval of a concept card.
@@ -441,3 +454,31 @@ It earns expansion for three reasons:
 3. **The ritual is earned.** *Makgeolli* and *pajeon* at a *sanjang* only appears after the climb. It cannot be decoupled from the behavior that precedes it. That is exactly what the ritual field is for.
 
 To begin: generate the `PAGE` object skeleton for Seoul — October. Use the concept card above as the source. Do not write full prose until the skeleton is approved.
+
+---
+
+## Build status
+
+Do not let the pipeline become the product. The pipeline exists only to help select pages worth writing.
+
+### Built
+
+- **Copenhagen — June** · *The Longest Evenings*  
+  Mechanism: daylight expands routine
+
+- **San Diego — September** · *Summer After Summer*  
+  Mechanism: conditions make weekdays usable
+
+### Pipeline
+
+- **Seoul — October** · *The City Climbs*  
+  Mechanism: elevation reorganizes social life
+
+- **Palermo — October** · *The Locals Return*  
+  Mechanism: heat releases the street
+
+- **Tokyo — April** · *The Annual Permission*  
+  Mechanism: public softness
+
+- **Dublin — May** · *Everyone Comes Back Outside*  
+  Mechanism: weather becomes trustworthy
