@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>San Diego — September · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    // ── Identity ─────────────────────────────────────────────────────
+    city:      "San Diego",
+    month:     "September",
+    storyline: "Summer After Summer",
+
+    archetype: "Local",
+
+    // Warm amber / sunset copper — the locals' season palette
+    accentColor:    "#c4853a",
+    accentColorDim: "rgba(196,133,58,.15)",
+
+    thesis: "San Diego in September feels like the month locals wait for all year.",
+
+    // ── Season tag (not yet rendered) ────────────────────────────────
+    season: "Local Season",
+
+    // ── Metadata (not yet rendered) ──────────────────────────────────
+    metadata: {
+      energy:      3,
+      daylight:    4,
+      streetLife:  3,
+      socialHours: 3,
+      comfort:     5,
+      momentum:    4,
+    },
+
+    // ── The Scene ────────────────────────────────────────────────────
+    scene: `It's 6:45 and the parking at Windansea is half-full. Not empty — half-full, which in July would have been a miracle. The water is 70 degrees. The last of the summer crowd left with Labor Day. A man walks down with a longboard under his arm, no wetsuit. A woman sits on the reef rocks with a book she isn't reading. The light is coming in low and amber from the west, and nobody here looks like they drove from somewhere else.`,
+
+    sceneAnchors: [
+      {
+        place: "Windansea Beach",
+        text: "The reef break that tourists walked past all summer. In September, the regulars who were surfing before sunrise in June are out in the afternoon now. The water temperature peaked two weeks ago and held. Nobody is in a hurry.",
+      },
+      {
+        place: "Bird Rock",
+        text: "The neighborhood just north of La Jolla that doesn't announce itself. In September the evening walk is unhurried — the coffee shop closes early, someone brings takeout from the taco spot on the corner, dogs are being walked by people who live here. It has the energy of a place that didn't notice the summer.",
+      },
+      {
+        place: "Sunset Cliffs",
+        text: "The long coastal park where the September light does something specific to the water below the bluffs. By 6:30 the people here are mostly local. They come to look at it, which is different from coming to photograph it.",
+      },
+    ],
+
+    // ── Sections ─────────────────────────────────────────────────────
+
+    locals: `The beach is theirs again. Not territorially — just practically. The surfers who were doing dawn sessions in July are out in the afternoon now. The usual parking spots are open. The taco shop on the corner has empty stools at lunch. People are at the water because they want to be, not because they planned their September trip around it.`,
+
+    localWord: {
+      term:        "locals' summer",
+      translation: "the season after the season, when San Diego belongs to itself again",
+      body:        "What San Diegans call September when they mean it as a compliment. Not the water temperature, not the sunsets — the fact that the city is finally theirs again.",
+    },
+
+    changes: `Around the second day, you stop planning around crowds you're no longer avoiding. The parking lot that said 45 minutes in July takes five minutes now. The restaurant takes you at the time you asked for. You stop making backup plans. This doesn't sound like much until you realize how long it's been since you did that anywhere.`,
+
+    start: `You start staying in the water longer than you planned. You walk neighborhoods instead of landmarks. You eat at the counter. You find yourself at the cliffs at 6:30 for no reason you'd want to explain to someone who hasn't been here in September.`,
+
+    stop: `Planning around the crowd. Not because you gave up — because you kept not needing to. September doesn't reward optimization. It rewards showing up.`,
+
+    returns: `The feeling that you're somewhere real. Not a version of a place assembled for visitors. The taco shop on the corner is full because it's good, not because it was written up. The beach is warm because the water held its heat, not because it's in season. Nobody is performing San Diego for you. You're just in it.`,
+
+    remember: `The ocean finally caught up to summer. So did you.`,
+
+    // ── Seasonal contrast ────────────────────────────────────────────
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "June",      body: "The marine layer keeps mornings muted.",                current: false },
+        { label: "September", body: "The ocean finally catches up to summer.",               current: true  },
+        { label: "November",  body: "Locals start keeping sweatshirts in their cars again.", current: false },
+      ],
+    },
+
+    // ── Navigation ──────────────────────────────────────────────────
+    next: [
+      { city: "Copenhagen", month: "June",    storyline: "The Longest Evenings",        href: "index.html" },
+      { city: "Palermo",    month: "October",  storyline: "The Locals Return",           href: "#"          },
+      { city: "Dublin",     month: "May",      storyline: "Everyone Comes Back Outside", href: "#"          },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

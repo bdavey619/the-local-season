@@ -5,906 +5,157 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Copenhagen — June · The Local Season</title>
 
-  <!--
-    THE LOCAL SEASON — City-Month Editorial Template
-    ─────────────────────────────────────────────────
-    To generate a new city-month page:
-    1. Duplicate this file
-    2. Replace the `PAGE` object below with new city data
-    3. All rendered content is driven by that object
-
-    Future conversion path → Next.js / Tailwind:
-    - `PAGE` becomes a typed CityMonth data object (e.g. content/copenhagen-june.ts)
-    - Each section maps to a reusable React component
-    - CSS custom properties map 1-to-1 to Tailwind theme tokens
-    - Archetype ("Electric", "Quiet", etc.) drives colour-scheme variants
-  -->
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
-
-  <style>
-    /* ── Design tokens ──────────────────────────────────────────────── */
-    :root {
-      --ink:        #1a1916;
-      --ink-light:  #5c5a55;
-      --ink-muted:  #9b9893;
-      --paper:      #f7f5f0;
-      --paper-warm: #ede9e1;
-      --accent:     #c8a96e;        /* Electric archetype warm gold */
-      --accent-dim: rgba(200,169,110,.15);
-      --rule:       rgba(26,25,22,.10);
-
-      --serif:  'EB Garamond', Georgia, serif;
-      --sans:   'Inter', system-ui, sans-serif;
-
-      --max:    720px;
-      --wide:   960px;
-
-      --space-xs:  0.5rem;
-      --space-sm:  1rem;
-      --space-md:  2rem;
-      --space-lg:  4rem;
-      --space-xl:  7rem;
-    }
-
-    /* ── Reset ──────────────────────────────────────────────────────── */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 18px; -webkit-font-smoothing: antialiased; }
-    body {
-      background: var(--paper);
-      color: var(--ink);
-      font-family: var(--serif);
-      line-height: 1.7;
-    }
-    img { display: block; max-width: 100%; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ── Layout helpers ─────────────────────────────────────────────── */
-    .container {
-      width: 100%;
-      max-width: var(--max);
-      margin-inline: auto;
-      padding-inline: var(--space-md);
-    }
-    .container--wide {
-      max-width: var(--wide);
-    }
-
-    /* ── Utility ────────────────────────────────────────────────────── */
-    .eyebrow {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 500;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-    }
-    .rule {
-      border: none;
-      border-top: 1px solid var(--rule);
-      margin-block: var(--space-lg);
-    }
-
-    /* ── Top nav ────────────────────────────────────────────────────── */
-    .site-nav {
-      padding: var(--space-md) var(--space-md);
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border-bottom: 1px solid var(--rule);
-    }
-    .site-nav__brand {
-      font-family: var(--sans);
-      font-size: 0.75rem;
-      font-weight: 500;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--ink);
-    }
-    .site-nav__label {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-weight: 400;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-    }
-
-    /* ── Hero ───────────────────────────────────────────────────────── */
-    .hero {
-      padding-top: var(--space-xl);
-      padding-bottom: var(--space-lg);
-      border-bottom: 1px solid var(--rule);
-    }
-    .hero__meta {
-      display: flex;
-      align-items: center;
-      gap: var(--space-sm);
-      margin-bottom: var(--space-md);
-    }
-    .archetype-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      background: var(--accent-dim);
-      border: 1px solid var(--accent);
-      border-radius: 2px;
-      padding: 0.2rem 0.6rem;
-      font-family: var(--sans);
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-    .archetype-badge::before {
-      content: '';
-      display: block;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-    .hero__city {
-      font-family: var(--serif);
-      font-size: clamp(2.6rem, 6vw, 4.2rem);
-      font-weight: 400;
-      line-height: 1.05;
-      letter-spacing: -.01em;
-      color: var(--ink);
-      margin-bottom: 0.25rem;
-    }
-    .hero__storyline {
-      font-family: var(--serif);
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--ink-light);
-      margin-bottom: var(--space-lg);
-    }
-    .hero__thesis {
-      font-family: var(--serif);
-      font-size: clamp(1.05rem, 2vw, 1.25rem);
-      font-weight: 400;
-      line-height: 1.65;
-      color: var(--ink);
-      max-width: 560px;
-      border-left: 2px solid var(--accent);
-      padding-left: var(--space-md);
-    }
-
-    /* ── Core framing ───────────────────────────────────────────────── */
-    .framing {
-      padding-block: var(--space-xl);
-      text-align: center;
-    }
-    .framing__text {
-      font-family: var(--serif);
-      font-size: clamp(1.3rem, 3vw, 1.9rem);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.5;
-      color: var(--ink);
-      max-width: 580px;
-      margin-inline: auto;
-    }
-    .framing__text em {
-      font-style: normal;
-      color: var(--accent);
-    }
-
-    /* ── Content sections ───────────────────────────────────────────── */
-    .sections {
-      padding-bottom: var(--space-xl);
-    }
-    .section {
-      padding-block: var(--space-lg);
-      border-top: 1px solid var(--rule);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-sm);
-    }
-    @media (min-width: 640px) {
-      .section {
-        grid-template-columns: 180px 1fr;
-        gap: var(--space-md);
-        align-items: start;
-      }
-    }
-    .section__heading {
-      font-family: var(--sans);
-      font-size: 0.63rem;
-      font-weight: 400;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      opacity: 0.75;
-      padding-top: 0.3rem;  /* optical alignment with body text cap-height */
-    }
-    .section__body {
-      font-family: var(--serif);
-      font-size: 1.08rem;
-      line-height: 1.8;
-      color: var(--ink);
-    }
-    .section__body p + p {
-      margin-top: 1em;
-    }
-
-    /* ── One line to remember ───────────────────────────────────────── */
-    .one-line {
-      padding-block: var(--space-xl);
-      border-top: 1px solid var(--rule);
-      text-align: center;
-    }
-    .one-line__label {
-      margin-bottom: var(--space-md);
-    }
-    .one-line__text {
-      font-family: var(--serif);
-      font-size: clamp(1.3rem, 3.5vw, 2rem);
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.45;
-      color: var(--ink);
-      max-width: 560px;
-      margin-inline: auto;
-    }
-
-    /* ── Framework ──────────────────────────────────────────────────── */
-    .framework {
-      background: var(--paper-warm);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      padding-block: var(--space-lg);
-    }
-    .framework__inner {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-md);
-    }
-    @media (min-width: 640px) {
-      .framework__inner {
-        grid-template-columns: 180px 1fr;
-        align-items: start;
-      }
-    }
-    .framework__label {
-      padding-top: 0.2rem;
-    }
-    .framework__intro {
-      font-family: var(--sans);
-      font-size: 0.82rem;
-      color: var(--ink-light);
-      line-height: 1.6;
-      margin-bottom: var(--space-md);
-    }
-    .framework__questions {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .framework__questions li {
-      font-family: var(--serif);
-      font-size: 1rem;
-      color: var(--ink);
-      line-height: 1.5;
-      display: flex;
-      gap: 0.75rem;
-      align-items: baseline;
-    }
-    .framework__questions li::before {
-      content: '–';
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* ── Explore next ───────────────────────────────────────────────── */
-    .explore {
-      padding-block: var(--space-xl);
-    }
-    .explore__header {
-      margin-bottom: var(--space-lg);
-    }
-    .explore__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1px;
-      background: var(--rule);
-      border: 1px solid var(--rule);
-    }
-    @media (min-width: 640px) {
-      .explore__grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    .explore__card {
-      background: var(--paper);
-      padding: var(--space-md);
-      transition: background 0.2s ease;
-      cursor: pointer;
-    }
-    .explore__card:hover {
-      background: var(--paper-warm);
-    }
-    .explore__card-city {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: var(--ink);
-      margin-bottom: 0.2rem;
-    }
-    .explore__card-storyline {
-      font-family: var(--serif);
-      font-size: 0.9rem;
-      font-style: italic;
-      color: var(--ink-light);
-    }
-    .explore__card-arrow {
-      display: block;
-      margin-top: var(--space-md);
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-    }
-
-    /* ── Footer ─────────────────────────────────────────────────────── */
-    .site-footer {
-      border-top: 1px solid var(--rule);
-      padding-block: var(--space-lg);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: var(--space-sm);
-      flex-wrap: wrap;
-    }
-    .site-footer__brand {
-      font-family: var(--sans);
-      font-size: 0.7rem;
-      font-weight: 500;
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      color: var(--ink);
-    }
-    .site-footer__copy {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      color: var(--ink-muted);
-    }
-
-    /* ── Local word ─────────────────────────────────────────────────── */
-    /* In Next.js: <LocalWord term="..." definition="..." body="..." /> */
-    .word-section {
-      background: var(--paper-warm);
-      margin-inline: calc(-1 * var(--space-md));
-      padding: var(--space-lg) var(--space-md);
-      border-top: 1px solid var(--rule);
-      border-bottom: 1px solid var(--rule);
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: var(--space-sm);
-    }
-    @media (min-width: 640px) {
-      .word-section {
-        grid-template-columns: 180px 1fr;
-        gap: var(--space-md);
-        align-items: start;
-      }
-    }
-    .word-section__label {
-      padding-top: 0.3rem;
-    }
-    .word-section__term {
-      font-family: var(--serif);
-      font-size: clamp(1.5rem, 4vw, 2.1rem);
-      font-weight: 400;
-      font-style: italic;
-      color: var(--ink);
-      line-height: 1.1;
-      margin-bottom: 0.35rem;
-    }
-    .word-section__pronunciation {
-      font-family: var(--sans);
-      font-size: 0.65rem;
-      font-style: normal;
-      font-weight: 400;
-      letter-spacing: .06em;
-      color: var(--ink-muted);
-      vertical-align: middle;
-      margin-left: 0.5rem;
-    }
-    .word-section__def {
-      font-family: var(--sans);
-      font-size: 0.72rem;
-      font-weight: 400;
-      letter-spacing: .06em;
-      color: var(--ink-muted);
-      margin-bottom: var(--space-sm);
-    }
-    .word-section__body {
-      font-family: var(--serif);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: var(--ink-light);
-    }
-
-    /* ── Seasonal contrast ─────────────────────────────────────────── */
-    /* Seasonal contrast explains why this month matters.               */
-    /* Compare behaviors across seasons, not weather statistics.        */
-    /* This should feel like marginalia, not a new chapter.             */
-    /* In Next.js: <SeasonalContrast title="..." items={[...]} />       */
-    .seasonal-contrast {
-      padding-block: var(--space-lg);
-      border-top: 1px solid var(--rule);
-    }
-    .seasonal-contrast__title {
-      font-family: var(--sans);
-      font-size: 0.63rem;
-      font-weight: 400;
-      letter-spacing: .13em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      opacity: 0.75;
-      margin-bottom: var(--space-md);
-    }
-    .seasonal-contrast__grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 0;
-    }
-    @media (min-width: 640px) {
-      .seasonal-contrast__grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    .seasonal-contrast__item {
-      padding: var(--space-sm) 0;
-      border-top: 1px solid var(--rule);
-    }
-    @media (min-width: 640px) {
-      .seasonal-contrast__item {
-        padding: var(--space-sm) var(--space-sm) var(--space-sm) 0;
-        border-top: none;
-        border-left: 1px solid var(--rule);
-        padding-left: var(--space-md);
-      }
-      .seasonal-contrast__item:first-child {
-        border-left: none;
-        padding-left: 0;
-      }
-    }
-    .seasonal-contrast__label {
-      font-family: var(--sans);
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-bottom: 0.4rem;
-    }
-    .seasonal-contrast__item--current .seasonal-contrast__label {
-      color: var(--accent);
-      opacity: 1;
-    }
-    .seasonal-contrast__body {
-      font-family: var(--serif);
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--ink-light);
-    }
-    .seasonal-contrast__item--current .seasonal-contrast__body {
-      color: var(--ink);
-    }
-
-    /* ── Scene anchors ──────────────────────────────────────────────── */
-    /* Field-guide marginalia: place name + 2-sentence evocation.       */
-    /* In Next.js: <SceneAnchor place="..." text="..." /> component.    */
-    .scene-anchors {
-      margin-top: var(--space-md);
-      padding-top: var(--space-md);
-      border-top: 1px solid var(--rule);
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-md);
-    }
-    .scene-anchor__place {
-      font-family: var(--sans);
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-bottom: 0.3rem;
-    }
-    .scene-anchor__text {
-      font-family: var(--serif);
-      font-size: 0.97rem;
-      line-height: 1.75;
-      color: var(--ink-light);
-    }
-  </style>
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
+<div id="page-root"></div>
 
+<script>
   <!--
     ══════════════════════════════════════════════════════════════════
-    CITYMONTH SCHEMA — The Local Season
+    HOW TO ADD A NEW CITY-MONTH
     ──────────────────────────────────────────────────────────────────
-    To create a new city-month page:
-      1. Duplicate this file (e.g. san-diego-september.html)
-      2. Replace the PAGE object below with new content
-      3. Everything rendered on the page is derived from PAGE
-
-    Next.js conversion path:
-      - PAGE becomes a typed CityMonth module: content/[city]-[month].ts
-      - Each rendered block maps to a React component
-      - CSS custom properties map 1-to-1 to Tailwind theme tokens
-      - `archetype` drives colour-scheme variants via a theme map
-
-    EDITORIAL RULES — enforce on every city-month:
-      // Every section must describe visible behavior, not attractions
-      // If copy could apply to 20 other cities, rewrite it
-      // Prefer concrete scenes over abstract observations
-      // Use at most one untranslated local term per section
-      // Recommendations should change routine, not just suggest places
-      // The scene anchor is a named location + a specific observation, not a review
-      // localWord is an editorial pause, not a glossary entry
-      // "remember" should land without explanation
+    1. Copy any existing page (e.g. san-diego-september.html) to a
+       new file named [city]-[month].html
+    2. Replace the PAGE object below with your new city data
+    3. assets/render.js builds the full page automatically — no HTML
+       changes needed
+    4. Add an href entry in the `next` array of related pages so the
+       Explore Next cards link correctly
     ══════════════════════════════════════════════════════════════════
+
+    PAGE SCHEMA — CityMonth
+    ──────────────────────────────────────────────────────────────────
+    Future TypeScript type (content/types.ts):
+
+    interface SceneAnchor  { place: string; text: string }
+    interface LocalWord    { term: string; pronunciation?: string; translation: string; body: string }
+    interface NextCity     { city: string; month: string; storyline: string; href?: string }
+    interface ContrastItem { label: string; body: string; current: boolean }
+
+    interface CityMonth {
+      // Identity
+      city: string; month: string; storyline: string; archetype: string
+      accentColor: string; accentColorDim: string
+
+      // Editorial
+      thesis: string
+      scene: string
+      sceneAnchors: SceneAnchor[]
+      locals: string
+      localWord: LocalWord
+      changes: string
+      start: string
+      stop: string
+      returns: string
+      remember: string
+      seasonalContrast: { title: string; items: ContrastItem[] }
+      next: NextCity[]
+
+      // Not yet rendered
+      season: string
+      metadata: Record<string, number>
+    }
   -->
-  <script>
-    /**
-     * CityMonth — canonical data shape for one city × one month story.
-     *
-     * Future TypeScript type (content/types.ts):
-     *
-     * interface SceneAnchor  { place: string; text: string }
-     * interface LocalWord    { term: string; pronunciation?: string; translation: string; body: string }
-     * interface NextCity     { city: string; month: string; storyline: string }
-     *
-     * interface CityMonth {
-     *   city: string; month: string; storyline: string; archetype: string
-     *   thesis: string
-     *   season: SeasonTag          // not yet rendered
-     *   metadata: CityMetadata     // not yet rendered
-     *   scene: string
-     *   sceneAnchors: SceneAnchor[]
-     *   locals: string
-     *   localWord: LocalWord
-     *   changes: string
-     *   start: string
-     *   stop: string
-     *   returns: string
-     *   remember: string
-     *   next: NextCity[]
-     * }
-     */
-    const PAGE = {
+  const PAGE = {
 
-      // ── Identity ────────────────────────────────────────────────────
-      city:      "Copenhagen",
-      month:     "June",
-      storyline: "The Longest Evenings",
+    // ── Identity ─────────────────────────────────────────────────────
+    city:      "Copenhagen",
+    month:     "June",
+    storyline: "The Longest Evenings",
 
-      // Archetype drives the accent colour token (--accent).
-      // Current set: Electric | Quiet | Slow | Raw | Open | Withdrawn
-      archetype: "Electric",
+    // Archetype drives the accent colour. Current set: Electric | Quiet | Slow | Raw | Open | Local
+    archetype: "Electric",
 
-      // One sentence. States what the city does to the visitor, not what
-      // the visitor should do in the city.
-      thesis: "Copenhagen in June feels like a city that has collectively decided to spend less time indoors.",
+    // Explicit accent colours for this archetype (used by render.js to override CSS tokens)
+    accentColor:    "#c8a96e",
+    accentColorDim: "rgba(200,169,110,.15)",
 
-      // ── Season tag ──────────────────────────────────────────────────
-      // Not yet rendered. Will appear as a small badge or filter label.
-      // Options: Peak Social | Local Season | Reflective | Escape | Open Window
-      season: "Peak Social",
+    // One sentence. States what the city does to the visitor.
+    thesis: "Copenhagen in June feels like a city that has collectively decided to spend less time indoors.",
 
-      // ── Metadata ────────────────────────────────────────────────────
-      // Not yet rendered. For future scoring UI, sorting, and filtering.
-      // Scale: 1–5 (1 = low, 5 = high). Null = not yet scored.
-      metadata: {
-        energy:      5,   // pace and stimulation of the city in this month
-        daylight:    5,   // hours and quality of usable outdoor light
-        streetLife:  5,   // density of visible public life
-        socialHours: 5,   // how late social life naturally extends
-        comfort:     4,   // ease of being outside (weather, crowd level)
-        momentum:    4,   // how strongly the month pulls you into a rhythm
+    // ── Season tag (not yet rendered) ────────────────────────────────
+    season: "Peak Social",
+
+    // ── Metadata (not yet rendered) ──────────────────────────────────
+    // Scale: 1–5. For future scoring UI, sorting, and filtering.
+    metadata: {
+      energy:      5,
+      daylight:    5,
+      streetLife:  5,
+      socialHours: 5,
+      comfort:     4,
+      momentum:    4,
+    },
+
+    // ── The Scene ────────────────────────────────────────────────────
+    // A specific moment: named place, named time, observed behavior.
+    scene: `It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to.`,
+
+    // 2–3 named locations. Each is a place + one specific observation.
+    sceneAnchors: [
+      {
+        place: "Islands Brygge Havnebadet",
+        text: "The harbour pool that made swimming in the city canal feel unremarkable. On a Tuesday in June, the queue for the tall jump platform is mostly children and one man in his fifties who appears to do this every week.",
       },
+      {
+        place: "Søerne",
+        text: "Three thin glacial lakes running north to south through the middle of the city. The path along the eastern bank is where you go to feel the shape of a June evening — the light holds flat on the water, and the people moving alongside it have nowhere they appear to be going.",
+      },
+      {
+        place: "Assistens Kirkegård",
+        text: "A working cemetery in Nørrebro that locals have quietly converted into a park. Blankets between graves. Children. Someone reading near the stone of the person they're reading. The most honest public space in the city.",
+      },
+    ],
 
-      // ── The Scene ───────────────────────────────────────────────────
-      // A specific moment — named place, named time, observed behavior.
-      // Must feel like the opening of a short story, not a recommendation.
-      scene: `It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to.`,
+    // ── Sections ─────────────────────────────────────────────────────
 
-      // 2–3 named locations. Each is a place + one specific observation.
-      // Not a "top spots" list. The observation is what makes it earn its place.
-      sceneAnchors: [
-        {
-          place: "Islands Brygge Havnebadet",
-          text: "The harbour pool that made swimming in the city canal feel unremarkable. On a Tuesday in June, the queue for the tall jump platform is mostly children and one man in his fifties who appears to do this every week.",
-        },
-        {
-          place: "Søerne",
-          text: "Three thin glacial lakes running north to south through the middle of the city. The path along the eastern bank is where you go to feel the shape of a June evening — the light holds flat on the water, and the people moving alongside it have nowhere they appear to be going.",
-        },
-        {
-          place: "Assistens Kirkegård",
-          text: "A working cemetery in Nørrebro that locals have quietly converted into a park. Blankets between graves. Children. Someone reading near the stone of the person they're reading. The most honest public space in the city.",
-        },
+    locals: `Work ends and people don't disappear. They move toward water. Bikes replace trains. The grass along Peblinge Sø fills with people who brought wine in water bottles. The harbours become swimming pools. Nobody sends an agenda for what happens next.`,
+
+    localWord: {
+      term:          "aftensol",
+      pronunciation: "af-ten-sol",
+      translation:   "the evening light that makes the day feel unfinished",
+      body:          "Not just sunset. Not golden hour. The long, usable light that makes 9pm feel unfinished.",
+    },
+
+    changes: `Sometime around day three, you stop checking the time before deciding to go outside. The sky at 9pm looks suspiciously like 6pm. You eat dinner later than you meant to — not because the restaurant was full, but because nothing in the light told you it was time.`,
+
+    start: `You start accepting distance. Eating outside without a table. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave.`,
+
+    stop: `Dinner. You pick up a pølse from a corner kiosk on the way somewhere and it's enough. You stop planning the evening. The city doesn't require it.`,
+
+    returns: `Margin. Not more hours exactly. Just enough room in the day that nothing feels late. You wait for someone outside a café without looking at your phone. You sit on the harbour edge doing nothing in particular. In June it just feels like being in Copenhagen.`,
+
+    remember: `The city doesn't ask you to do more. It convinces you there's more time.`,
+
+    // ── Seasonal contrast ────────────────────────────────────────────
+    // Compare behaviors across seasons, not weather statistics.
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "Winter",  body: "People gather closer.",               current: false },
+        { label: "June",    body: "People forget to go home.",           current: true  },
+        { label: "Autumn",  body: "People start noticing sunset again.", current: false },
       ],
+    },
 
-      // ── Sections ────────────────────────────────────────────────────
-
-      // What the visitor observes locals doing. Visible, specific behaviors.
-      // Not "people enjoy the outdoors." What are they actually doing?
-      locals: `Work ends and people don't disappear. They move toward water. Bikes replace trains. The grass along Peblinge Sø fills with people who brought wine in water bottles. The harbours become swimming pools. Nobody sends an agenda for what happens next.`,
-
-      // A single local word that names something the city does in this month.
-      // Rendered as an editorial pause between "locals" and "changes."
-      // pronunciation is optional — include IPA or phonetic if it adds something.
-      localWord: {
-        term:          "aftensol",
-        pronunciation: "af-ten-sol",
-        translation:   "the evening light that makes the day feel unfinished",
-        body:          "Not just sunset. Not golden hour. The long, usable light that makes 9pm feel unfinished.",
-      },
-
-      // What changes in the visitor's perception or behavior. Not the city —
-      // the visitor. Should mark the moment the routine starts to shift.
-      changes: `Sometime around day three, you stop checking the time before deciding to go outside. The sky at 9pm looks suspiciously like 6pm. You eat dinner later than you meant to — not because the restaurant was full, but because nothing in the light told you it was time.`,
-
-      // New behaviors the visitor picks up. Grounded and observable.
-      // "Saying yes more often" is not a behavior. What are they actually doing?
-      start: `You start accepting distance. Eating outside without a table. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave.`,
-
-      // What the visitor stops optimizing or planning. One thing leads it.
-      stop: `Dinner. You pick up a pølse from a corner kiosk on the way somewhere and it's enough. You stop planning the evening. The city doesn't require it.`,
-
-      // What comes back that was missing. Abstract is fine here — it should
-      // feel earned by everything that came before.
-      returns: `Margin. Not more hours exactly. Just enough room in the day that nothing feels late. You wait for someone outside a café without looking at your phone. You sit on the harbour edge doing nothing in particular. In June it just feels like being in Copenhagen.`,
-
-      // One sentence. Should land without needing the page behind it.
-      remember: `The city doesn't ask you to do more. It convinces you there's more time.`,
-
-      // ── Seasonal contrast ───────────────────────────────────────────
-      // Compare behaviors across seasons, not weather or daylight stats.
-      // Typically 3 items. June (or the current month) can be emphasized.
-      // Keep total copy under 60 words. One sentence per item.
-      seasonalContrast: {
-        title: "Not always like this",
-        items: [
-          { label: "Winter",  body: "People gather closer.",          current: false },
-          { label: "June",    body: "People forget to go home.",       current: true  },
-          { label: "Autumn",  body: "People start noticing sunset again.", current: false },
-        ],
-      },
-
-      // ── Navigation ──────────────────────────────────────────────────
-      next: [
-        { city: "San Diego", month: "September", storyline: "Summer After Summer"      },
-        { city: "Palermo",   month: "October",   storyline: "The Locals Return"        },
-        { city: "Dublin",    month: "May",        storyline: "Everyone Comes Back Outside" },
-      ],
-    };
-  </script>
-
-  <!-- ── Site nav ──────────────────────────────────────────────────── -->
-  <nav class="site-nav">
-    <span class="site-nav__brand">The Local Season</span>
-    <span class="site-nav__label">A city is different every month</span>
-  </nav>
-
-  <!-- ── Hero ─────────────────────────────────────────────────────── -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero__meta">
-        <span class="eyebrow">Copenhagen · June</span>
-        <span class="archetype-badge">Electric</span>
-      </div>
-      <h1 class="hero__city">Copenhagen<br/>— June</h1>
-      <p class="hero__storyline">The Longest Evenings</p>
-      <p class="hero__thesis">
-        "Copenhagen in June feels like a city that has collectively decided to spend less time indoors."
-      </p>
-    </div>
-  </header>
-
-  <!-- ── Core framing ──────────────────────────────────────────────── -->
-  <section class="framing">
-    <div class="container">
-      <p class="framing__text">
-        Travel isn't just where you go.<br/>
-        It's how a place <em>changes the way you live.</em>
-      </p>
-    </div>
-  </section>
-
-  <!-- ── Editorial sections ────────────────────────────────────────── -->
-  <main class="sections">
-    <div class="container">
-
-      <!-- The Scene -->
-      <article class="section">
-        <h2 class="section__heading">The Scene</h2>
-        <div class="section__body">
-          <p>It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to.</p>
-
-          <!-- Scene anchors: named places that carry the same atmosphere.
-               Template note: render from PAGE.sceneAnchors array.       -->
-          <div class="scene-anchors">
-
-            <div class="scene-anchor">
-              <p class="scene-anchor__place">Islands Brygge Havnebadet</p>
-              <p class="scene-anchor__text">The harbour pool that made swimming in the city canal feel unremarkable. On a Tuesday in June, the queue for the tall jump platform is mostly children and one man in his fifties who appears to do this every week.</p>
-            </div>
-
-            <div class="scene-anchor">
-              <p class="scene-anchor__place">Søerne</p>
-              <p class="scene-anchor__text">Three thin glacial lakes running north to south through the middle of the city. The path along the eastern bank is where you go to feel the shape of a June evening — the light holds flat on the water, and the people moving alongside it have nowhere they appear to be going.</p>
-            </div>
-
-            <div class="scene-anchor">
-              <p class="scene-anchor__place">Assistens Kirkegård</p>
-              <p class="scene-anchor__text">A working cemetery in Nørrebro that locals have quietly converted into a park. Blankets between graves. Children. Someone reading near the stone of the person they're reading. The most honest public space in the city.</p>
-            </div>
-
-          </div>
-        </div>
-      </article>
-
-      <!-- What locals are doing -->
-      <article class="section">
-        <h2 class="section__heading">What locals are doing</h2>
-        <div class="section__body">
-          <p>Work ends and people don't disappear. They move toward water. Bikes replace trains. The grass along Peblinge Sø fills with people who brought wine in water bottles. The harbours become swimming pools. Nobody sends an agenda for what happens next.</p>
-        </div>
-      </article>
-
-    </div><!-- /.container -->
-
-    <!--
-      LocalWord component — editorial pause between "locals" and "changes."
-      Template note: render from PAGE.localWord.
-      Fields: term, pronunciation (optional), translation, body.
-      Design rule: quiet, not a callout. The word carries; the definition recedes.
-    -->
-    <div class="container">
-      <div class="word-section">
-        <div class="word-section__label">
-          <p class="eyebrow">A word for it</p>
-        </div>
-        <div>
-          <p class="word-section__term">aftensol <span class="word-section__pronunciation">af-ten-sol</span></p>
-          <p class="word-section__def">the evening light that makes the day feel unfinished</p>
-          <p class="word-section__body">Not just sunset. Not golden hour. The long, usable light that makes 9pm feel unfinished.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-
-      <!-- What changes -->
-      <article class="section">
-        <h2 class="section__heading">What changes</h2>
-        <div class="section__body">
-          <p>Sometime around day three, you stop checking the time before deciding to go outside. The sky at 9pm looks suspiciously like 6pm. You eat dinner later than you meant to — not because the restaurant was full, but because nothing in the light told you it was time.</p>
-        </div>
-      </article>
-
-      <!-- What you start doing -->
-      <article class="section">
-        <h2 class="section__heading">What you start doing</h2>
-        <div class="section__body">
-          <p>You start accepting distance. Eating outside without a table. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave.</p>
-        </div>
-      </article>
-
-      <!-- What you stop controlling -->
-      <article class="section">
-        <h2 class="section__heading">What you stop controlling</h2>
-        <div class="section__body">
-          <p>Dinner. You pick up a pølse from a corner kiosk on the way somewhere and it's enough. You stop planning the evening. The city doesn't require it.</p>
-        </div>
-      </article>
-
-      <!-- What returns -->
-      <article class="section">
-        <h2 class="section__heading">What returns</h2>
-        <div class="section__body">
-          <p>Margin. Not more hours exactly. Just enough room in the day that nothing feels late. You wait for someone outside a café without looking at your phone. You sit on the harbour edge doing nothing in particular. In June it just feels like being in Copenhagen.</p>
-        </div>
-      </article>
-
-    </div>
-  </main>
-
-  <!-- ── One line to remember ──────────────────────────────────────── -->
-  <section class="one-line">
-    <div class="container">
-      <p class="eyebrow one-line__label">One line to remember</p>
-      <p class="one-line__text">
-        "The city doesn't ask you to do more.<br/>
-        It convinces you there's more time."
-      </p>
-    </div>
-  </section>
-
-  <!-- ── Seasonal contrast ────────────────────────────────────────── -->
-  <!-- Seasonal contrast explains why this month matters.              -->
-  <!-- Compare behaviors across seasons, not weather statistics.       -->
-  <!-- This should feel like marginalia, not a new chapter.            -->
-  <!-- Template note: render from PAGE.seasonalContrast                -->
-  <section class="seasonal-contrast">
-    <div class="container">
-      <p class="seasonal-contrast__title">Not always like this</p>
-      <div class="seasonal-contrast__grid">
-
-        <div class="seasonal-contrast__item">
-          <p class="seasonal-contrast__label">Winter</p>
-          <p class="seasonal-contrast__body">People gather closer.</p>
-        </div>
-
-        <div class="seasonal-contrast__item seasonal-contrast__item--current">
-          <p class="seasonal-contrast__label">June</p>
-          <p class="seasonal-contrast__body">People forget to go home.</p>
-        </div>
-
-        <div class="seasonal-contrast__item">
-          <p class="seasonal-contrast__label">Autumn</p>
-          <p class="seasonal-contrast__body">People start noticing sunset again.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Explore next ───────────────────────────────────────────────── -->
-  <section class="explore">
-    <div class="container container--wide">
-      <div class="explore__header">
-        <p class="eyebrow">Explore next</p>
-      </div>
-      <div class="explore__grid">
-
-        <a class="explore__card" href="#">
-          <p class="explore__card-city">San Diego — September</p>
-          <p class="explore__card-storyline">Summer After Summer</p>
-          <span class="explore__card-arrow">Read →</span>
-        </a>
-
-        <a class="explore__card" href="#">
-          <p class="explore__card-city">Palermo — October</p>
-          <p class="explore__card-storyline">The Locals Return</p>
-          <span class="explore__card-arrow">Read →</span>
-        </a>
-
-        <a class="explore__card" href="#">
-          <p class="explore__card-city">Dublin — May</p>
-          <p class="explore__card-storyline">Everyone Comes Back Outside</p>
-          <span class="explore__card-arrow">Read →</span>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Footer ────────────────────────────────────────────────────── -->
-  <footer class="site-footer">
-    <div class="container container--wide" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
-      <span class="site-footer__brand">The Local Season</span>
-      <span class="site-footer__copy">A city is different every month. Travel is not just where you go.</span>
-    </div>
-  </footer>
-
+    // ── Navigation ──────────────────────────────────────────────────
+    // href is optional; defaults to "#" if omitted
+    next: [
+      { city: "San Diego", month: "September", storyline: "Summer After Summer",        href: "san-diego-september.html" },
+      { city: "Palermo",   month: "October",   storyline: "The Locals Return",          href: "#"                        },
+      { city: "Dublin",    month: "May",        storyline: "Everyone Comes Back Outside", href: "#"                      },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
 </body>
 </html>
