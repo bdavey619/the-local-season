@@ -1,110 +1,154 @@
 # The Local Season
 
-An editorial travel project about when cities feel most alive — and how places change the way you live.
+Travel is not only movement through geography.
+It is temporary membership in another routine.
 
-> "Travel isn't just where you go. It's how a place changes the way you live."
+The Local Season is not a guide to the best time to visit.
 
-## City-months
+It is an attempt to capture the version of a place people miss when they leave.
 
-| Page | Storyline | Archetype |
-|------|-----------|-----------|
-| **Copenhagen — June** (`index.html`) | The Longest Evenings | Electric |
-| **San Diego — September** (`san-diego-september.html`) | Summer After Summer | Local |
+---
+
+## Editorial test
+
+A page succeeds when:
+
+- Someone who has never been there wants to go.
+- Someone who lives there wishes it were that month again.
+
+Each city-month should reveal something that is not available year round.
+
+The goal is not peak weather, peak tourism, or peak activity.
+
+The goal is to capture the energy that makes that city feel most like itself.
+
+---
+
+## Principles
+
+- Write routines, not attractions. Places should be understood through repeated behavior, not landmark lists.
+- Compare behavior, not weather
+- Specific places should reveal routines, not fill a list
+- If a sentence could apply to another city, rewrite it
+- Use local language sparingly
+- Contrast creates appreciation
+- Recommendations should change routine, not fill an itinerary
+
+---
 
 ## Framework
 
-Each city-month page is structured around eight editorial sections:
+Each city-month is structured around nine editorial sections:
 
-- **The Scene** — a specific moment, named place, named time
-- **What locals are doing** — visible behaviors, not general impressions
-- **A word for it** — one local term that names something the city does this month
-- **What changes** — how the visitor's perception shifts
-- **What you start doing** — new behaviors, grounded and observable
-- **What you stop controlling** — what the city releases you from planning
-- **What returns** — what comes back that was missing
-- **One line to remember** — a single sentence that lands without the page behind it
-- **Not always like this** — seasonal contrast: why this month, in three sentences
+**The Scene** — a specific moment: named place, named time, observed behavior  
+**What locals are doing** — visible behaviors, not general impressions  
+**A word for it** — one local term that names something the city does this month  
+**What changes** — how the visitor's perception or routine shifts  
+**What you start doing** — new behaviors, grounded and observable  
+**What you stop controlling** — what the city releases you from planning  
+**What returns** — what comes back that was missing  
+**One line to remember** — a single sentence that lands without the page behind it  
+**Not always like this** — seasonal contrast in three sentences
 
-## Adding a new city-month
+Pages are not meant to determine the best time to visit. They explain why a moment matters.
 
-All page content lives in a `PAGE` object. The renderer (`assets/render.js`) builds the full HTML from that object — no HTML editing required for new pages.
+---
 
-**Steps:**
+## Current pages
 
-1. Copy an existing page (e.g. `san-diego-september.html`) to a new file:
+**Copenhagen — June** · *The Longest Evenings*  
+How long daylight changes routine.
+
+**San Diego — September** · *Summer After Summer*  
+How late-season conditions give weekdays back.
+
+---
+
+## Data model
+
+Each page is driven by a `PAGE` object. The shared renderer (`assets/render.js`) builds the full page from that object — no HTML editing required for new pages.
+
+**Development:** Static HTML. No build step. Open any `.html` file directly in a browser.
+
+Key fields:
+
+| Field | Purpose |
+|-------|---------|
+| `city`, `month`, `storyline` | Identity |
+| `archetype` | Editorial character — drives accent colour |
+| `accentColor` | Per-page hex token; overrides the shared CSS `--accent` variable |
+| `season` | Seasonal tag (not yet rendered) |
+| `scene` | Opening moment — specific place, time, observed behavior |
+| `sceneAnchors` | 2–3 named locations with specific observations |
+| `localWord` | One term that names something the city does this month |
+| `seasonalContrast` | Why this month, in three behavioral sentences |
+| `next` | Links to other city-month pages |
+
+Future pages require only a `PAGE` object and the shared renderer.
+
+### Adding a new city-month
+
+1. Copy an existing page to a new file:
    ```
    cp san-diego-september.html [city]-[month].html
    ```
 
-2. Replace the `PAGE` object in the new file with your city data. Required fields:
+2. Replace the `PAGE` object with new city data. All rendering is automatic.
 
-   ```js
-   const PAGE = {
-     city:           "City Name",
-     month:          "Month",
-     storyline:      "Subtitle",
-     archetype:      "Local",          // Electric | Quiet | Slow | Raw | Open | Local
-     accentColor:    "#c4853a",        // hex — drives the --accent CSS token
-     accentColorDim: "rgba(196,133,58,.15)",
+3. Add an `href` entry in the `next` array of related pages.
 
-     thesis:    "One sentence. What the city does to the visitor in this month.",
+4. Update the Current pages section of this README.
 
-     season:    "Local Season",        // not yet rendered
-     metadata:  { energy: 3, daylight: 4, streetLife: 3, socialHours: 3, comfort: 5, momentum: 4 },
+### PAGE schema
 
-     scene:        "Opening scene — specific place, specific time, observed behavior.",
-     sceneAnchors: [
-       { place: "Place Name", text: "One specific observation." },
-     ],
-     locals:   "Visible behaviors. Not what locals enjoy — what they actually do.",
-     localWord: {
-       term:          "the phrase",
-       pronunciation: "optional",      // omit if English or no phonetic needed
-       translation:   "what it means",
-       body:          "One or two sentences. The word as an editorial pause.",
-     },
-     changes:  "How the visitor's perception shifts.",
-     start:    "New behaviors the visitor picks up.",
-     stop:     "What the visitor stops optimizing or planning.",
-     returns:  "What comes back that was missing.",
-     remember: "One sentence. Should land without the page behind it.",
+```js
+const PAGE = {
+  city:           "City Name",
+  month:          "Month",
+  storyline:      "Subtitle",
+  archetype:      "Local",          // Electric | Quiet | Slow | Raw | Open | Local
+  accentColor:    "#c4853a",
+  accentColorDim: "rgba(196,133,58,.15)",
 
-     seasonalContrast: {
-       title: "Not always like this",
-       items: [
-         { label: "Before month",   body: "One sentence.",  current: false },
-         { label: "This month",     body: "One sentence.",  current: true  },
-         { label: "After month",    body: "One sentence.",  current: false },
-       ],
-     },
+  thesis:    "One sentence. What this month does to the way daily life feels.",
 
-     next: [
-       { city: "Other City", month: "Month", storyline: "Subtitle", href: "other-city-month.html" },
-     ],
-   };
-   ```
+  season:    "Local Season",        // not yet rendered
+  metadata:  { energy: 3, daylight: 4, streetLife: 3, socialHours: 3, comfort: 5, momentum: 4 },
 
-3. Add a link (`href`) to this new page in the `next` array of related existing pages.
+  scene:        "Opening moment — specific place, specific time, observed behavior.",
+  sceneAnchors: [
+    { place: "Place Name", text: "One specific observation." },
+  ],
+  locals:   "What locals are visibly doing. Not impressions — behaviors.",
+  localWord: {
+    term:          "the phrase",
+    pronunciation: "optional",
+    translation:   "what it means",
+    body:          "One or two sentences. Editorial pause, not a glossary entry.",
+  },
+  changes:  "How the visitor's perception or routine shifts.",
+  start:    "New behaviors the visitor picks up.",
+  stop:     "What the visitor stops optimizing.",
+  returns:  "What comes back that was missing.",
+  remember: "One sentence. Should land without the page behind it.",
 
-4. Update this README's city-months table.
+  seasonalContrast: {
+    title: "Not always like this",
+    items: [
+      { label: "Before",     body: "One sentence.",  current: false },
+      { label: "This month", body: "One sentence.",  current: true  },
+      { label: "After",      body: "One sentence.",  current: false },
+    ],
+  },
 
-## Editorial rules (enforce on every city-month)
+  next: [
+    { city: "Other City", month: "Month", storyline: "Subtitle", href: "other-city-month.html" },
+  ],
+};
+```
 
-- Every section must describe visible behavior, not attractions
-- If copy could apply to 20 other cities, rewrite it
-- Prefer concrete scenes over abstract observations
-- Use at most one untranslated local term per section
-- Recommendations should change routine, not just suggest places
-- The scene anchor is a named location + a specific observation, not a review
-- `localWord` is an editorial pause, not a glossary entry
-- `remember` should land without explanation
+---
 
-## Development
+## Future direction
 
-Static HTML. No build step. Open any `.html` file directly in a browser.
-
-**Future conversion path → Next.js / Tailwind:**
-- `PAGE` → a typed `CityMonth` data module in `content/[city]-[month].ts`
-- Each section in `render.js` → a React component
-- CSS custom properties → Tailwind theme tokens via `tailwind.config.ts`
-- `archetype` drives colour-scheme variants via a theme map
+The ambition is not to cover every city. Only moments that earn a page.
