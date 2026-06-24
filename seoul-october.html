@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seoul — October · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    // ── Identity ─────────────────────────────────────────────────────
+    city:      "Seoul",
+    month:     "October",
+    storyline: "The City Climbs",
+
+    archetype: "Local",
+
+    // Deep terracotta — Korean autumn foliage, mountain earth
+    accentColor:    "#b05c35",
+    accentColorDim: "rgba(176,92,53,.15)",
+
+    thesis: "Seoul in October reveals that the city is mostly mountain, and that Koreans have always known this.",
+
+    // ── Season tag (not yet rendered) ────────────────────────────────
+    season: "Deungsan Season",
+
+    // ── Metadata (not yet rendered) ──────────────────────────────────
+    metadata: {
+      energy:      4,
+      daylight:    3,
+      streetLife:  3,
+      socialHours: 4,
+      comfort:     5,
+      momentum:    5,
+    },
+
+    // ── The Scene ────────────────────────────────────────────────────
+    scene: `It's 7:15 and the trail to Baegundae is already full. Not crowded the way a subway car is crowded — full in the way a room is full when everyone in it knows what they're doing and nobody had to coordinate. A woman in her sixties is moving faster than most of the people below her. Three men who appear to work together are eating kimbap from foil on a boulder, talking quietly enough that the mountain can still be heard. The foliage has reached the mid-slope — not peak, not finished, the particular few days when the mountain can't decide what color it wants. It is a Tuesday.`,
+
+    sceneAnchors: [
+      {
+        place: "Bukhansan National Park",
+        text: "The mountain that sits at the northern edge of Seoul and refuses to let the city pretend it isn't there. In October, the Baegundae trail fills before 8am. You start near Ui Station and walk toward something the city has been organized around since before it was called Seoul.",
+      },
+      {
+        place: "Inwangsan",
+        text: "A smaller mountain in the center of the city, walkable from Gyeongbokgung. In October it fills differently — neighborhood regulars, older men who have been climbing this particular trail twice a week for decades, who nod at the same rock formations on the way up and no longer need to look at them.",
+      },
+      {
+        place: "Sanjang (산장)",
+        text: "The mountain restaurants that appear halfway down the trail — not at the summit, not at the base. In October they fill from 10am. The menu is fixed: makgeolli, pajeon, sometimes dubu kimchi. You sit on a plastic stool at a folding table and the steam from the jeon goes sideways in the mountain wind.",
+      },
+    ],
+
+    // ── Sections ─────────────────────────────────────────────────────
+
+    locals: `People leave for the mountain before most of the city is awake. The gear is serious — technical jackets, trekking poles, compression socks — not ironic, not signaling. Functional. They go in groups but move at their own pace. The older hikers pass the younger ones without appearing to notice. By 10am the descent begins and the sanjang fills. People eat makgeolli in a mountain restaurant they have been eating makgeolli in every October. The conversation is easy in the way conversation is easy after something physical has already happened.`,
+
+    localWord: {
+      term:          "deungsan",
+      pronunciation: "deung-san",
+      translation:   "mountain hiking as a civic practice",
+      body:          "Not a hobby. Not exercise. The word implies regularity — a schedule kept, a mountain returned to. In October, deungsan reveals itself as the city's oldest social infrastructure. The trail is where Seoul becomes legible.",
+    },
+
+    changes: `Seoul from street level is dense — towers, traffic, screens. The mountains are visible from everywhere but somehow peripheral, backdrop rather than subject. October changes the geometry. On the second day you notice the mountain outside your window isn't decorative. It has trails. People are already on them. By the third day you are too, and from the top of Inwangsan the city below makes a different kind of sense: it was built in the gaps between mountains, not the other way around.`,
+
+    start: `You start waking earlier than the city requires because the mountain requires it first. You start arriving at trails with people who do this every week, moving among them without explaining yourself. You find the descent more useful than the summit — the sanjang is on the way down, and the conversation that happens there is different from anything that happens at street level.`,
+
+    stop: `Scheduling the rest of the day. Seoul at street level rewards a plan — which neighborhood, which hour, which line. The mountain removes the decision. The trail goes up. The sanjang is halfway down. By the time you're back in the subway the afternoon has organized itself.`,
+
+    returns: `Quiet, briefly. Then a different kind of proximity — to the people moving alongside you, to the city spread below, to your own breathing. Something Seoul's efficiency had been routing around you since you arrived.`,
+
+    remember: `You thought Seoul was its streets. The streets are just how it connects the mountains.`,
+
+    // ── Seasonal contrast ────────────────────────────────────────────
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "Summer",  body: "The heat keeps hikers on the trails early. The mountains are green and used, but not collective.",  current: false },
+        { label: "October", body: "The foliage turns and the city climbs together. The trail becomes social.",                         current: true  },
+        { label: "January", body: "The trails freeze. Only the dedicated go, and they go alone.",                                      current: false },
+      ],
+    },
+
+    // ── Small ritual (not yet rendered) ─────────────────────────────
+    // Small ritual is not a food recommendation.
+    // It should describe how food or drink extends a routine.
+    ritual: {
+      title: "Small ritual",
+      body:  "Makgeolli and pajeon at a sanjang on the descent from Bukhansan. The ritual does not work without the climb.",
+    },
+
+    // ── Navigation ──────────────────────────────────────────────────
+    next: [
+      { city: "Copenhagen", month: "June",      storyline: "The Longest Evenings",  href: "index.html"               },
+      { city: "San Diego",  month: "September", storyline: "Summer After Summer",   href: "san-diego-september.html" },
+      { city: "Tokyo",      month: "April",     storyline: "The Annual Permission", href: "#"                        },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>
