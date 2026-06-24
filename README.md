@@ -27,6 +27,7 @@ The goal is to capture the energy that makes that city feel most like itself.
 ## Principles
 
 - Write routines, not attractions. Places should be understood through repeated behavior, not landmark lists.
+- Write rituals, not recommendations. Food or drink should appear only when it explains behavior or helps the evening continue.
 - Compare behavior, not weather
 - Specific places should reveal routines, not fill a list
 - If a sentence could apply to another city, rewrite it
@@ -82,6 +83,7 @@ Key fields:
 | `sceneAnchors` | 2–3 named locations with specific observations |
 | `localWord` | One term that names something the city does this month |
 | `seasonalContrast` | Why this month, in three behavioral sentences |
+| `ritual` | Optional. How food or drink extends a routine (not yet rendered) |
 | `next` | Links to other city-month pages |
 
 Future pages require only a `PAGE` object and the shared renderer.
@@ -139,6 +141,13 @@ const PAGE = {
       { label: "This month", body: "One sentence.",  current: true  },
       { label: "After",      body: "One sentence.",  current: false },
     ],
+  },
+
+  // Small ritual is not a food recommendation.
+  // It should describe how food or drink extends a routine.
+  ritual: {                           // optional; not yet rendered
+    title: "Small ritual",
+    body:  "",
   },
 
   next: [
