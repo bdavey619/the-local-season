@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sydney — December · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Sydney",
+    month:     "December",
+    storyline: "The Holidays Move Outside",
+
+    archetype: "Open",
+
+    accentColor:    "#5a9eb5",
+    accentColorDim: "rgba(90,158,181,.15)",
+
+    thesis: "Sydney in December is where Christmas ends up when no one can keep it indoors.",
+
+    season: "Summer Solstice",
+
+    metadata: {
+      energy:      5,
+      daylight:    5,
+      streetLife:  4,
+      socialHours: 5,
+      comfort:     4,
+      momentum:    5,
+    },
+
+    scene: `It's 5pm on Christmas Eve at Bondi Beach. Someone has set up a decorated tree in the sand. It is thirty degrees. A man in board shorts is wearing a Santa hat while queuing for soft serve. This is not ironic. It is deeply sincere. A group is playing backyard cricket on the grass above the beach. The sun sets at eight.`,
+
+    sceneAnchors: [
+      {
+        place: "Bondi Beach on a weekday in December",
+        text: "Where the summer school holidays meet the long evenings. Families on the sand by 4pm. The beach is full but not impossible. The people here are the people who live within walking distance.",
+      },
+      {
+        place: "The Rocks on a December evening",
+        text: "The historic harbor district that goes from tourist by day to local by night. In December the light off the harbor stays beautiful until 8:30. People eat outside along the waterfront because the option to eat inside barely registers.",
+      },
+      {
+        place: "Manly Ferry crossing on a Sunday",
+        text: "The thirty-minute ferry that crosses the harbor to Manly Beach. In December the harbor is full of yachts, kayaks, people in the water who have not yet decided to stop. The Opera House slides past. Nobody stops talking.",
+      },
+    ],
+
+    locals: `Moving the Christmas lunch to the backyard. Swimming before breakfast. Taking the ferry to the beach instead of the train to the shops. Refusing to treat December like it is supposed to be cold.`,
+
+    localWord: {
+      term:        "arvo",
+      translation: "afternoon, specifically the version worth going to the beach for",
+      body:        "Australian shorthand that carries more cultural weight than its two syllables suggest. The arvo in December is the unit of life. Getting to the beach by arvo is not a plan — it is the condition of a good day.",
+    },
+
+    changes: `The Christmas cultural script rewrites itself. The indoor obligations — the heavy meal, the staying in — become absurd against 30 degrees and the harbor. Sydney in December is not ignoring Christmas. It has simply moved it outside.`,
+
+    start: `The morning swim. The beach on a weekday. The dinner that happens on the deck because no other option makes sense.`,
+
+    stop: `The northern-hemisphere December template. Sydney does not do winter solstice. It does the longest day.`,
+
+    returns: `The version of December where outdoor life and the holiday season occupy the same calendar. You realize you have always celebrated one of them slightly wrong.`,
+
+    remember: `You didn't expect to swim in December. Now you're not sure how you managed without it.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "October",  body: "Spring is new and the beaches are starting to wake up.",                     current: false },
+        { label: "December", body: "The longest days and the lightest version of a year-end.",                    current: true  },
+        { label: "February", body: "The heat has peaked and the city starts its slow slide toward autumn.",       current: false },
+      ],
+    },
+
+    next: [
+      { city: "Seoul",        month: "November", storyline: "The City That Browns Slowly", href: "seoul-november.html"    },
+      { city: "Mexico City",  month: "March",    storyline: "Before the Heat",             href: "mexico-city-march.html" },
+      { city: "San Diego",    month: "September", storyline: "Summer After Summer",        href: "san-diego-september.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

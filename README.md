@@ -8,8 +8,18 @@ An editorial travel project about when cities feel most alive — and how places
 
 | Page | Storyline | Archetype |
 |------|-----------|-----------|
+| **Osaka — January** (`osaka-january.html`) | The Warmest Table | Quiet |
+| **Lisbon — February** (`lisbon-february.html`) | Before the Season | Open |
+| **Mexico City — March** (`mexico-city-march.html`) | Before the Heat | Slow |
+| **Tokyo — April** (`tokyo-april.html`) | The Permission | Electric |
+| **Dublin — May** (`dublin-may.html`) | Everyone Comes Back Outside | Open |
 | **Copenhagen — June** (`index.html`) | The Longest Evenings | Electric |
+| **Montreal — July** (`montreal-july.html`) | The City That Summers Hard | Electric |
+| **Porto — August** (`porto-august.html`) | After the Rush | Quiet |
 | **San Diego — September** (`san-diego-september.html`) | Summer After Summer | Local |
+| **Palermo — October** (`palermo-october.html`) | The Locals Return | Local |
+| **Seoul — November** (`seoul-november.html`) | The City That Browns Slowly | Raw |
+| **Sydney — December** (`sydney-december.html`) | The Holidays Move Outside | Open |
 
 ## Framework
 

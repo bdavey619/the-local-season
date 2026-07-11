@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seoul — November · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Seoul",
+    month:     "November",
+    storyline: "The City That Browns Slowly",
+
+    archetype: "Raw",
+
+    accentColor:    "#9e876a",
+    accentColorDim: "rgba(158,135,106,.15)",
+
+    thesis: "Seoul in November is a city watching something leave and not quite ready to let it go.",
+
+    season: "Autumn Strip",
+
+    metadata: {
+      energy:      3,
+      daylight:    3,
+      streetLife:  4,
+      socialHours: 4,
+      comfort:     3,
+      momentum:    3,
+    },
+
+    scene: `It's 4pm in Bukchon Hanok Village. The maple trees at the end of the alley are half-turned — some still green, some the specific orange-red that only lasts three days before it is gone. A woman in a padded coat is photographing one branch. The hanok rooftiles are dark from last night's rain. The street vendor selling hotteok is doing the most business of the day.`,
+
+    sceneAnchors: [
+      {
+        place: "Changdeokgung Palace Secret Garden",
+        text: "The walled garden open only by guided tour where November has one of the densest concentrations of autumn color in the city. The ginkgo trees turn the same yellow-gold every year and people come from three hours away to see them do it.",
+      },
+      {
+        place: "Insadong on a weekday",
+        text: "The art-and-tea street that loses its weekend crowd in November and becomes navigable again. Tea houses with heated floors. A ceramics gallery with nothing in the window. The kind of afternoon that exists in this city only in this month.",
+      },
+      {
+        place: "Hangang Park on a November evening",
+        text: "The long riverside park where the summer barbecue crowd has gone and the November crowd is thinner and quieter. People walk alongside the river with their hands in their pockets. The water is dark.",
+      },
+    ],
+
+    locals: `Drinking makgeolli at the pojangmacha tents that appeared in October. Visiting the palace gardens for the last leaves before they fall. Eating hotteok from the street cart because it is finally cold enough for it. Going to a jjimjilbang on a night that is too cold for anything else.`,
+
+    localWord: {
+      term:          "nunchi",
+      pronunciation: "noon-chee",
+      translation:   "the ability to read a room without being told what it needs",
+      body:          "November in Seoul is the season of nunchi. The city knows what it needs: warmth, closeness, the particular Korean art of sitting down together for a long dinner without naming what you are doing. You start to develop it yourself by the second week.",
+    },
+
+    changes: `You stop spending and start receiving. The city in summer is giving you its best performance. In November it is just living in front of you. The street food is better because you need it. The tea house is better because you need it.`,
+
+    start: `Sitting on heated floors. Taking the long way through the market. Finding the neighborhood barbecue spot that has no sign and no English menu.`,
+
+    stop: `Moving fast between landmarks. November in Seoul is not a museum month. It is a sit-at-the-table month.`,
+
+    returns: `The value of warmth. Not abstract warmth — the specific warmth of a heated floor, a bowl brought to you steaming, walking into somewhere small after the cold of the street.`,
+
+    remember: `The leaves fell before you were done looking.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "September", body: "The summer heat is breaking and the city feels light.",       current: false },
+        { label: "November",  body: "The ginkgos have ten days left and everyone knows it.",       current: true  },
+        { label: "January",   body: "The Han River is frozen and Seoul is at its most interior.",  current: false },
+      ],
+    },
+
+    next: [
+      { city: "Osaka",  month: "January",  storyline: "The Warmest Table",   href: "osaka-january.html"  },
+      { city: "Tokyo",  month: "April",    storyline: "The Permission",      href: "tokyo-april.html"    },
+      { city: "Sydney", month: "December", storyline: "The Holidays Move Outside", href: "sydney-december.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

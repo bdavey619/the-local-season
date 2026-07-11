@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lisbon — February · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Lisbon",
+    month:     "February",
+    storyline: "Before the Season",
+
+    archetype: "Open",
+
+    accentColor:    "#6b9eb5",
+    accentColorDim: "rgba(107,158,181,.15)",
+
+    thesis: "Lisbon in February is a city still mostly its own.",
+
+    season: "Pre-Season",
+
+    metadata: {
+      energy:      3,
+      daylight:    3,
+      streetLife:  4,
+      socialHours: 3,
+      comfort:     3,
+      momentum:    3,
+    },
+
+    scene: `It's 11am at a pastelaria in Mouraria. The counter has six stools and they are all taken by people who live here. A man in paint-stained trousers. Two women talking without looking up from their phones. The pasteis de nata are still warm from the oven. The bill is one euro forty.`,
+
+    sceneAnchors: [
+      {
+        place: "Miradouro da Graca",
+        text: "The viewpoint the guidebooks don't lead with. In February it has the benches mostly to itself. The city below spreads west toward the river and nobody here is explaining what they're looking at.",
+      },
+      {
+        place: "Feira da Ladra",
+        text: "The Tuesday and Saturday flea market at Campo de Santa Clara that is selling to itself in February. Postcards from 1973. Someone buying a lamp they don't need. A vendor who has set up in the same spot since before the neighborhood changed.",
+      },
+      {
+        place: "Alfama after 3pm",
+        text: "The steep streets that empty once the restaurant lunch rush is done. In February the tourists who came down by tram have gone back up. The afternoon belongs to the hill.",
+      },
+    ],
+
+    locals: `Walking to the market. Sitting at cafe counters. Moving through Alfama on the shortcuts that don't appear on any map. Taking the 28 tram from one end to the other and getting off where they live, not where the views are.`,
+
+    localWord: {
+      term:          "saudade",
+      pronunciation: "saw-DAH-deh",
+      translation:   "a longing for something you cannot quite name",
+      body:          "Not nostalgia — saudade does not require distance. In February, walking through Alfama at dusk, it is not clear whether what you are feeling is for a place you left or one you have not finished arriving in.",
+    },
+
+    changes: `The city becomes legible. In summer Lisbon is a destination; in February it is a neighborhood. You start to understand which streets go where — not because you studied them but because you walked them without crowds redirecting you.`,
+
+    start: `Taking the tram as transportation, not sightseeing. Eating lunch when the counter has one seat left. Walking uphill after dark because the view at night costs nothing.`,
+
+    stop: `Optimizing for the best-rated. The pastelaria without reviews is the one where the stools are always full.`,
+
+    returns: `The unhurried version of arrival. The version where you are allowed to be a regular after two days.`,
+
+    remember: `The city was here before the season. In February it still is.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "October", body: "The last of the season crowd is thinning and the city is sighing.",             current: false },
+        { label: "February", body: "The stools at the counter still have room.",                                   current: true  },
+        { label: "June",    body: "Every miradouro has a line and the rent has changed the neighborhood.",         current: false },
+      ],
+    },
+
+    next: [
+      { city: "Mexico City", month: "March",   storyline: "Before the Heat",        href: "mexico-city-march.html" },
+      { city: "Porto",       month: "August",  storyline: "After the Rush",          href: "porto-august.html"      },
+      { city: "Palermo",     month: "October", storyline: "The Locals Return",       href: "palermo-october.html"   },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

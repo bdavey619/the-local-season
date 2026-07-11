@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Palermo — October · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Palermo",
+    month:     "October",
+    storyline: "The Locals Return",
+
+    archetype: "Local",
+
+    accentColor:    "#c47a3a",
+    accentColorDim: "rgba(196,122,58,.15)",
+
+    thesis: "Palermo in October is when the city gets itself back.",
+
+    season: "Local Season",
+
+    metadata: {
+      energy:      4,
+      daylight:    3,
+      streetLife:  5,
+      socialHours: 4,
+      comfort:     5,
+      momentum:    4,
+    },
+
+    scene: `It's 7pm in the Vucciria. The last tourist has walked back to the hotel. The fruit vendor is packing up the day's last mangoes. A group of teenagers on scooters circles the fountain. A man is setting up a table on the pavement outside his building that has no stated purpose but will be there until midnight. Nobody is taking photos.`,
+
+    sceneAnchors: [
+      {
+        place: "Ballaro market in the morning",
+        text: "The oldest market in Palermo where October means the vendors are selling to the neighborhood again. Eggplants the size of a fist. Someone arguing the price of swordfish. The market that does not adjust itself for visitors.",
+      },
+      {
+        place: "Piazza Pretoria after dark",
+        text: "The baroque fountain the locals call the piazza of shame. In October, after 9pm, it belongs to couples, old men in chairs, teenagers on the steps. The tour groups have gone.",
+      },
+      {
+        place: "Mondello on a weekday",
+        text: "The beach town fifteen minutes from the center that is abandoned by September and reclaimed in October by Palermitani who go there on a Tuesday because they can. The lido chairs are mostly stacked. The water is still warm.",
+      },
+    ],
+
+    locals: `Going to Mondello on a weekday. Shopping at Ballaro without a list. Sitting in the piazza without acknowledging that it is a famous piazza. Eating arancine at the bar on the corner for breakfast because that is what you do on a Tuesday in October.`,
+
+    localWord: {
+      term:        "fare una passeggiata",
+      translation: "to take a walk that is not for exercise or destination",
+      body:        "The Italian institution, but October in Palermo is when it reclaims its original meaning. The passeggiata is not tourism. It is being in the city without a reason. In October you do not need one.",
+    },
+
+    changes: `The street noise changes register. The summer sound — scooter horns, raised voices, tourists with maps — softens into the October sound, which is the city talking to itself. You start to hear it around day two.`,
+
+    start: `Walking without the map. Eating at the counter. Going to the market before the bread runs out.`,
+
+    stop: `The itinerary. Palermo in October does not reward the plan. It rewards the detour.`,
+
+    returns: `The sense that you are in someone else's city, not a set for your photos. That the square you are standing in existed before you arrived and will exist after you leave.`,
+
+    remember: `The summer left. You stayed.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "August",  body: "The city runs at full tourist capacity and the locals go to the mountains.",      current: false },
+        { label: "October", body: "Ballaro opens at 6am and only Palermitani are there.",                            current: true  },
+        { label: "December", body: "The city goes quiet for a different reason and the streets belong to those who never left.", current: false },
+      ],
+    },
+
+    next: [
+      { city: "San Diego", month: "September", storyline: "Summer After Summer",  href: "san-diego-september.html" },
+      { city: "Porto",     month: "August",    storyline: "After the Rush",        href: "porto-august.html"        },
+      { city: "Lisbon",    month: "February",  storyline: "Before the Season",     href: "lisbon-february.html"     },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

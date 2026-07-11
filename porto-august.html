@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Porto — August · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Porto",
+    month:     "August",
+    storyline: "After the Rush",
+
+    archetype: "Quiet",
+
+    accentColor:    "#b07a5a",
+    accentColorDim: "rgba(176,122,90,.15)",
+
+    thesis: "Porto in August, past the first week, is a city that has started breathing again.",
+
+    season: "Late Summer",
+
+    metadata: {
+      energy:      3,
+      daylight:    4,
+      streetLife:  3,
+      socialHours: 3,
+      comfort:     3,
+      momentum:    3,
+    },
+
+    scene: `It's 4pm on a Sunday in Miragaia. The riverside is not empty but it is not loud. A woman is reading at one of the outdoor cafe tables. A fisherman is at the water below the retaining wall, which he does here every Sunday regardless of the month. A tuk-tuk passes going uphill. The tiles on the building opposite are the color of the hour.`,
+
+    sceneAnchors: [
+      {
+        place: "Ribeira after 3pm",
+        text: "The riverside neighborhood that empties after tourist lunch and fills again at dusk with people who are staying. In August the afternoon gap is visible. The restaurants reset. The waiters eat.",
+      },
+      {
+        place: "Serra do Pilar, Vila Nova de Gaia",
+        text: "The monastery across the river where August evenings bring Porto residents over the bridge for the view back. They bring wine. They don't take photos. They have done this before.",
+      },
+      {
+        place: "Foz do Douro",
+        text: "Where the Douro meets the Atlantic and the swimming beach belongs mostly to people who live within a bus ride. On a weekday afternoon the families have the rocks and the water to themselves.",
+      },
+    ],
+
+    locals: `Swimming at Foz on a Tuesday. Taking the cable car for the view, not the photo. Going to the miradouros at dusk rather than midday. Eating dinner late, eating sardines, eating outside because it has not yet occurred to them to do otherwise.`,
+
+    localWord: {
+      term:        "pacato",
+      translation: "unhurried, undisturbed",
+      body:        "Not a Porto-specific word, but August in Porto — past the peak of mid-month — has a specific pacato quality. The city is still open, the wine lodges still full, but the urgency has slowed. You can tell in how people walk.",
+    },
+
+    changes: `The city shows its seams. The August tourists concentrate around the river and the bookshop. Everywhere else — the streets behind Santa Catarina, the Bonfim neighborhood, Rua de Cedofeita in the evening — belongs to the people who live here.`,
+
+    start: `Crossing the bridge to Gaia for the view back across the water. Taking the bus to Foz when the afternoon gets too hot for the tiles. Finding the local grocery because the tourist one is out of something.`,
+
+    stop: `The peak-hours plan. August in Porto rewards the margins — the early market, the late miradouro. The middle of the day is for shade.`,
+
+    returns: `The awareness of tile. Azulejos are everywhere but you only start seeing them — really seeing them — when you have slowed down enough to stop in front of one.`,
+
+    remember: `The tourists came for the view. You stayed long enough to stop needing it.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "June",    body: "The city is filling and the terrasses feel new.",                               current: false },
+        { label: "August",  body: "The third week, when it thins enough to feel like the city you came for.",      current: true  },
+        { label: "October", body: "The wine harvest brings a different kind of busy — one that belongs here.",     current: false },
+      ],
+    },
+
+    next: [
+      { city: "Palermo",  month: "October",  storyline: "The Locals Return",  href: "palermo-october.html"  },
+      { city: "Lisbon",   month: "February", storyline: "Before the Season",   href: "lisbon-february.html"  },
+      { city: "San Diego", month: "September", storyline: "Summer After Summer", href: "san-diego-september.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>
