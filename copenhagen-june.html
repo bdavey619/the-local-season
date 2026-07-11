@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copenhagen — June · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  <!--
+    ══════════════════════════════════════════════════════════════════
+    HOW TO ADD A NEW CITY-MONTH
+    ──────────────────────────────────────────────────────────────────
+    1. Copy any existing page (e.g. san-diego-september.html) to a
+       new file named [city]-[month].html
+    2. Replace the PAGE object below with your new city data
+    3. assets/render.js builds the full page automatically — no HTML
+       changes needed
+    4. Add an href entry in the `next` array of related pages so the
+       Explore Next cards link correctly
+    ══════════════════════════════════════════════════════════════════
+
+    PAGE SCHEMA — CityMonth
+    ──────────────────────────────────────────────────────────────────
+    Future TypeScript type (content/types.ts):
+
+    interface SceneAnchor  { place: string; text: string }
+    interface LocalWord    { term: string; pronunciation?: string; translation: string; body: string }
+    interface NextCity     { city: string; month: string; storyline: string; href?: string }
+    interface ContrastItem { label: string; body: string; current: boolean }
+
+    interface CityMonth {
+      // Identity
+      city: string; month: string; storyline: string; archetype: string
+      accentColor: string; accentColorDim: string
+
+      // Editorial
+      thesis: string
+      scene: string
+      sceneAnchors: SceneAnchor[]
+      locals: string
+      localWord: LocalWord
+      changes: string
+      start: string
+      stop: string
+      returns: string
+      remember: string
+      seasonalContrast: { title: string; items: ContrastItem[] }
+      next: NextCity[]
+
+      // Not yet rendered
+      season: string
+      metadata: Record<string, number>
+
+      // Small ritual is not a food recommendation.
+      // It should describe how food or drink extends a routine.
+      ritual?: { title: string; body: string }
+    }
+  -->
+  const PAGE = {
+
+    // ── Identity ─────────────────────────────────────────────────────
+    city:      "Copenhagen",
+    month:     "June",
+    storyline: "The Longest Evenings",
+
+    // Archetype drives the accent colour. Current set: Electric | Quiet | Slow | Raw | Open | Local
+    archetype: "Electric",
+
+    // Explicit accent colours for this archetype (used by render.js to override CSS tokens)
+    accentColor:    "#c8a96e",
+    accentColorDim: "rgba(200,169,110,.15)",
+
+    // One sentence. States what the city does to the visitor.
+    thesis: "Copenhagen in June feels like a city that has collectively decided to spend less time indoors.",
+
+    // ── Season tag (not yet rendered) ────────────────────────────────
+    season: "Peak Social",
+
+    // ── Metadata (not yet rendered) ──────────────────────────────────
+    // Scale: 1–5. For future scoring UI, sorting, and filtering.
+    metadata: {
+      energy:      5,
+      daylight:    5,
+      streetLife:  5,
+      socialHours: 5,
+      comfort:     4,
+      momentum:    4,
+    },
+
+    // ── The Scene ────────────────────────────────────────────────────
+    // A specific moment: named place, named time, observed behavior.
+    scene: `It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to.`,
+
+    // 2–3 named locations. Each is a place + one specific observation.
+    sceneAnchors: [
+      {
+        place: "Islands Brygge Havnebadet",
+        text: "The harbour pool that made swimming in the city canal feel unremarkable. On a Tuesday in June, the queue for the tall jump platform is mostly children and one man in his fifties who appears to do this every week.",
+      },
+      {
+        place: "Søerne",
+        text: "Three thin glacial lakes running north to south through the middle of the city. The path along the eastern bank is where you go to feel the shape of a June evening — the light holds flat on the water, and the people moving alongside it have nowhere they appear to be going.",
+      },
+      {
+        place: "Assistens Kirkegård",
+        text: "A working cemetery in Nørrebro that locals have quietly converted into a park. Blankets between graves. Children. Someone reading near the stone of the person they're reading. The most honest public space in the city.",
+      },
+    ],
+
+    // ── Sections ─────────────────────────────────────────────────────
+
+    locals: `Work ends and people don't disappear. They move toward water. Bikes replace trains. The grass along Peblinge Sø fills with people who brought wine in water bottles. The harbours become swimming pools. Nobody sends an agenda for what happens next.`,
+
+    localWord: {
+      term:          "aftensol",
+      pronunciation: "af-ten-sol",
+      translation:   "the evening light that makes the day feel unfinished",
+      body:          "Not just sunset. Not golden hour. The long, usable light that makes 9pm feel unfinished.",
+    },
+
+    changes: `Sometime around day three, you stop checking the time before deciding to go outside. The sky at 9pm looks suspiciously like 6pm. You eat dinner later than you meant to — not because the restaurant was full, but because nothing in the light told you it was time.`,
+
+    start: `You start accepting distance. Eating outside without a table. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave.`,
+
+    stop: `Dinner. You pick up a pølse from a corner kiosk on the way somewhere and it's enough. You stop planning the evening. The city doesn't require it.`,
+
+    returns: `Margin. Not more hours exactly. Just enough room in the day that nothing feels late. You wait for someone outside a café without looking at your phone. You sit on the harbour edge doing nothing in particular. In June it just feels like being in Copenhagen.`,
+
+    remember: `The city doesn't ask you to do more. It convinces you there's more time.`,
+
+    // ── Seasonal contrast ────────────────────────────────────────────
+    // Compare behaviors across seasons, not weather statistics.
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "Winter",  body: "People gather closer.",               current: false },
+        { label: "June",    body: "People forget to go home.",           current: true  },
+        { label: "Autumn",  body: "People start noticing sunset again.", current: false },
+      ],
+    },
+
+    // ── Small ritual (not yet rendered) ─────────────────────────────
+    // Small ritual is not a food recommendation.
+    // It should describe how food or drink extends a routine.
+    ritual: {
+      title: "Small ritual",
+      body:  "Cold wine in a water bottle at Søerne.",
+    },
+
+    // ── Navigation ──────────────────────────────────────────────────
+    // href is optional; defaults to "#" if omitted
+    next: [
+      { city: "San Diego", month: "September", storyline: "Summer After Summer",          href: "san-diego-september.html" },
+      { city: "Palermo",   month: "October",   storyline: "The Locals Return",           href: "palermo-october.html"     },
+      { city: "Dublin",    month: "May",        storyline: "Everyone Comes Back Outside", href: "dublin-may.html"          },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

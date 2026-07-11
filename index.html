@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Copenhagen — June · The Local Season</title>
+  <title>The Local Season</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,162 +12,218 @@
     rel="stylesheet"
   />
   <link rel="stylesheet" href="assets/style.css" />
+
+  <style>
+    /* ── Landing-specific styles ─────────────────────────────────── */
+
+    .home-hero {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-lg);
+      border-bottom: 1px solid var(--rule);
+    }
+    .home-hero .container {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: var(--space-md);
+    }
+    .home-hero__title {
+      font-family: var(--serif);
+      font-size: clamp(2.8rem, 7vw, 4.8rem);
+      font-weight: 400;
+      line-height: 1.02;
+      letter-spacing: -.015em;
+      color: var(--ink);
+      margin-bottom: 1.5rem;
+    }
+    .home-hero__philosophy {
+      font-family: var(--serif);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.65;
+      max-width: 520px;
+      margin-bottom: var(--space-lg);
+    }
+    .home-hero__count {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .home-hero__count::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--ink-muted);
+    }
+
+    /* ── City grid ───────────────────────────────────────────────── */
+    .city-index {
+      padding-block: var(--space-xl);
+    }
+    .city-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+    @media (min-width: 560px) {
+      .city-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 900px) {
+      .city-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    /* ── City card ───────────────────────────────────────────────── */
+    .city-card {
+      background: var(--paper);
+      padding: var(--space-md) var(--space-md) 1.75rem;
+      border-left: 3px solid var(--card-accent, var(--ink-muted));
+      display: flex;
+      flex-direction: column;
+      transition: background 0.15s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .city-card:hover { background: var(--paper-warm); }
+
+    .city-card__month {
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-bottom: 0.35rem;
+    }
+    .city-card__city {
+      font-family: var(--serif);
+      font-size: 1.45rem;
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--ink);
+      margin-bottom: 0.15rem;
+    }
+    .city-card__storyline {
+      font-family: var(--serif);
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.5;
+      margin-bottom: 0.85rem;
+      flex-grow: 1;
+    }
+    .city-card__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.18rem 0.5rem;
+      border: 1px solid var(--card-accent, var(--ink-muted));
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 0.54rem;
+      font-weight: 500;
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      color: var(--card-accent, var(--ink-muted));
+      width: fit-content;
+      margin-top: auto;
+    }
+    .city-card__badge::before {
+      content: '';
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--card-accent, var(--ink-muted));
+      flex-shrink: 0;
+    }
+    .city-card__arrow {
+      display: block;
+      margin-top: 0.75rem;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .city-card { transition: none; }
+    }
+  </style>
 </head>
 
 <body>
-<div id="page-root"></div>
+
+<nav class="site-nav">
+  <span class="site-nav__brand">The Local Season</span>
+  <span class="site-nav__label">A city is different every month</span>
+</nav>
+
+<header class="home-hero">
+  <div class="container">
+    <h1 class="home-hero__title">The Local<br>Season</h1>
+    <p class="home-hero__philosophy">
+      Travel is not only movement through geography.<br>
+      It is temporary membership in another routine.
+    </p>
+    <p class="home-hero__count">Twelve cities &nbsp;·&nbsp; Twelve months</p>
+  </div>
+</header>
+
+<main>
+  <section class="city-index">
+    <div class="container container--wide">
+      <div class="city-grid" id="city-grid"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container container--wide" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;width:100%;">
+    <span class="site-footer__brand">The Local Season</span>
+    <span class="site-footer__copy">The goal is not peak weather. The goal is the energy that makes a city feel most like itself.</span>
+  </div>
+</footer>
 
 <script>
-  <!--
-    ══════════════════════════════════════════════════════════════════
-    HOW TO ADD A NEW CITY-MONTH
-    ──────────────────────────────────────────────────────────────────
-    1. Copy any existing page (e.g. san-diego-september.html) to a
-       new file named [city]-[month].html
-    2. Replace the PAGE object below with your new city data
-    3. assets/render.js builds the full page automatically — no HTML
-       changes needed
-    4. Add an href entry in the `next` array of related pages so the
-       Explore Next cards link correctly
-    ══════════════════════════════════════════════════════════════════
+  var PAGES = [
+    { month: "January",   city: "Osaka",       storyline: "The Warmest Table",           archetype: "Quiet",    accent: "#b07840", href: "osaka-january.html"      },
+    { month: "February",  city: "Lisbon",       storyline: "Before the Season",           archetype: "Open",     accent: "#6b9eb5", href: "lisbon-february.html"    },
+    { month: "March",     city: "Mexico City",  storyline: "Before the Heat",             archetype: "Slow",     accent: "#c4785a", href: "mexico-city-march.html"  },
+    { month: "April",     city: "Tokyo",        storyline: "The Permission",              archetype: "Electric", accent: "#c49eb0", href: "tokyo-april.html"        },
+    { month: "May",       city: "Dublin",       storyline: "Everyone Comes Back Outside", archetype: "Open",     accent: "#7a9e7a", href: "dublin-may.html"         },
+    { month: "June",      city: "Copenhagen",   storyline: "The Longest Evenings",        archetype: "Electric", accent: "#c8a96e", href: "copenhagen-june.html"    },
+    { month: "July",      city: "Montreal",     storyline: "The City That Summers Hard",  archetype: "Electric", accent: "#c49e3a", href: "montreal-july.html"      },
+    { month: "August",    city: "Porto",        storyline: "After the Rush",              archetype: "Quiet",    accent: "#b07a5a", href: "porto-august.html"       },
+    { month: "September", city: "San Diego",    storyline: "Summer After Summer",         archetype: "Local",    accent: "#c4853a", href: "san-diego-september.html"},
+    { month: "October",   city: "Palermo",      storyline: "The Locals Return",           archetype: "Local",    accent: "#c47a3a", href: "palermo-october.html"    },
+    { month: "November",  city: "Seoul",        storyline: "The City That Browns Slowly", archetype: "Raw",      accent: "#9e876a", href: "seoul-november.html"     },
+    { month: "December",  city: "Sydney",       storyline: "The Holidays Move Outside",   archetype: "Open",     accent: "#5a9eb5", href: "sydney-december.html"    },
+  ];
 
-    PAGE SCHEMA — CityMonth
-    ──────────────────────────────────────────────────────────────────
-    Future TypeScript type (content/types.ts):
-
-    interface SceneAnchor  { place: string; text: string }
-    interface LocalWord    { term: string; pronunciation?: string; translation: string; body: string }
-    interface NextCity     { city: string; month: string; storyline: string; href?: string }
-    interface ContrastItem { label: string; body: string; current: boolean }
-
-    interface CityMonth {
-      // Identity
-      city: string; month: string; storyline: string; archetype: string
-      accentColor: string; accentColorDim: string
-
-      // Editorial
-      thesis: string
-      scene: string
-      sceneAnchors: SceneAnchor[]
-      locals: string
-      localWord: LocalWord
-      changes: string
-      start: string
-      stop: string
-      returns: string
-      remember: string
-      seasonalContrast: { title: string; items: ContrastItem[] }
-      next: NextCity[]
-
-      // Not yet rendered
-      season: string
-      metadata: Record<string, number>
-
-      // Small ritual is not a food recommendation.
-      // It should describe how food or drink extends a routine.
-      ritual?: { title: string; body: string }
-    }
-  -->
-  const PAGE = {
-
-    // ── Identity ─────────────────────────────────────────────────────
-    city:      "Copenhagen",
-    month:     "June",
-    storyline: "The Longest Evenings",
-
-    // Archetype drives the accent colour. Current set: Electric | Quiet | Slow | Raw | Open | Local
-    archetype: "Electric",
-
-    // Explicit accent colours for this archetype (used by render.js to override CSS tokens)
-    accentColor:    "#c8a96e",
-    accentColorDim: "rgba(200,169,110,.15)",
-
-    // One sentence. States what the city does to the visitor.
-    thesis: "Copenhagen in June feels like a city that has collectively decided to spend less time indoors.",
-
-    // ── Season tag (not yet rendered) ────────────────────────────────
-    season: "Peak Social",
-
-    // ── Metadata (not yet rendered) ──────────────────────────────────
-    // Scale: 1–5. For future scoring UI, sorting, and filtering.
-    metadata: {
-      energy:      5,
-      daylight:    5,
-      streetLife:  5,
-      socialHours: 5,
-      comfort:     4,
-      momentum:    4,
-    },
-
-    // ── The Scene ────────────────────────────────────────────────────
-    // A specific moment: named place, named time, observed behavior.
-    scene: `It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to.`,
-
-    // 2–3 named locations. Each is a place + one specific observation.
-    sceneAnchors: [
-      {
-        place: "Islands Brygge Havnebadet",
-        text: "The harbour pool that made swimming in the city canal feel unremarkable. On a Tuesday in June, the queue for the tall jump platform is mostly children and one man in his fifties who appears to do this every week.",
-      },
-      {
-        place: "Søerne",
-        text: "Three thin glacial lakes running north to south through the middle of the city. The path along the eastern bank is where you go to feel the shape of a June evening — the light holds flat on the water, and the people moving alongside it have nowhere they appear to be going.",
-      },
-      {
-        place: "Assistens Kirkegård",
-        text: "A working cemetery in Nørrebro that locals have quietly converted into a park. Blankets between graves. Children. Someone reading near the stone of the person they're reading. The most honest public space in the city.",
-      },
-    ],
-
-    // ── Sections ─────────────────────────────────────────────────────
-
-    locals: `Work ends and people don't disappear. They move toward water. Bikes replace trains. The grass along Peblinge Sø fills with people who brought wine in water bottles. The harbours become swimming pools. Nobody sends an agenda for what happens next.`,
-
-    localWord: {
-      term:          "aftensol",
-      pronunciation: "af-ten-sol",
-      translation:   "the evening light that makes the day feel unfinished",
-      body:          "Not just sunset. Not golden hour. The long, usable light that makes 9pm feel unfinished.",
-    },
-
-    changes: `Sometime around day three, you stop checking the time before deciding to go outside. The sky at 9pm looks suspiciously like 6pm. You eat dinner later than you meant to — not because the restaurant was full, but because nothing in the light told you it was time.`,
-
-    start: `You start accepting distance. Eating outside without a table. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave.`,
-
-    stop: `Dinner. You pick up a pølse from a corner kiosk on the way somewhere and it's enough. You stop planning the evening. The city doesn't require it.`,
-
-    returns: `Margin. Not more hours exactly. Just enough room in the day that nothing feels late. You wait for someone outside a café without looking at your phone. You sit on the harbour edge doing nothing in particular. In June it just feels like being in Copenhagen.`,
-
-    remember: `The city doesn't ask you to do more. It convinces you there's more time.`,
-
-    // ── Seasonal contrast ────────────────────────────────────────────
-    // Compare behaviors across seasons, not weather statistics.
-    seasonalContrast: {
-      title: "Not always like this",
-      items: [
-        { label: "Winter",  body: "People gather closer.",               current: false },
-        { label: "June",    body: "People forget to go home.",           current: true  },
-        { label: "Autumn",  body: "People start noticing sunset again.", current: false },
-      ],
-    },
-
-    // ── Small ritual (not yet rendered) ─────────────────────────────
-    // Small ritual is not a food recommendation.
-    // It should describe how food or drink extends a routine.
-    ritual: {
-      title: "Small ritual",
-      body:  "Cold wine in a water bottle at Søerne.",
-    },
-
-    // ── Navigation ──────────────────────────────────────────────────
-    // href is optional; defaults to "#" if omitted
-    next: [
-      { city: "San Diego", month: "September", storyline: "Summer After Summer",          href: "san-diego-september.html" },
-      { city: "Palermo",   month: "October",   storyline: "The Locals Return",           href: "palermo-october.html"     },
-      { city: "Dublin",    month: "May",        storyline: "Everyone Comes Back Outside", href: "dublin-may.html"          },
-    ],
-  };
+  var grid = document.getElementById('city-grid');
+  PAGES.forEach(function(p) {
+    var card = document.createElement('a');
+    card.className = 'city-card';
+    card.href = p.href;
+    card.style.setProperty('--card-accent', p.accent);
+    card.innerHTML =
+      '<p class="city-card__month">' + p.month + '</p>' +
+      '<p class="city-card__city">' + p.city + '</p>' +
+      '<p class="city-card__storyline">' + p.storyline + '</p>' +
+      '<span class="city-card__badge">' + p.archetype + '</span>' +
+      '<span class="city-card__arrow">Read →</span>';
+    grid.appendChild(card);
+  });
 </script>
-<script src="assets/render.js"></script>
+
 </body>
 </html>
