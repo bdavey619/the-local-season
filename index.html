@@ -62,6 +62,10 @@
       // Not yet rendered
       season: string
       metadata: Record<string, number>
+
+      // Small ritual is not a food recommendation.
+      // It should describe how food or drink extends a routine.
+      ritual?: { title: string; body: string }
     }
   -->
   const PAGE = {
@@ -145,6 +149,14 @@
         { label: "June",    body: "People forget to go home.",           current: true  },
         { label: "Autumn",  body: "People start noticing sunset again.", current: false },
       ],
+    },
+
+    // ── Small ritual (not yet rendered) ─────────────────────────────
+    // Small ritual is not a food recommendation.
+    // It should describe how food or drink extends a routine.
+    ritual: {
+      title: "Small ritual",
+      body:  "Cold wine in a water bottle at Søerne.",
     },
 
     // ── Navigation ──────────────────────────────────────────────────
