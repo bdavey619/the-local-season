@@ -56,11 +56,20 @@ Pages are not meant to determine the best time to visit. They explain why a mome
 
 ## Current pages
 
-**Copenhagen — June** · *The Longest Evenings*  
-How long daylight changes routine.
-
-**San Diego — September** · *Summer After Summer*  
-How late-season conditions give weekdays back.
+| Month | City | Storyline | Archetype |
+|-------|------|-----------|-----------|
+| January | **Osaka** (`osaka-january.html`) | The Warmest Table | Quiet |
+| February | **Lisbon** (`lisbon-february.html`) | Before the Season | Open |
+| March | **Mexico City** (`mexico-city-march.html`) | Before the Heat | Slow |
+| April | **Tokyo** (`tokyo-april.html`) | The Permission | Electric |
+| May | **Dublin** (`dublin-may.html`) | Everyone Comes Back Outside | Open |
+| June | **Copenhagen** (`index.html`) | The Longest Evenings | Electric |
+| July | **Montreal** (`montreal-july.html`) | The City That Summers Hard | Electric |
+| August | **Porto** (`porto-august.html`) | After the Rush | Quiet |
+| September | **San Diego** (`san-diego-september.html`) | Summer After Summer | Local |
+| October | **Palermo** (`palermo-october.html`) | The Locals Return | Local |
+| November | **Seoul** (`seoul-november.html`) | The City That Browns Slowly | Raw |
+| December | **Sydney** (`sydney-december.html`) | The Holidays Move Outside | Open |
 
 ---
 

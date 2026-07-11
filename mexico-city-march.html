@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mexico City — March · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Mexico City",
+    month:     "March",
+    storyline: "Before the Heat",
+
+    archetype: "Slow",
+
+    accentColor:    "#c4785a",
+    accentColorDim: "rgba(196,120,90,.15)",
+
+    thesis: "Mexico City in March is a city at full capacity without being at full speed.",
+
+    season: "Dry Season",
+
+    metadata: {
+      energy:      3,
+      daylight:    4,
+      streetLife:  4,
+      socialHours: 4,
+      comfort:     5,
+      momentum:    3,
+    },
+
+    scene: `It's 9am in Roma Norte. A cafe has tables on the sidewalk and they are all occupied by people who have no apparent plan to leave. A man with a book. Two people talking with their coffees still full. The jacaranda trees along the street are just beginning to drop their purple flowers on the pavement. A dog is asleep under one of the chairs. Nobody has asked for the check.`,
+
+    sceneAnchors: [
+      {
+        place: "Parque Mexico",
+        text: "The oval park in Condesa where March brings the best morning light before the heat of April makes it something to avoid. People walking dogs, people on benches with coffee from the cart near the entrance, a man doing tai chi in the corner he has used for years.",
+      },
+      {
+        place: "Mercado de Medellin",
+        text: "The covered market in Roma Sur that has not become a food hall yet. Fruit in towers. A stall serving tortas where the bread is baked that morning. The transaction is fast and so is the breakfast, and then you take it outside.",
+      },
+      {
+        place: "Coyoacan on a Sunday morning",
+        text: "The colonial neighborhood where Sunday is still Sunday — the market, the plaza, the strolling that has no destination attached to it. The cobblestones are shaded by trees. Nobody has checked the time.",
+      },
+    ],
+
+    locals: `Taking Sunday seriously. Walking in the park with coffee they brought from home. Sitting in restaurants past the point of eating. Making the breakfast last until noon without intending to. The pace here is not laziness — it is agreement.`,
+
+    localWord: {
+      term:        "sobremesa",
+      translation: "the time after the meal when no one moves",
+      body:        "The meal ends. The table does not. Nobody reaches for the check. Nobody is waiting for something else. This is not waiting — it is the point. Mexico City in March has the weather and the temperament for it.",
+    },
+
+    changes: `Your pace adjusts within a day. The city is not slow in the sense of idle — everything is open and the streets are full. The slowness is an agreement between the people here about how long a thing is allowed to take.`,
+
+    start: `Taking the second coffee. Staying at the table past the point of eating. Walking in the direction of the park without a plan for what to do once you get there.`,
+
+    stop: `The itinerary. Mexico City in March rewards the unhurried hour more than the scheduled stop. The best meal you have will not be the one you planned.`,
+
+    returns: `The version of a day that has room in it. The kind of morning that ends at noon and leaves you wondering where it went without any regret about it.`,
+
+    remember: `The jacaranda had already started. You stayed long enough to notice.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "January",  body: "The city moves a little faster, the evenings a little cooler.",     current: false },
+        { label: "March",    body: "The trees are purple and no one is in a hurry.",                    current: true  },
+        { label: "May",      body: "The heat arrives and slows a different kind of movement.",          current: false },
+      ],
+    },
+
+    next: [
+      { city: "Tokyo",   month: "April",   storyline: "The Permission",         href: "tokyo-april.html"       },
+      { city: "Osaka",   month: "January", storyline: "The Warmest Table",      href: "osaka-january.html"     },
+      { city: "Sydney",  month: "December", storyline: "The Holidays Move Outside", href: "sydney-december.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

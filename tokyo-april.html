@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tokyo — April · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Tokyo",
+    month:     "April",
+    storyline: "The Permission",
+
+    archetype: "Electric",
+
+    accentColor:    "#c49eb0",
+    accentColorDim: "rgba(196,158,176,.15)",
+
+    thesis: "Tokyo in April is when a city that does not usually permit itself becomes briefly, collectively, off-duty.",
+
+    season: "Sakura",
+
+    metadata: {
+      energy:      5,
+      daylight:    4,
+      streetLife:  5,
+      socialHours: 5,
+      comfort:     4,
+      momentum:    5,
+    },
+
+    scene: `It's 5pm in Shinjuku Gyoen. Office workers in dress shirts are sitting on blue tarps under the cherry trees. Someone has a convenience store bento. Someone else has a portable speaker playing something low. Nobody is performing relaxation — they are actually doing it, which in Tokyo is rarer than the blossoms.`,
+
+    sceneAnchors: [
+      {
+        place: "Shinjuku Gyoen",
+        text: "The park that enforces quiet, closes at dusk, and still fills past capacity every April. By 4pm the ground is pink with fallen petals. By 5pm the dress shirts have loosened their collars.",
+      },
+      {
+        place: "Nakameguro canal",
+        text: "The stretch of water under the cherry trees that becomes the most photographed kilometer in Japan every spring. At 7am it is still quiet. By noon the crowds arrive. The locals come at 7am.",
+      },
+      {
+        place: "Yoyogi Park on a Sunday",
+        text: "Where the hanami groups have been here since morning and will stay past dark. A man playing guitar. A group of students asleep on a tarp. The city has decided that today counts differently.",
+      },
+    ],
+
+    locals: `Arriving at parks before 8am to hold spots with a tarp. Eating under trees in work clothes on weeknights. Staying later than seems reasonable. Treating the blossoms with a specific mixture of joy and conscious awareness that it will end in a week.`,
+
+    localWord: {
+      term:          "mono no aware",
+      pronunciation: "moh-no no ah-WAH-reh",
+      translation:   "the bittersweet awareness of impermanence",
+      body:          "The cherry blossom is the annual tutorial. The point is not to enjoy the bloom but to be aware that it ends. In April, Tokyo is briefly a city where impermanence is scheduled and attended.",
+    },
+
+    changes: `The city loosens. Not in a way you would predict — it is not louder or more chaotic. It is softer. Eye contact in the park. Groups of strangers close together on shared tarps. The permission to be present in a public space without a transaction attached.`,
+
+    start: `Getting to the park before the crowds. Buying something from the convenience store and eating it outside. Staying past when the light is good, because the light is good for a long time.`,
+
+    stop: `The indoor agenda. April in Tokyo has one event. It lasts about ten days. Being inside for it is a loss you would only recognize later.`,
+
+    returns: `The awareness of duration. The blossoms last a week. After a day or two you start measuring time differently — not in hours but in petals.`,
+
+    remember: `The blossoms are the excuse. The city just needed one.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "March",   body: "The trees are bare and Tokyo is running at full efficiency.",             current: false },
+        { label: "April",   body: "The trees bloom and the city briefly remembers it is allowed to stop.",  current: true  },
+        { label: "May",     body: "The flowers are gone and nobody mentions them until next year.",          current: false },
+      ],
+    },
+
+    next: [
+      { city: "Copenhagen",   month: "June",    storyline: "The Longest Evenings",  href: "index.html"             },
+      { city: "Mexico City",  month: "March",   storyline: "Before the Heat",       href: "mexico-city-march.html" },
+      { city: "Seoul",        month: "November", storyline: "The City That Browns Slowly", href: "seoul-november.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

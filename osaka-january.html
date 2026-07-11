@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Osaka — January · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Osaka",
+    month:     "January",
+    storyline: "The Warmest Table",
+
+    archetype: "Quiet",
+
+    accentColor:    "#b07840",
+    accentColorDim: "rgba(176,120,64,.15)",
+
+    thesis: "Osaka in January is a city that has moved the party indoors and convinced you the indoors is where you wanted to be all along.",
+
+    season: "Deep Winter",
+
+    metadata: {
+      energy:      4,
+      daylight:    2,
+      streetLife:  3,
+      socialHours: 5,
+      comfort:     3,
+      momentum:    4,
+    },
+
+    scene: `It's 7:45pm at a ramen counter in Namba. Four seats left. Someone hands you a ticket from the vending machine before you even sit down. The broth is the whole reason for being here. The windows are fogged from the steam. A couple eat facing forward at the bar in the way you do when the food is the conversation. Nobody is performing anything for anyone.`,
+
+    sceneAnchors: [
+      {
+        place: "Kuromon Ichiba",
+        text: "The covered market that runs on local traffic in January. Vendors grilling things on skewers at 8am because the people who come here are on their way to work, not on their way to a photo.",
+      },
+      {
+        place: "Hozenji Yokocho",
+        text: "The stone-paved alley where restaurants open onto the street but barely. In January the narrow space between buildings holds heat. The moss on the stone statue is wet from last night's rain.",
+      },
+      {
+        place: "Tenjinbashisuji Shotengai",
+        text: "The longest covered shopping street in Japan, where the ceiling keeps the January cold out without keeping the city out. Old women with carts. A barber with no appointment book. The ordinary Tuesday that looks the same every month except that it's warm.",
+      },
+    ],
+
+    locals: `Eating standing up at market stalls. Waiting in small groups outside a counter they know. Taking the underground through Namba rather than the surface route. Arriving at a specific restaurant at a specific time because they know the karaage is ready at 6. The cold is not a deterrent — it is a reason.`,
+
+    localWord: {
+      term:          "kuidaore",
+      pronunciation: "kwee-dah-oh-reh",
+      translation:   "to ruin yourself eating",
+      body:          "The Osaka principle that overspending on food is not a problem but a value. In January it is not a tourist phrase. It is what happens when the cold makes you stay at the table longer than you planned.",
+    },
+
+    changes: `You stop eating for sustenance and start eating for warmth. The meal is not the pause between places. The restaurant is the place. You start noticing that the best counters have no menu in English, which has nothing to do with exclusion — they simply have not needed one.`,
+
+    start: `Eating two meals in the same neighborhood. Standing at a stall for something you didn't plan. Finding the place you'll come back to tomorrow and coming back.`,
+
+    stop: `Planning. Osaka in January rewards walking into whatever is steaming. The queue outside the unmarked door is the only review that matters.`,
+
+    returns: `The pleasure of a meal that is only about the meal. No view. No occasion. Just the broth and the counter and the hour.`,
+
+    remember: `You didn't come for the cold. But the cold sent you somewhere you wouldn't have gone.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "Summer",  body: "The city spills onto every sidewalk and the food is about the street.",                      current: false },
+        { label: "January", body: "The city has moved inside, and inside is where everything is.",                              current: true  },
+        { label: "Spring",  body: "Cherry blossom crowds arrive and Osaka becomes temporarily someone else's city.",             current: false },
+      ],
+    },
+
+    next: [
+      { city: "Lisbon",    month: "February", storyline: "Before the Season",       href: "lisbon-february.html"    },
+      { city: "Seoul",     month: "November", storyline: "The City That Browns Slowly", href: "seoul-november.html" },
+      { city: "Montreal",  month: "July",     storyline: "The City That Summers Hard",  href: "montreal-july.html"  },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Montreal — July · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Montreal",
+    month:     "July",
+    storyline: "The City That Summers Hard",
+
+    archetype: "Electric",
+
+    accentColor:    "#c49e3a",
+    accentColorDim: "rgba(196,158,58,.15)",
+
+    thesis: "Montreal in July is a city that winters hard and therefore summers harder.",
+
+    season: "Full Summer",
+
+    metadata: {
+      energy:      5,
+      daylight:    5,
+      streetLife:  5,
+      socialHours: 5,
+      comfort:     4,
+      momentum:    5,
+    },
+
+    scene: `It's 9pm on Saint-Laurent. Every restaurant has moved its tables to the sidewalk. A man is playing accordion near the corner. The terrasse at the bar across the street is full and there is a list and people are waiting outside on the pavement and not minding. The evening is warm. Everyone knows this will not last until November.`,
+
+    sceneAnchors: [
+      {
+        place: "Plateau-Mont-Royal on a July evening",
+        text: "The neighborhood where every alley has a party and every balcony has a person on it and the street noise is the entire social scene. The terrasses run the length of the block. The city knows exactly what this month is worth.",
+      },
+      {
+        place: "Parc La Fontaine",
+        text: "The park in the Plateau where July means outdoor concerts, people on the grass past dark, the unspoken agreement that the city has decided to be good to itself this month.",
+      },
+      {
+        place: "Mile End on a Sunday morning",
+        text: "The stretch of Saint-Viateur and Fairmount where the bagels come out of the wood ovens at 5am and people queue in summer clothes, coffee in hand, before heading back to the park.",
+      },
+    ],
+
+    locals: `Eating outside as a default, not an option. Staying on the terrasse past midnight. Walking to the park after dinner rather than taking the metro. Taking the bike over the train. Making the summer count with the specific urgency of a city that knows what comes after.`,
+
+    localWord: {
+      term:        "terrasse",
+      translation: "any outdoor seating, treated as non-negotiable in summer",
+      body:        "In Montreal the terrasse is a weather-dependent luxury that becomes a cultural obligation in July. To eat inside in July is to admit something you do not want to admit. Every restaurant in the city knows this.",
+    },
+
+    changes: `The urgency is audible. The city does not waste evenings in July. You stop making early plans because the evening will reorganize itself and the best version will happen after 8pm.`,
+
+    start: `Eating outside every meal. Taking the long route on foot. Staying for the next round because the night is warm enough to justify it.`,
+
+    stop: `The cautious version of July. Montreal does not reward restraint in summer. Come back in January for that.`,
+
+    returns: `The guilt-free lateness. The version of 11pm that feels like 8pm and gives you no reason to go home.`,
+
+    remember: `A Montreal winter earns this. So do you.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "March",   body: "The city is still in parkas and moving fast to stay warm.",                       current: false },
+        { label: "July",    body: "The same people are at the same corner and have been since 7pm.",                 current: true  },
+        { label: "October", body: "The terrasses come in and people start looking at the calendar with feeling.",    current: false },
+      ],
+    },
+
+    next: [
+      { city: "Copenhagen", month: "June",  storyline: "The Longest Evenings",    href: "index.html"        },
+      { city: "Dublin",     month: "May",   storyline: "Everyone Comes Back Outside", href: "dublin-may.html" },
+      { city: "Porto",      month: "August", storyline: "After the Rush",          href: "porto-august.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>

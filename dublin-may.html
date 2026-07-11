@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dublin — May · The Local Season</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div id="page-root"></div>
+
+<script>
+  const PAGE = {
+
+    city:      "Dublin",
+    month:     "May",
+    storyline: "Everyone Comes Back Outside",
+
+    archetype: "Open",
+
+    accentColor:    "#7a9e7a",
+    accentColorDim: "rgba(122,158,122,.15)",
+
+    thesis: "Dublin in May is when the city remembers that it has an outside and decides to use it.",
+
+    season: "First Light",
+
+    metadata: {
+      energy:      4,
+      daylight:    5,
+      streetLife:  4,
+      socialHours: 4,
+      comfort:     3,
+      momentum:    4,
+    },
+
+    scene: `It's 6pm on a Thursday near the Grand Canal. A pub has moved its doors open and a crowd has formed on the pavement that was not there at 5pm. Someone is holding a pint in both hands. The light is coming in low from the west. Nobody has decided to leave.`,
+
+    sceneAnchors: [
+      {
+        place: "St. Stephen's Green",
+        text: "The enclosed park in the center that fills on the first warm day and stays full until the last. In May the deck chairs come out. The lunchtime crowd is not eating lunch — they are lying in the sun on a Wednesday.",
+      },
+      {
+        place: "Dun Laoghaire pier",
+        text: "The long pier stretching into Dublin Bay where May brings the walkers out at dusk. Couples. People with dogs. People on their own walking away from something and back to it.",
+      },
+      {
+        place: "Grand Canal towpath",
+        text: "Where the Friday afternoon pint has moved outdoors and the path is lined with people who are technically still on the clock but clearly aren't. The canal holds the last of the light.",
+      },
+    ],
+
+    locals: `Taking the pint outside as a reflex, not a decision. Staying later than planned. Making a walk into an evening. Discovering that there is still enough light for one more thing after dinner.`,
+
+    localWord: {
+      term:        "grand",
+      translation: "everything is fine, and more than fine",
+      body:        "The Dublin unit of contentment. Not ecstatic, not disappointed — grand. In May, when the sun holds past 9pm and someone on the pier says it is a grand evening, they mean the city has delivered on something it owed them.",
+    },
+
+    changes: `The city expands. The same square footage as February but with the pavement counted as space. The pub is inside and outside at once and no one is sure where the line is anymore. You stop thinking about where you will end the evening.`,
+
+    start: `The evening walk. The pint on the pavement. The decision, at 7pm, that there is still enough light for one more thing — and being right.`,
+
+    stop: `The indoor default. May in Dublin is when people stop assuming the plan ends inside.`,
+
+    returns: `The long evening. The version of a day where 9pm is still daytime and the light tells you there is time.`,
+
+    remember: `By May Dublin has remembered it is a coastal city. You will remember too.`,
+
+    seasonalContrast: {
+      title: "Not always like this",
+      items: [
+        { label: "February", body: "The pubs are full and the outside is not an option.",                      current: false },
+        { label: "May",      body: "The doors come open and the city spills out.",                             current: true  },
+        { label: "August",   body: "The sun is still there but the tourists have arrived and the pavement is shared.", current: false },
+      ],
+    },
+
+    next: [
+      { city: "Copenhagen", month: "June",     storyline: "The Longest Evenings",    href: "index.html"          },
+      { city: "Lisbon",     month: "February", storyline: "Before the Season",        href: "lisbon-february.html" },
+      { city: "Montreal",   month: "July",     storyline: "The City That Summers Hard", href: "montreal-july.html" },
+    ],
+  };
+</script>
+<script src="assets/render.js"></script>
+</body>
+</html>
