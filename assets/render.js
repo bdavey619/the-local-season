@@ -52,7 +52,7 @@
       : '';
     return (
       '<header class=”hero”>' +
-        '<div class=”hero__inner”>' +
+        '<div class=”container”>' +
           '<div class=”hero__meta”>' +
             '<span class=”eyebrow”>' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</span>' +
             '<span class=”archetype-badge”>' + esc(p.archetype) + '</span>' +
