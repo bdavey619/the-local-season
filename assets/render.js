@@ -62,20 +62,6 @@
     );
   }
 
-  function sceneImage(p) {
-    if (!p.heroImage) return '';
-    var img = p.heroImage;
-    var credit = img.credit
-      ? '<a class="scene-image__credit" href="' + esc(img.creditUrl || 'https://www.pexels.com') + '" target="_blank" rel="noopener">' + esc(img.credit) + '</a>'
-      : '';
-    return (
-      '<div class="scene-image">' +
-        '<img src="' + esc(img.src) + '" alt="' + esc(img.alt || (p.city + ' in ' + p.month)) + '" loading="lazy" />' +
-        credit +
-      '</div>'
-    );
-  }
-
   function framing() {
     return (
       '<section class="framing">' +
@@ -226,7 +212,6 @@
   document.getElementById('page-root').innerHTML = (
     nav() +
     hero(PAGE) +
-    sceneImage(PAGE) +
     framing() +
     sections(PAGE) +
     oneLine(PAGE) +
