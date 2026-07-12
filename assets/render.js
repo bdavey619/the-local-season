@@ -53,18 +53,14 @@
     return (
       '<header class=”hero”>' +
         '<div class=”container”>' +
-          '<div class=”hero__inner”>' +
-            '<div class=”hero__label”>' +
-              '<p class=”eyebrow”>' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</p>' +
-              '<span class=”archetype-badge”>' + esc(p.archetype) + '</span>' +
-              seasonTag +
-            '</div>' +
-            '<div>' +
-              '<h1 class=”hero__city”>' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
-              '<p class=”hero__storyline”>' + esc(p.storyline) + '</p>' +
-              '<p class=”hero__thesis”>”' + esc(p.thesis) + '”</p>' +
-            '</div>' +
+          '<div class=”hero__meta”>' +
+            '<span class=”eyebrow”>' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</span>' +
+            '<span class=”archetype-badge”>' + esc(p.archetype) + '</span>' +
+            seasonTag +
           '</div>' +
+          '<h1 class=”hero__city”>' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
+          '<p class=”hero__storyline”>' + esc(p.storyline) + '</p>' +
+          '<p class=”hero__thesis”>”' + esc(p.thesis) + '”</p>' +
         '</div>' +
       '</header>'
     );

@@ -36,7 +36,7 @@ function pageHtml(page) {
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
-  <link rel="stylesheet" href="assets/style.css?v=5" />
+  <link rel="stylesheet" href="assets/style.css?v=6" />
 </head>
 
 <body>
@@ -45,7 +45,7 @@ function pageHtml(page) {
 <script>
 const PAGE = ${JSON.stringify(page, null, 2)};
 </script>
-<script src="assets/render.js?v=5"></script>
+<script src="assets/render.js?v=6"></script>
 </body>
 </html>
 `;
