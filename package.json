@@ -1,0 +1,9 @@
+{
+  "name": "the-local-season",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.js",
+    "extract": "node scripts/extract.js"
+  }
+}
