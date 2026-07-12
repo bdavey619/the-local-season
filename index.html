@@ -157,6 +157,50 @@
     @media (prefers-reduced-motion: reduce) {
       .city-card { transition: none; }
     }
+
+    /* ── Archetype filter ────────────────────────────────────────────── */
+    .filter-bar {
+      display: flex;
+      align-items: baseline;
+      gap: 0.1rem;
+      padding-bottom: var(--space-md);
+      flex-wrap: wrap;
+    }
+    .filter-bar__label {
+      font-family: var(--sans);
+      font-size: 0.55rem;
+      font-weight: 500;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      margin-right: 0.6rem;
+      white-space: nowrap;
+    }
+    .filter-btn {
+      appearance: none;
+      background: none;
+      border: none;
+      border-bottom: 1.5px solid transparent;
+      cursor: pointer;
+      font-family: var(--sans);
+      font-size: 0.58rem;
+      font-weight: 500;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding: 0.3rem 0.5rem 0.18rem;
+      line-height: 1;
+      transition: color 0.12s, border-color 0.12s;
+    }
+    .filter-btn:hover { color: var(--ink); }
+    .filter-btn--active {
+      color: var(--ink);
+      border-bottom-color: var(--ink);
+    }
+    .city-card[hidden] { display: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .filter-btn { transition: none; }
+    }
   </style>
 </head>
 
@@ -181,6 +225,7 @@
 <main>
   <section class="city-index">
     <div class="container container--wide">
+      <div class="filter-bar" id="filter-bar"></div>
       <div class="city-grid" id="city-grid"></div>
     </div>
   </section>
@@ -210,11 +255,13 @@
     { month: "December", city: "Sydney", storyline: "The Holidays Move Outside", archetype: "Open", accent: "#5a9eb5", href: "sydney-december.html" },
   ];
 
+  // ── Render cards ─────────────────────────────────────────────────
   var grid = document.getElementById('city-grid');
   PAGES.forEach(function(p) {
     var card = document.createElement('a');
     card.className = 'city-card';
     card.href = p.href;
+    card.dataset.archetype = p.archetype;
     card.style.setProperty('--card-accent', p.accent);
     card.innerHTML =
       '<p class="city-card__month">' + p.month + '</p>' +
@@ -224,6 +271,44 @@
       '<span class="city-card__arrow">Read →</span>';
     grid.appendChild(card);
   });
+
+  // ── Archetype filter ──────────────────────────────────────────────
+  var ARCHETYPE_ORDER = ['Electric', 'Open', 'Local', 'Quiet', 'Raw', 'Slow'];
+  var present = ARCHETYPE_ORDER.filter(function(a) {
+    return PAGES.some(function(p) { return p.archetype === a; });
+  });
+
+  var bar = document.getElementById('filter-bar');
+  var active = null;
+
+  var label = document.createElement('span');
+  label.className = 'filter-bar__label';
+  label.textContent = 'Energy';
+  bar.appendChild(label);
+
+  function makeBtn(text, value) {
+    var btn = document.createElement('button');
+    btn.className = 'filter-btn' + (value === null ? ' filter-btn--active' : '');
+    btn.dataset.filter = value || 'all';
+    btn.textContent = text;
+    btn.addEventListener('click', function() {
+      active = (value !== null && active === value) ? null : value;
+      applyFilter();
+    });
+    return btn;
+  }
+
+  bar.appendChild(makeBtn('All', null));
+  present.forEach(function(a) { bar.appendChild(makeBtn(a, a)); });
+
+  function applyFilter() {
+    bar.querySelectorAll('.filter-btn').forEach(function(btn) {
+      btn.classList.toggle('filter-btn--active', btn.dataset.filter === (active || 'all'));
+    });
+    document.querySelectorAll('.city-card').forEach(function(card) {
+      card.hidden = active !== null && card.dataset.archetype !== active;
+    });
+  }
 </script>
 
 </body>
