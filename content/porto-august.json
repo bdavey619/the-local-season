@@ -60,25 +60,5 @@
         "current": false
       }
     ]
-  },
-  "next": [
-    {
-      "city": "Palermo",
-      "month": "October",
-      "storyline": "The Locals Return",
-      "href": "palermo-october.html"
-    },
-    {
-      "city": "Lisbon",
-      "month": "February",
-      "storyline": "Before the Season",
-      "href": "lisbon-february.html"
-    },
-    {
-      "city": "San Diego",
-      "month": "September",
-      "storyline": "Summer After Summer",
-      "href": "san-diego-september.html"
-    }
-  ]
+  }
 }

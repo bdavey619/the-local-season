@@ -65,25 +65,5 @@
   "ritual": {
     "title": "Small ritual",
     "body": "Makgeolli and pajeon at a sanjang on the descent from Bukhansan. The ritual does not work without the climb."
-  },
-  "next": [
-    {
-      "city": "Copenhagen",
-      "month": "June",
-      "storyline": "The Longest Evenings",
-      "href": "copenhagen-june.html"
-    },
-    {
-      "city": "San Diego",
-      "month": "September",
-      "storyline": "Summer After Summer",
-      "href": "san-diego-september.html"
-    },
-    {
-      "city": "Tokyo",
-      "month": "April",
-      "storyline": "The Annual Permission",
-      "href": "#"
-    }
-  ]
+  }
 }

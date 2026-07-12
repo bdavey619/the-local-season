@@ -47,18 +47,61 @@
   }
 
   function hero(p) {
+    var seasonTag = p.season
+      ? '<span class=”season-tag”>' + esc(p.season) + '</span>'
+      : '';
     return (
-      '<header class="hero">' +
-        '<div class="container">' +
-          '<div class="hero__meta">' +
-            '<span class="eyebrow">' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</span>' +
-            '<span class="archetype-badge">' + esc(p.archetype) + '</span>' +
+      '<header class=”hero”>' +
+        '<div class=”container”>' +
+          '<div class=”hero__meta”>' +
+            '<span class=”eyebrow”>' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</span>' +
+            '<span class=”archetype-badge”>' + esc(p.archetype) + '</span>' +
+            seasonTag +
           '</div>' +
-          '<h1 class="hero__city">' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
-          '<p class="hero__storyline">' + esc(p.storyline) + '</p>' +
-          '<p class="hero__thesis">“' + esc(p.thesis) + '”</p>' +
+          '<h1 class=”hero__city”>' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
+          '<p class=”hero__storyline”>' + esc(p.storyline) + '</p>' +
+          '<p class=”hero__thesis”>”' + esc(p.thesis) + '”</p>' +
+          metadata(p) +
         '</div>' +
       '</header>'
+    );
+  }
+
+  function metadata(p) {
+    if (!p.metadata) return '';
+    var dims = [
+      ['Energy',       p.metadata.energy],
+      ['Daylight',     p.metadata.daylight],
+      ['Street life',  p.metadata.streetLife],
+      ['Social hours', p.metadata.socialHours],
+      ['Comfort',      p.metadata.comfort],
+      ['Momentum',     p.metadata.momentum],
+    ];
+    return (
+      '<div class=”metadata”>' +
+      dims.map(function (d) {
+        var pips = '';
+        for (var i = 1; i <= 5; i++) {
+          pips += '<span class=”pip pip--' + (i <= d[1] ? 'filled' : 'empty') + '”></span>';
+        }
+        return (
+          '<div class=”metadata__row”>' +
+            '<span class=”metadata__label”>' + esc(d[0]) + '</span>' +
+            '<span class=”metadata__pips”>' + pips + '</span>' +
+          '</div>'
+        );
+      }).join('') +
+      '</div>'
+    );
+  }
+
+  function ritual(p) {
+    if (!p.ritual) return '';
+    return (
+      '<div class=”ritual”>' +
+        '<p class=”eyebrow ritual__label”>Small ritual</p>' +
+        '<p class=”ritual__body”>' + esc(p.ritual.body) + '</p>' +
+      '</div>'
     );
   }
 
@@ -152,27 +195,6 @@
     );
   }
 
-  function exploreNext(p) {
-    return (
-      '<section class="explore">' +
-        '<div class="container container--wide">' +
-          '<div class="explore__header"><p class="eyebrow">Explore next</p></div>' +
-          '<div class="explore__grid">' +
-          p.next.map(function (n) {
-            return (
-              '<a class="explore__card" href="' + esc(n.href || '#') + '">' +
-                '<p class="explore__card-city">' + esc(n.city) + ' — ' + esc(n.month) + '</p>' +
-                '<p class="explore__card-storyline">' + esc(n.storyline) + '</p>' +
-                '<span class="explore__card-arrow">Read →</span>' +
-              '</a>'
-            );
-          }).join('') +
-          '</div>' +
-        '</div>' +
-      '</section>'
-    );
-  }
-
   function footer() {
     return (
       '<footer class="site-footer">' +
@@ -191,6 +213,7 @@
         '<div class="container">' +
           section('The Scene', p.scene, sceneAnchors(p.sceneAnchors)) +
           section('What locals are doing', p.locals) +
+        ritual(p) +
         '</div>' +
 
         // Local word: full-bleed within its own container
@@ -216,7 +239,6 @@
     sections(PAGE) +
     oneLine(PAGE) +
     seasonalContrast(PAGE) +
-    exploreNext(PAGE) +
     footer()
   );
 

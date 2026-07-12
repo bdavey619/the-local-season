@@ -60,25 +60,5 @@
         "current": false
       }
     ]
-  },
-  "next": [
-    {
-      "city": "Seoul",
-      "month": "November",
-      "storyline": "The City That Browns Slowly",
-      "href": "seoul-november.html"
-    },
-    {
-      "city": "Mexico City",
-      "month": "March",
-      "storyline": "Before the Heat",
-      "href": "mexico-city-march.html"
-    },
-    {
-      "city": "San Diego",
-      "month": "September",
-      "storyline": "Summer After Summer",
-      "href": "san-diego-september.html"
-    }
-  ]
+  }
 }

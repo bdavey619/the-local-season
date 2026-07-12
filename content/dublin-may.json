@@ -60,25 +60,5 @@
         "current": false
       }
     ]
-  },
-  "next": [
-    {
-      "city": "Copenhagen",
-      "month": "June",
-      "storyline": "The Longest Evenings",
-      "href": "copenhagen-june.html"
-    },
-    {
-      "city": "Lisbon",
-      "month": "February",
-      "storyline": "Before the Season",
-      "href": "lisbon-february.html"
-    },
-    {
-      "city": "Montreal",
-      "month": "July",
-      "storyline": "The City That Summers Hard",
-      "href": "montreal-july.html"
-    }
-  ]
+  }
 }

@@ -64,25 +64,5 @@
   "ritual": {
     "title": "Small ritual",
     "body": "Wet feet and a burrito eaten leaning against your car."
-  },
-  "next": [
-    {
-      "city": "Copenhagen",
-      "month": "June",
-      "storyline": "The Longest Evenings",
-      "href": "copenhagen-june.html"
-    },
-    {
-      "city": "Palermo",
-      "month": "October",
-      "storyline": "The Locals Return",
-      "href": "palermo-october.html"
-    },
-    {
-      "city": "Dublin",
-      "month": "May",
-      "storyline": "Everyone Comes Back Outside",
-      "href": "dublin-may.html"
-    }
-  ]
+  }
 }

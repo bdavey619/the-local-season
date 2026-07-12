@@ -61,25 +61,5 @@
         "current": false
       }
     ]
-  },
-  "next": [
-    {
-      "city": "Osaka",
-      "month": "January",
-      "storyline": "The Warmest Table",
-      "href": "osaka-january.html"
-    },
-    {
-      "city": "Tokyo",
-      "month": "April",
-      "storyline": "The Permission",
-      "href": "tokyo-april.html"
-    },
-    {
-      "city": "Sydney",
-      "month": "December",
-      "storyline": "The Holidays Move Outside",
-      "href": "sydney-december.html"
-    }
-  ]
+  }
 }
