@@ -40,7 +40,7 @@
   function nav() {
     return (
       '<nav class="site-nav">' +
-        '<span class="site-nav__brand">The Local Season</span>' +
+        '<a class="site-nav__brand" href="index.html">The Local Season</a>' +
         '<span class="site-nav__label">A city is different every month</span>' +
       '</nav>'
     );
@@ -61,13 +61,12 @@
           '<h1 class=”hero__city”>' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
           '<p class=”hero__storyline”>' + esc(p.storyline) + '</p>' +
           '<p class=”hero__thesis”>”' + esc(p.thesis) + '”</p>' +
-          metadata(p) +
         '</div>' +
       '</header>'
     );
   }
 
-  function metadata(p) {
+  function atAGlance(p) {
     if (!p.metadata) return '';
     var dims = [
       ['Energy',       p.metadata.energy],
@@ -77,7 +76,7 @@
       ['Comfort',      p.metadata.comfort],
       ['Momentum',     p.metadata.momentum],
     ];
-    return (
+    var grid = (
       '<div class=”metadata”>' +
       dims.map(function (d) {
         var pips = '';
@@ -91,6 +90,11 @@
           '</div>'
         );
       }).join('') +
+      '</div>'
+    );
+    return (
+      '<div class=”at-a-glance”>' +
+        '<div class=”container”>' + grid + '</div>' +
       '</div>'
     );
   }
@@ -206,6 +210,31 @@
     );
   }
 
+  function behaviors(p) {
+    var items = [
+      ['What changes',         p.changes],
+      ['What you start doing', p.start],
+      ['What you let go',      p.stop],
+      ['What returns',         p.returns],
+    ];
+    return (
+      '<div class="behaviors">' +
+        '<div class="container">' +
+          '<div class="behaviors__grid">' +
+          items.map(function (item) {
+            return (
+              '<div class="behavior">' +
+                '<p class="behavior__heading">' + esc(item[0]) + '</p>' +
+                '<p class="behavior__body">' + esc(item[1]) + '</p>' +
+              '</div>'
+            );
+          }).join('') +
+          '</div>' +
+        '</div>' +
+      '</div>'
+    );
+  }
+
   function sections(p) {
     return (
       '<main class="sections">' +
@@ -219,13 +248,7 @@
         // Local word: full-bleed within its own container
         localWord(p.localWord) +
 
-        // Remaining editorial sections
-        '<div class="container">' +
-          section('What changes', p.changes) +
-          section('What you start doing', p.start) +
-          section('What you stop controlling', p.stop) +
-          section('What returns', p.returns) +
-        '</div>' +
+        behaviors(p) +
       '</main>'
     );
   }
@@ -235,7 +258,7 @@
   document.getElementById('page-root').innerHTML = (
     nav() +
     hero(PAGE) +
-    framing() +
+    atAGlance(PAGE) +
     sections(PAGE) +
     oneLine(PAGE) +
     seasonalContrast(PAGE) +
