@@ -473,6 +473,42 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink);
 }
 
+/* ── Scene hero image ───────────────────────────────────────────── */
+.scene-image {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-bottom: 1px solid var(--rule);
+}
+.scene-image img {
+  width: 100%;
+  height: clamp(280px, 52vh, 580px);
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.scene-image__credit {
+  position: absolute;
+  bottom: 0.6rem;
+  right: 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.48rem;
+  letter-spacing: .08em;
+  color: rgba(255,255,255,.72);
+  background: rgba(0,0,0,.32);
+  padding: 0.15rem 0.45rem;
+  border-radius: 2px;
+  text-decoration: none;
+  backdrop-filter: blur(3px);
+  transition: color 0.15s;
+}
+.scene-image__credit:hover {
+  color: #fff;
+}
+@media (prefers-reduced-motion: reduce) {
+  .scene-image img { transition: none; }
+}
+
 /* ── Scene anchors ──────────────────────────────────────────────── */
 /* Field-guide marginalia: place name + 2-sentence evocation.       */
 /* In Next.js: <SceneAnchor place="..." text="..." /> component.    */
