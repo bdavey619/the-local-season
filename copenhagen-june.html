@@ -18,56 +18,6 @@
 <div id="page-root"></div>
 
 <script>
-  <!--
-    ══════════════════════════════════════════════════════════════════
-    HOW TO ADD A NEW CITY-MONTH
-    ──────────────────────────────────────────────────────────────────
-    1. Copy any existing page (e.g. san-diego-september.html) to a
-       new file named [city]-[month].html
-    2. Replace the PAGE object below with your new city data
-    3. assets/render.js builds the full page automatically — no HTML
-       changes needed
-    4. Add an href entry in the `next` array of related pages so the
-       Explore Next cards link correctly
-    ══════════════════════════════════════════════════════════════════
-
-    PAGE SCHEMA — CityMonth
-    ──────────────────────────────────────────────────────────────────
-    Future TypeScript type (content/types.ts):
-
-    interface SceneAnchor  { place: string; text: string }
-    interface LocalWord    { term: string; pronunciation?: string; translation: string; body: string }
-    interface NextCity     { city: string; month: string; storyline: string; href?: string }
-    interface ContrastItem { label: string; body: string; current: boolean }
-
-    interface CityMonth {
-      // Identity
-      city: string; month: string; storyline: string; archetype: string
-      accentColor: string; accentColorDim: string
-
-      // Editorial
-      thesis: string
-      scene: string
-      sceneAnchors: SceneAnchor[]
-      locals: string
-      localWord: LocalWord
-      changes: string
-      start: string
-      stop: string
-      returns: string
-      remember: string
-      seasonalContrast: { title: string; items: ContrastItem[] }
-      next: NextCity[]
-
-      // Not yet rendered
-      season: string
-      metadata: Record<string, number>
-
-      // Small ritual is not a food recommendation.
-      // It should describe how food or drink extends a routine.
-      ritual?: { title: string; body: string }
-    }
-  -->
   const PAGE = {
 
     // ── Identity ─────────────────────────────────────────────────────
