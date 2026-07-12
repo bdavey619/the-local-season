@@ -45,7 +45,7 @@ function pageHtml(page) {
 <script>
 const PAGE = ${JSON.stringify(page, null, 2)};
 </script>
-<script src="assets/render.js?v=8"></script>
+<script src="assets/render.v8.js"></script>
 </body>
 </html>
 `;
