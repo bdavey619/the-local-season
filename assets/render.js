@@ -70,44 +70,6 @@
     );
   }
 
-  function atAGlance(p) {
-    if (!p.metadata) return '';
-    var dims = [
-      ['Energy',       p.metadata.energy],
-      ['Daylight',     p.metadata.daylight],
-      ['Street life',  p.metadata.streetLife],
-      ['Social hours', p.metadata.socialHours],
-      ['Comfort',      p.metadata.comfort],
-      ['Momentum',     p.metadata.momentum],
-    ];
-    var grid = (
-      '<div class=”metadata”>' +
-      dims.map(function (d) {
-        var pips = '';
-        for (var i = 1; i <= 5; i++) {
-          pips += '<span class=”pip pip--' + (i <= d[1] ? 'filled' : 'empty') + '”></span>';
-        }
-        return (
-          '<div class=”metadata__row”>' +
-            '<span class=”metadata__label”>' + esc(d[0]) + '</span>' +
-            '<span class=”metadata__pips”>' + pips + '</span>' +
-          '</div>'
-        );
-      }).join('') +
-      '</div>'
-    );
-    return (
-      '<div class=”at-a-glance”>' +
-        '<div class=”container”>' +
-          '<div class=”at-a-glance__inner”>' +
-            '<p class=”section__heading”>At a glance</p>' +
-            grid +
-          '</div>' +
-        '</div>' +
-      '</div>'
-    );
-  }
-
   function ritual(p) {
     if (!p.ritual) return '';
     return (
@@ -267,7 +229,6 @@
   document.getElementById('page-root').innerHTML = (
     nav() +
     hero(PAGE) +
-    atAGlance(PAGE) +
     sections(PAGE) +
     oneLine(PAGE) +
     seasonalContrast(PAGE) +
