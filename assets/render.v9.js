@@ -48,19 +48,19 @@
 
   function hero(p) {
     var seasonTag = p.season
-      ? '<span class=”season-tag”>' + esc(p.season) + '</span>'
+      ? '<span class="season-tag">' + esc(p.season) + '</span>'
       : '';
     return (
-      '<header class=”hero”>' +
-        '<div class=”container”>' +
-          '<div class=”hero__meta”>' +
-            '<span class=”eyebrow”>' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</span>' +
-            '<span class=”archetype-badge”>' + esc(p.archetype) + '</span>' +
+      '<header class="hero">' +
+        '<div class="container">' +
+          '<div class="hero__meta">' +
+            '<span class="eyebrow">' + esc(p.city) + ' \xB7 ' + esc(p.month) + '</span>' +
+            '<span class="archetype-badge">' + esc(p.archetype) + '</span>' +
             seasonTag +
           '</div>' +
-          '<h1 class=”hero__city”>' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
-          '<p class=”hero__storyline”>' + esc(p.storyline) + '</p>' +
-          '<p class=”hero__thesis”>”' + esc(p.thesis) + '”</p>' +
+          '<h1 class="hero__city">' + esc(p.city) + '<br/>— ' + esc(p.month) + '</h1>' +
+          '<p class="hero__storyline">' + esc(p.storyline) + '</p>' +
+          '<p class="hero__thesis">“' + esc(p.thesis) + '”</p>' +
         '</div>' +
       '</header>'
     );
@@ -69,9 +69,9 @@
   function ritual(p) {
     if (!p.ritual) return '';
     return (
-      '<div class=”ritual”>' +
-        '<p class=”eyebrow ritual__label”>Small ritual</p>' +
-        '<p class=”ritual__body”>' + esc(p.ritual.body) + '</p>' +
+      '<div class="ritual">' +
+        '<p class="eyebrow ritual__label">Small ritual</p>' +
+        '<p class="ritual__body">' + esc(p.ritual.body) + '</p>' +
       '</div>'
     );
   }
