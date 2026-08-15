@@ -17,8 +17,8 @@
     /* ── Landing-specific styles ─────────────────────────────────── */
 
     .home-hero {
-      padding-top: var(--space-xl);
-      padding-bottom: var(--space-lg);
+      padding-top: var(--space-lg);
+      padding-bottom: var(--space-md);
       border-bottom: 1px solid var(--rule);
     }
     .home-hero .container {
@@ -42,84 +42,175 @@
       color: var(--ink-light);
       line-height: 1.65;
       max-width: 520px;
-      margin-bottom: var(--space-lg);
     }
-    .home-hero__count {
-      font-family: var(--sans);
-      font-size: 0.6rem;
-      font-weight: 500;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
+    /* ── This month ──────────────────────────────────────────────── */
+    /* The current month is the front door. Everything else stays
+       reachable but deliberately quieter. */
+    .now {
+      padding-block: var(--space-lg);
+      border-bottom: 1px solid var(--rule);
+    }
+    .now__label {
       display: flex;
       align-items: center;
-      gap: 1rem;
+      gap: 0.75rem;
+      margin-bottom: var(--space-md);
     }
-    .home-hero__count::before {
+    .now__label::after {
       content: '';
-      display: inline-block;
-      width: 24px;
+      flex: 1;
       height: 1px;
-      background: var(--ink-muted);
+      background: var(--rule);
     }
-
-    /* ── City grid ───────────────────────────────────────────────── */
-    .city-index {
-      padding-block: var(--space-xl);
-    }
-    .city-grid {
+    .now-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1px;
       background: var(--rule);
       border: 1px solid var(--rule);
     }
-    @media (min-width: 560px) {
-      .city-grid { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 760px) {
+      .now-grid--multi { grid-template-columns: repeat(2, 1fr); }
     }
-    @media (min-width: 900px) {
-      .city-grid { grid-template-columns: repeat(3, 1fr); }
-    }
-
-    /* ── City card ───────────────────────────────────────────────── */
-    .city-card {
+    .now-card {
       background: var(--paper);
-      padding: var(--space-md) var(--space-md) 1.75rem;
+      padding: var(--space-md);
       border-left: 3px solid var(--card-accent, var(--ink-muted));
       display: flex;
       flex-direction: column;
-      transition: background 0.15s ease;
       text-decoration: none;
       color: inherit;
+      transition: background 0.15s ease;
     }
-    .city-card:hover { background: var(--paper-warm); }
-
-    .city-card__month {
+    .now-card:hover { background: var(--paper-warm); }
+    .now-card__season {
       font-family: var(--sans);
       font-size: 0.58rem;
       font-weight: 500;
       letter-spacing: .2em;
       text-transform: uppercase;
-      color: var(--ink-muted);
-      margin-bottom: 0.35rem;
+      color: var(--card-accent, var(--ink-muted));
+      margin-bottom: 0.6rem;
     }
-    .city-card__city {
+    .now-card__city {
       font-family: var(--serif);
-      font-size: 1.45rem;
+      font-size: clamp(2rem, 4vw, 2.8rem);
       font-weight: 400;
-      line-height: 1.1;
+      line-height: 1.05;
       color: var(--ink);
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.2rem;
     }
-    .city-card__storyline {
+    .now-card__storyline {
       font-family: var(--serif);
-      font-size: 0.88rem;
+      font-size: 1.1rem;
       font-style: italic;
       color: var(--ink-light);
-      line-height: 1.5;
-      margin-bottom: 0.85rem;
+      margin-bottom: 1rem;
+    }
+    .now-card__thesis {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--ink);
+      border-left: 2px solid var(--card-accent, var(--ink-muted));
+      padding-left: 1rem;
+      margin-bottom: 1.25rem;
       flex-grow: 1;
     }
+    .now-card__foot {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: auto;
+    }
+    .now-card__arrow {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+    }
+
+    /* ── Full index ──────────────────────────────────────────────── */
+    /* Compact rows grouped by month. Reads as a calendar and stays
+       legible well past a hundred entries. */
+    .city-index { padding-block: var(--space-lg) var(--space-xl); }
+    .index-head {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: var(--space-md);
+    }
+    .index-head__title {
+      font-family: var(--serif);
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+    .month-group { margin-bottom: 1.5rem; }
+    .month-group[hidden] { display: none; }
+    .month-group__label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 0.25rem;
+    }
+    .month-group--now .month-group__label { color: var(--ink); }
+    .month-group__now {
+      font-size: 0.55rem;
+      letter-spacing: .16em;
+      color: var(--ink-muted);
+    }
+    .city-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.15rem 1rem;
+      align-items: baseline;
+      padding: 0.6rem 0.5rem 0.6rem 0.9rem;
+      border-left: 3px solid var(--card-accent, var(--ink-muted));
+      border-bottom: 1px solid var(--rule);
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.12s ease;
+    }
+    @media (min-width: 640px) {
+      .city-row { grid-template-columns: 10rem 1fr auto; }
+    }
+    .city-row:hover { background: var(--paper-warm); }
+    .city-row[hidden] { display: none; }
+    .city-row__city {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .city-row__storyline {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.4;
+    }
+    .index-empty {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--ink-muted);
+      padding-block: var(--space-md);
+    }
+    .index-empty[hidden] { display: none; }
+
+    /* ── Archetype badge (shared by card and row) ─────────────────── */
     .city-card__badge {
       display: inline-flex;
       align-items: center;
@@ -134,7 +225,6 @@
       text-transform: uppercase;
       color: var(--card-accent, var(--ink-muted));
       width: fit-content;
-      margin-top: auto;
     }
     .city-card__badge::before {
       content: '';
@@ -144,18 +234,9 @@
       background: var(--card-accent, var(--ink-muted));
       flex-shrink: 0;
     }
-    .city-card__arrow {
-      display: block;
-      margin-top: 0.75rem;
-      font-family: var(--sans);
-      font-size: 0.6rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--ink-muted);
-    }
 
     @media (prefers-reduced-motion: reduce) {
-      .city-card { transition: none; }
+      .now-card, .city-row { transition: none; }
     }
 
     /* ── Archetype filter ────────────────────────────────────────────── */
@@ -163,7 +244,6 @@
       display: flex;
       align-items: baseline;
       gap: 0.1rem;
-      padding-bottom: var(--space-md);
       flex-wrap: wrap;
     }
     .filter-bar__label {
@@ -218,15 +298,25 @@
       Travel is not only movement through geography.<br>
       It is temporary membership in another routine.
     </p>
-    <p class="home-hero__count">Twelve cities &nbsp;·&nbsp; Twelve months</p>
   </div>
 </header>
 
 <main>
+  <section class="now" id="now" hidden>
+    <div class="container container--wide">
+      <p class="eyebrow now__label">This month &nbsp;·&nbsp; <span id="now-month"></span></p>
+      <div class="now-grid" id="now-grid"></div>
+    </div>
+  </section>
+
   <section class="city-index">
     <div class="container container--wide">
-      <div class="filter-bar" id="filter-bar"></div>
-      <div class="city-grid" id="city-grid"></div>
+      <div class="index-head">
+        <h2 class="index-head__title">Every city-month</h2>
+        <div class="filter-bar" id="filter-bar"></div>
+      </div>
+      <div id="month-list"></div>
+      <p class="index-empty" id="index-empty" hidden>No city carries that energy yet.</p>
     </div>
   </section>
 </main>
@@ -240,36 +330,94 @@
 
 <script>
   var PAGES = [
-    { month: "January", city: "Osaka", storyline: "The Warmest Table", archetype: "Quiet", accent: "#b07840", href: "osaka-january.html" },
-    { month: "February", city: "Lisbon", storyline: "Before the Season", archetype: "Open", accent: "#6b9eb5", href: "lisbon-february.html" },
-    { month: "March", city: "Mexico City", storyline: "Before the Heat", archetype: "Slow", accent: "#c4785a", href: "mexico-city-march.html" },
-    { month: "April", city: "Tokyo", storyline: "The Permission", archetype: "Electric", accent: "#c49eb0", href: "tokyo-april.html" },
-    { month: "May", city: "Dublin", storyline: "Everyone Comes Back Outside", archetype: "Open", accent: "#7a9e7a", href: "dublin-may.html" },
-    { month: "June", city: "Copenhagen", storyline: "The Longest Evenings", archetype: "Electric", accent: "#c8a96e", href: "copenhagen-june.html" },
-    { month: "July", city: "Montreal", storyline: "The City That Summers Hard", archetype: "Electric", accent: "#c49e3a", href: "montreal-july.html" },
-    { month: "August", city: "Porto", storyline: "After the Rush", archetype: "Quiet", accent: "#b07a5a", href: "porto-august.html" },
-    { month: "September", city: "San Diego", storyline: "Summer After Summer", archetype: "Local", accent: "#c4853a", href: "san-diego-september.html" },
-    { month: "October", city: "Palermo", storyline: "The Locals Return", archetype: "Local", accent: "#c47a3a", href: "palermo-october.html" },
-    { month: "October", city: "Seoul", storyline: "The City Climbs", archetype: "Local", accent: "#b05c35", href: "seoul-october.html" },
-    { month: "November", city: "Seoul", storyline: "The City That Browns Slowly", archetype: "Raw", accent: "#9e876a", href: "seoul-november.html" },
-    { month: "December", city: "Sydney", storyline: "The Holidays Move Outside", archetype: "Open", accent: "#5a9eb5", href: "sydney-december.html" },
+    { month: "January", city: "Osaka", storyline: "The Warmest Table", archetype: "Quiet", season: "Deep Winter", thesis: "Osaka in January is a city that has moved the party indoors and convinced you the indoors is where you wanted to be all along.", accent: "#7d7a70", href: "osaka-january.html" },
+    { month: "February", city: "Lisbon", storyline: "Before the Season", archetype: "Open", season: "Pre-Season", thesis: "Lisbon in February is a city still mostly its own.", accent: "#4f8fa8", href: "lisbon-february.html" },
+    { month: "March", city: "Mexico City", storyline: "Before the Heat", archetype: "Slow", season: "Dry Season", thesis: "Mexico City in March is a city at full capacity without being at full speed.", accent: "#5f8a63", href: "mexico-city-march.html" },
+    { month: "April", city: "Tokyo", storyline: "The Permission", archetype: "Electric", season: "Sakura", thesis: "Tokyo in April is when a city that does not usually permit itself becomes briefly, collectively, off-duty.", accent: "#c08a2e", href: "tokyo-april.html" },
+    { month: "May", city: "Dublin", storyline: "Everyone Comes Back Outside", archetype: "Open", season: "First Light", thesis: "Dublin in May is when the city remembers that it has an outside and decides to use it.", accent: "#4f8fa8", href: "dublin-may.html" },
+    { month: "June", city: "Copenhagen", storyline: "The Longest Evenings", archetype: "Electric", season: "Peak Social", thesis: "Copenhagen in June feels like a city that has collectively decided to spend less time indoors.", accent: "#c08a2e", href: "copenhagen-june.html" },
+    { month: "July", city: "Montreal", storyline: "The City That Summers Hard", archetype: "Electric", season: "Full Summer", thesis: "Montreal in July is a city that winters hard and therefore summers harder.", accent: "#c08a2e", href: "montreal-july.html" },
+    { month: "August", city: "Porto", storyline: "After the Rush", archetype: "Quiet", season: "Late Summer", thesis: "Porto in August, past the first week, is a city that has started breathing again.", accent: "#7d7a70", href: "porto-august.html" },
+    { month: "September", city: "San Diego", storyline: "Summer After Summer", archetype: "Local", season: "Local Season", thesis: "San Diego in September feels like the month that gives the weekday back.", accent: "#b05c35", href: "san-diego-september.html" },
+    { month: "October", city: "Palermo", storyline: "The Locals Return", archetype: "Local", season: "Local Season", thesis: "Palermo in October is when the city gets itself back.", accent: "#b05c35", href: "palermo-october.html" },
+    { month: "October", city: "Seoul", storyline: "The City Climbs", archetype: "Local", season: "Deungsan Season", thesis: "Seoul in October reveals that the city is mostly mountain, and that Koreans have always known this.", accent: "#b05c35", href: "seoul-october.html" },
+    { month: "December", city: "Sydney", storyline: "The Holidays Move Outside", archetype: "Open", season: "Summer Solstice", thesis: "Sydney in December is where Christmas ends up when no one can keep it indoors.", accent: "#4f8fa8", href: "sydney-december.html" },
   ];
 
-  // ── Render cards ─────────────────────────────────────────────────
-  var grid = document.getElementById('city-grid');
-  PAGES.forEach(function(p) {
+  var MONTH_ORDER = [
+    'January', 'February', 'March',     'April',   'May',      'June',
+    'July',    'August',   'September', 'October', 'November', 'December'
+  ];
+
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"]/g, function(c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+
+  // ── This month ───────────────────────────────────────────────────
+  // Resolved from the visitor's clock, so the front door follows the
+  // calendar without a rebuild.
+  var currentMonth = MONTH_ORDER[new Date().getMonth()];
+  var featured = PAGES.filter(function(p) { return p.month === currentMonth; });
+
+  var nowSection = document.getElementById('now');
+  var nowGrid    = document.getElementById('now-grid');
+  document.getElementById('now-month').textContent = currentMonth;
+
+  featured.forEach(function(p) {
     var card = document.createElement('a');
-    card.className = 'city-card';
+    card.className = 'now-card';
     card.href = p.href;
     card.dataset.archetype = p.archetype;
+    card.dataset.month = p.month;
     card.style.setProperty('--card-accent', p.accent);
     card.innerHTML =
-      '<p class="city-card__month">' + p.month + '</p>' +
-      '<p class="city-card__city">' + p.city + '</p>' +
-      '<p class="city-card__storyline">' + p.storyline + '</p>' +
-      '<span class="city-card__badge">' + p.archetype + '</span>' +
-      '<span class="city-card__arrow">Read →</span>';
-    grid.appendChild(card);
+      '<p class="now-card__season">' + esc(p.season) + '</p>' +
+      '<h3 class="now-card__city">' + esc(p.city) + '</h3>' +
+      '<p class="now-card__storyline">' + esc(p.storyline) + '</p>' +
+      '<p class="now-card__thesis">' + esc(p.thesis) + '</p>' +
+      '<span class="now-card__foot">' +
+        '<span class="city-card__badge">' + esc(p.archetype) + '</span>' +
+        '<span class="now-card__arrow">Read →</span>' +
+      '</span>';
+    nowGrid.appendChild(card);
+  });
+  nowGrid.classList.toggle('now-grid--multi', featured.length > 1);
+
+  // ── Full index, grouped by month ─────────────────────────────────
+  var monthList = document.getElementById('month-list');
+  var indexEmpty = document.getElementById('index-empty');
+
+  MONTH_ORDER.forEach(function(month) {
+    var inMonth = PAGES.filter(function(p) { return p.month === month; });
+    if (!inMonth.length) return;
+
+    var group = document.createElement('section');
+    group.className = 'month-group' + (month === currentMonth ? ' month-group--now' : '');
+    group.dataset.month = month;
+
+    var label = document.createElement('h3');
+    label.className = 'month-group__label';
+    label.innerHTML = esc(month) +
+      (month === currentMonth ? '<span class="month-group__now">· now</span>' : '');
+    group.appendChild(label);
+
+    inMonth.forEach(function(p) {
+      var row = document.createElement('a');
+      row.className = 'city-row';
+      row.href = p.href;
+      row.dataset.archetype = p.archetype;
+      row.dataset.month = p.month;
+      row.style.setProperty('--card-accent', p.accent);
+      row.innerHTML =
+        '<span class="city-row__city">' + esc(p.city) + '</span>' +
+        '<span class="city-row__storyline">' + esc(p.storyline) + '</span>' +
+        '<span class="city-card__badge">' + esc(p.archetype) + '</span>';
+      group.appendChild(row);
+    });
+
+    monthList.appendChild(group);
   });
 
   // ── Archetype filter ──────────────────────────────────────────────
@@ -305,10 +453,32 @@
     bar.querySelectorAll('.filter-btn').forEach(function(btn) {
       btn.classList.toggle('filter-btn--active', btn.dataset.filter === (active || 'all'));
     });
-    document.querySelectorAll('.city-card').forEach(function(card) {
-      card.hidden = active !== null && card.dataset.archetype !== active;
+
+    var matches = function(el) {
+      return active === null || el.dataset.archetype === active;
+    };
+
+    document.querySelectorAll('.now-card').forEach(function(card) {
+      card.hidden = !matches(card);
     });
+    // Nothing left to feature this month under the active filter.
+    nowSection.hidden = !featured.length ||
+      !featured.some(function(p) { return active === null || p.archetype === active; });
+
+    var anyVisible = false;
+    document.querySelectorAll('.month-group').forEach(function(group) {
+      var shown = 0;
+      group.querySelectorAll('.city-row').forEach(function(row) {
+        row.hidden = !matches(row);
+        if (!row.hidden) shown++;
+      });
+      group.hidden = shown === 0;
+      if (shown) anyVisible = true;
+    });
+    indexEmpty.hidden = anyVisible;
   }
+
+  applyFilter();
 </script>
 
 </body>
