@@ -1,0 +1,62 @@
+{
+  "city": "Cape Town",
+  "month": "March",
+  "storyline": "The Wind Drops",
+  "archetype": "Local",
+  "season": "Secret Season",
+  "thesis": "Cape Town in March stops checking the wind and discovers it has the city back.",
+  "metadata": {
+    "energy": 3,
+    "daylight": 4,
+    "streetLife": 4,
+    "socialHours": 4,
+    "comfort": 5,
+    "momentum": 3
+  },
+  "scene": "It's ten to seven and the light is going orange on the front of the mountain. On the lawn above Clifton the group that has been coming down after work all summer has finally stopped checking their phones before leaving the office, because there is nothing to check. The sea is flat. A man is setting out a small folding table, which would have been pointless in January. Somebody has brought a speaker and it is not loud. Down on the sand a swimmer is going in without the twenty seconds of standing still that the wind used to require. It is a Wednesday in March and the beach is more than half local.",
+  "sceneAnchors": [
+    {
+      "place": "Clifton Fourth",
+      "text": "The last of the four coves below the road, sheltered enough to be usable on days when the rest of the coast is not. In summer the choice of which of the four to walk down to is a wind decision made at the top of the steps. In March the decision stops needing to be made."
+    },
+    {
+      "place": "The Pipe Track",
+      "text": "The contour path running along the front of the Twelve Apostles, walked after work by people who go up for an hour and come back down. In March the path is busy at six in the evening with the same faces several times a week, and the tablecloth of cloud that sits on the mountain all summer is mostly gone."
+    },
+    {
+      "place": "Kalk Bay",
+      "text": "The harbour on the False Bay side, where the boats come in mid-morning and the fish is sold on the quay to people who live along that line of the railway. In March the queues are short and the tables outside the places on Main Road are taken by the same regulars two months running."
+    }
+  ],
+  "locals": "For four months the wind has decided things. Which beach, whether the table outside is worth taking, which side of the mountain to walk, whether the washing goes out. People check it the way other cities check rain, and the checking is constant and unremarked. In March it stops, and within a fortnight the visitors have gone too, so the places that were unusable and the places that were full become available in the same week. Everyone knows this and nobody advertises it.",
+  "localWord": {
+    "term": "the Cape Doctor",
+    "translation": "the south-easter, named for scrubbing the air clean",
+    "body": "A wind treated as a public figure. From November it decides which beach, which side of the mountain, and whether anything can be left on a table. In March it goes."
+  },
+  "changes": "You stop consulting the conditions before making a plan. For a few weeks the outdoors simply works, which sounds minor until you notice how much of the summer was spent negotiating. The city that was being shared with a great many people in January is now being used by the people who live in it, quietly, on weekdays.",
+  "start": "Going up the mountain after work rather than at the weekend, because an hour is enough and the light holds. You stop picking a beach and start picking the nearest one. You eat outside without weighting anything down. Within two weeks you recognise people on the contour path, and you begin to understand that this is the stretch of the year residents meant when they were being polite about January.",
+  "stop": "Planning around the forecast. There is nothing in it for a few weeks, which is the entire point and takes some getting used to after a summer of checking. Cape Town in March has quietly removed the variable that organised the previous four months, and left the city standing there without it.",
+  "returns": "The ordinary weekday outdoors, which the wind and the season had between them made into an occasion. In March nothing about being on a beach at six on a Wednesday is remarkable, and there is no one there to make it feel like an event. The city is simply usable, by the people it belongs to.",
+  "remember": "The wind left first. Everyone else was only following it.",
+  "seasonalContrast": {
+    "title": "Not always like this",
+    "items": [
+      {
+        "label": "January",
+        "body": "The south-easter decides the day and the city is full of visitors.",
+        "current": false
+      },
+      {
+        "label": "March",
+        "body": "The wind drops, the visitors go, and the outdoors stops negotiating.",
+        "current": true
+      },
+      {
+        "label": "July",
+        "body": "The rain arrives and the city moves indoors for the winter.",
+        "current": false
+      }
+    ]
+  }
+}

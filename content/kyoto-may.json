@@ -1,0 +1,63 @@
+{
+  "city": "Kyoto",
+  "month": "May",
+  "storyline": "The River Grows a Floor",
+  "archetype": "Open",
+  "season": "Kawayuka",
+  "thesis": "Kyoto in May builds wooden floors out over the river and eats on them until September.",
+  "metadata": {
+    "energy": 3,
+    "daylight": 4,
+    "streetLife": 4,
+    "socialHours": 4,
+    "comfort": 5,
+    "momentum": 3
+  },
+  "scene": "It's a quarter past seven and the platforms along Pontocho have been up for two weeks. From the far bank they read as a single long balcony, lit underneath, running the length of the block. On one of them four people from the same office are sitting at the rail with the water audible below them and the hills going dark behind. The floor is timber laid on scaffolding that was not there in April and will not be there in November. A heron is standing in the shallows being ignored. Somebody leans over to see how far down the river is, which everyone does once.",
+  "sceneAnchors": [
+    {
+      "place": "Pontocho",
+      "text": "The narrow lane running parallel to the Kamo, one building deep, where the restaurants have a door on the alley and a platform on the river. From May the same establishment is two rooms: an inside that has existed all year and an outside that was assembled in the last fortnight."
+    },
+    {
+      "place": "The Kamo riverbank",
+      "text": "The grass strip along the water below Sanjo, used year-round and used differently once the platforms are up. In May people sit on the bank at roughly even spacing, an arrangement nobody organises and everybody observes, and look up at the restaurants they are not eating in."
+    },
+    {
+      "place": "Kibune",
+      "text": "The valley north of the city where the platforms are built directly above a much smaller and colder stream, close enough that the water can be touched from the table. People go up in May for the temperature difference rather than the food, on a small train, and come back the same evening."
+    }
+  ],
+  "locals": "The platforms go up at the start of the month and their appearance is how the year is dated; people say things happened before or after the yuka went up. Bookings that were indoor become outdoor without any change of restaurant. The bank below fills with people who are not eating at all, sitting at the spacing the bank has always used, and the two groups spend the evening a few metres apart with no traffic between them. By September the timber comes down and nobody remarks on that either.",
+  "localWord": {
+    "term": "kawayuka",
+    "pronunciation": "kah-wah-YOO-kah",
+    "translation": "the platforms built out over the river each summer",
+    "body": "Not a terrace and not a view. A structure the city assembles in May and takes apart in autumn, which is how the year gets divided into before and after."
+  },
+  "changes": "You start noticing that the season is built rather than arrived at. Somewhere in April a crew put up scaffolding, and the result is that a room now exists that did not exist last month. The city turns out to change shape on a schedule, and the schedule is physical rather than atmospheric.",
+  "start": "Walking the far bank in the evening to look at the platforms rather than sitting on one. You start sitting on the grass at the spacing everyone else uses, which takes no instruction and about four minutes to learn. You eat one meal up on the timber and spend it aware of the water underneath. By the second week you have started dating things by whether the yuka were up.",
+  "stop": "Treating the river as scenery. It is a working part of the arrangement — the reason the platforms are worth building is the temperature of the air coming off the water, not the look of it. Kyoto in May has engineered a cooling system out of timber and a shallow river, and then booked tables on it.",
+  "returns": "The pleasure of a city that keeps a promise on a date. The platforms are not weather-dependent and not a surprise; they go up in May because they go up in May, and the whole season is legible from the far bank for the price of sitting on some grass.",
+  "remember": "The season did not arrive in Kyoto. Somebody built it.",
+  "seasonalContrast": {
+    "title": "Not always like this",
+    "items": [
+      {
+        "label": "March",
+        "body": "The bank is bare and the restaurants face inward.",
+        "current": false
+      },
+      {
+        "label": "May",
+        "body": "The platforms go up and the city eats above the water.",
+        "current": true
+      },
+      {
+        "label": "November",
+        "body": "They come down, and the river is a river again.",
+        "current": false
+      }
+    ]
+  }
+}
