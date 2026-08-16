@@ -3,7 +3,7 @@
   "month": "January",
   "storyline": "The Warmest Table",
   "archetype": "Quiet",
-  "thesis": "Osaka in January is a city that has moved the party indoors and convinced you the indoors is where you wanted to be all along.",
+  "thesis": "Osaka in January has moved the party indoors and convinced you that is where you wanted it.",
   "season": "Deep Winter",
   "metadata": {
     "energy": 4,
@@ -13,7 +13,7 @@
     "comfort": 3,
     "momentum": 4
   },
-  "scene": "It's 7:45pm at a ramen counter in Namba. Four seats left. Someone hands you a ticket from the vending machine before you even sit down. The broth is the whole reason for being here. The windows are fogged from the steam. A couple eat facing forward at the bar in the way you do when the food is the conversation. Nobody is performing anything for anyone.",
+  "scene": "It's 7:45pm at a ramen counter in Namba. Four seats left. Someone hands you a ticket from the vending machine before you even sit down, because the machine is outside and the transaction is already over. The broth is the whole reason for being here. The windows are fogged from the steam and have been since about five. A couple eat facing forward at the bar in the way you do when the food is the conversation. The man beside you finishes, stands, and is replaced within about twenty seconds by someone who was waiting in the cold without complaining about it. Nobody is performing anything for anyone.",
   "sceneAnchors": [
     {
       "place": "Kuromon Ichiba",
@@ -21,24 +21,24 @@
     },
     {
       "place": "Hozenji Yokocho",
-      "text": "The stone-paved alley where restaurants open onto the street but barely. In January the narrow space between buildings holds heat. The moss on the stone statue is wet from last night's rain."
+      "text": "The stone-paved alley where restaurants open onto the street but barely. In January the narrow space between buildings holds heat, and walking it is noticeably warmer than the road it runs off. The moss on the stone statue is wet from last night's rain and from everyone who has thrown water at it since."
     },
     {
       "place": "Tenjinbashisuji Shotengai",
       "text": "The longest covered shopping street in Japan, where the ceiling keeps the January cold out without keeping the city out. Old women with carts. A barber with no appointment book. The ordinary Tuesday that looks the same every month except that it's warm."
     }
   ],
-  "locals": "Eating standing up at market stalls. Waiting in small groups outside a counter they know. Taking the underground through Namba rather than the surface route. Arriving at a specific restaurant at a specific time because they know the karaage is ready at 6. The cold is not a deterrent — it is a reason.",
+  "locals": "Eating standing up at market stalls. Waiting in small groups outside a counter they know, in the cold, without discussing whether to go somewhere warmer. Taking the underground through Namba rather than the surface route, which adds turns and removes weather. Arriving at a specific restaurant at a specific time because they know the karaage is ready at six. Meals are eaten quickly and the sitting afterwards is done somewhere else. The cold is not a deterrent — it is a reason, and it is the reason the counter is full.",
   "localWord": {
     "term": "kuidaore",
     "pronunciation": "kwee-dah-oh-reh",
-    "translation": "to ruin yourself eating",
-    "body": "The Osaka principle that overspending on food is not a problem but a value. In January it is not a tourist phrase. It is what happens when the cold makes you stay at the table longer than you planned."
+    "translation": "to ruin yourself eating, and to mean it well",
+    "body": "The principle that overspending on food is a value rather than a problem. In January it is what happens when the cold keeps you at the table longer than planned."
   },
   "changes": "You stop eating for sustenance and start eating for warmth. The meal is not the pause between places. The restaurant is the place. You start noticing that the best counters have no menu in English, which has nothing to do with exclusion — they simply have not needed one.",
-  "start": "Eating two meals in the same neighborhood. Standing at a stall for something you didn't plan. Finding the place you'll come back to tomorrow and coming back.",
-  "stop": "Planning. Osaka in January rewards walking into whatever is steaming. The queue outside the unmarked door is the only review that matters.",
-  "returns": "The pleasure of a meal that is only about the meal. No view. No occasion. Just the broth and the counter and the hour.",
+  "start": "Eating two meals in the same neighborhood, forty minutes apart, because the second one was steaming. Standing at a stall for something you didn't plan and finishing it before you have decided whether you liked it. Finding the place you'll come back to tomorrow and coming back. Within a week you have a counter you consider yours, on the basis of three visits and no conversation at all.",
+  "stop": "Planning. Osaka in January rewards walking into whatever is steaming, and the steam is visible from the end of the street, which is the entire selection process. The queue outside the unmarked door is the only review that matters and it updates itself hourly. You stop reading anything before you eat.",
+  "returns": "The pleasure of a meal that is only about the meal. No view. No occasion. Just the broth and the counter and the hour, and the particular quiet of a room where eleven people are eating and none of them are talking. Osaka in January hands you back the idea that dinner can be the whole of an evening.",
   "remember": "You didn't come for the cold. But the cold sent you somewhere you wouldn't have gone.",
   "seasonalContrast": {
     "title": "Not always like this",

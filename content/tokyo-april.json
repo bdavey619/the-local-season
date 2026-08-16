@@ -13,22 +13,22 @@
     "comfort": 4,
     "momentum": 5
   },
-  "scene": "It's 5pm in Shinjuku Gyoen. Office workers in dress shirts are sitting on blue tarps under the cherry trees. Someone has a convenience store bento. Someone else has a portable speaker playing something low. Nobody is performing relaxation — they are actually doing it, which in Tokyo is rarer than the blossoms.",
+  "scene": "It's 5pm in Shinjuku Gyoen. Office workers in dress shirts are sitting on blue tarps under the cherry trees, shoes off and lined up at the edge of the tarp the way shoes are lined up at a door. Someone has a convenience store bento and is eating it with the lid folded back. Someone else has a portable speaker playing something low enough that it stops at the next tarp. A man who arrived at eight this morning to hold the ground is asleep. Nobody is performing relaxation — they are actually doing it, which in Tokyo is rarer than the blossoms.",
   "sceneAnchors": [
     {
       "place": "Shinjuku Gyoen",
-      "text": "The park that enforces quiet, closes at dusk, and still fills past capacity every April. By 4pm the ground is pink with fallen petals. By 5pm the dress shirts have loosened their collars."
+      "text": "The park that enforces quiet, closes at dusk, and still fills past capacity every April. By 4pm the ground is pink with fallen petals and nobody is sweeping them. By 5pm the dress shirts have loosened their collars and the shoes are off."
     },
     {
       "place": "Nakameguro canal",
-      "text": "The stretch of water under the cherry trees that becomes the most photographed kilometer in Japan every spring. At 7am it is still quiet. By noon the crowds arrive. The locals come at 7am."
+      "text": "The stretch of water under the cherry trees that becomes the most photographed kilometer in Japan every spring. At 7am it is still quiet and the reflections are the reason to be there. By noon the crowds arrive and the bridges become a queue. The locals come at 7am."
     },
     {
       "place": "Yoyogi Park on a Sunday",
-      "text": "Where the hanami groups have been here since morning and will stay past dark. A man playing guitar. A group of students asleep on a tarp. The city has decided that today counts differently."
+      "text": "Where the hanami groups have been here since morning and will stay past dark. A man playing guitar. A group of students asleep on a tarp with the rubbish already bagged beside them. The city has decided that today counts differently, and the decision appears to have been unanimous."
     }
   ],
-  "locals": "Arriving at parks before 8am to hold spots with a tarp. Eating under trees in work clothes on weeknights. Staying later than seems reasonable. Treating the blossoms with a specific mixture of joy and conscious awareness that it will end in a week.",
+  "locals": "Arriving at parks before 8am to hold spots with a tarp, usually the newest person in the office, for a party that starts nine hours later. Eating under trees in work clothes on weeknights. Staying later than seems reasonable and later than the trains make convenient. Treating the blossoms with a specific mixture of joy and conscious awareness that it will end in a week — the forecast is on the news, by region, with percentages, and people plan around it the way other countries plan around weather.",
   "localWord": {
     "term": "mono no aware",
     "pronunciation": "moh-no no ah-WAH-reh",
@@ -36,9 +36,9 @@
     "body": "The cherry blossom is the annual tutorial. The point is not to enjoy the bloom but to be aware that it ends. In April, Tokyo is briefly a city where impermanence is scheduled and attended."
   },
   "changes": "The city loosens. Not in a way you would predict — it is not louder or more chaotic. It is softer. Eye contact in the park. Groups of strangers close together on shared tarps. The permission to be present in a public space without a transaction attached.",
-  "start": "Getting to the park before the crowds. Buying something from the convenience store and eating it outside. Staying past when the light is good, because the light is good for a long time.",
-  "stop": "The indoor agenda. April in Tokyo has one event. It lasts about ten days. Being inside for it is a loss you would only recognize later.",
-  "returns": "The awareness of duration. The blossoms last a week. After a day or two you start measuring time differently — not in hours but in petals.",
+  "start": "Getting to the park before the crowds, which means earlier than you think. Buying something from the convenience store and eating it outside, which is normal here and takes a few days to stop feeling like a compromise. Staying past when the light is good, because the light is good for a long time and the tarps do not empty until the trains start to matter.",
+  "stop": "The indoor agenda. April in Tokyo has one event, it lasts about ten days, and the city has quietly cleared its calendar around it without announcing that it has. Being inside for it is a loss you would only recognise later, when somebody asks what you did and the answer is a building.",
+  "returns": "The awareness of duration. The blossoms last a week. After a day or two you start measuring time differently — not in hours but in petals, and in how much of the ground has gone pink since yesterday. It is the only calendar in the city that everybody is reading at once.",
   "remember": "The blossoms are the excuse. The city just needed one.",
   "seasonalContrast": {
     "title": "Not always like this",

@@ -13,7 +13,7 @@
     "comfort": 4,
     "momentum": 4
   },
-  "scene": "It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to.",
+  "scene": "It's 6:30 and the harbour pool at Islands Brygge is full. Not crowded — full, in the way a room feels when the right people are in it. Someone jumps from the tall platform and the queue behind them does not move up, because nobody is in a hurry to be next. A woman in a blazer has folded it into her bag and is sitting with her feet over the edge of the dock, still in the rest of the suit. Two bikes are leaning against each other with the lights still clipped on. The light is still direct, still high — it won't soften for another three hours. Nobody seems to be waiting for it to. It is a Wednesday.",
   "sceneAnchors": [
     {
       "place": "Islands Brygge Havnebadet",
@@ -28,7 +28,7 @@
       "text": "A working cemetery in Nørrebro that locals have quietly converted into a park. Blankets between graves. Children. Someone reading near the stone of the person they're reading. The most honest public space in the city."
     }
   ],
-  "locals": "Work ends and people don't disappear. They move toward water. Bikes replace trains. The grass along Peblinge Sø fills with people who brought wine in water bottles. The harbours become swimming pools. Nobody sends an agenda for what happens next.",
+  "locals": "Work ends and people don't disappear. They move toward water. Bikes replace trains, and the racks outside the harbour baths fill in a way that would be a problem anywhere with less bicycle parking. The grass along Peblinge Sø fills with people who brought wine in water bottles. Swimming happens in work clothes that have been taken off and put in a bag. Nobody sends an agenda for what happens next, and nothing gets confirmed; people arrive at the same stretch of dock they were at last week and find that most of the same people had the same idea.",
   "localWord": {
     "term": "aftensol",
     "pronunciation": "af-ten-sol",
@@ -36,8 +36,8 @@
     "body": "Not just sunset. Not golden hour. The long, usable light that makes 9pm feel unfinished."
   },
   "changes": "Sometime around day three, you stop checking the time before deciding to go outside. The sky at 9pm looks suspiciously like 6pm. You eat dinner later than you meant to — not because the restaurant was full, but because nothing in the light told you it was time.",
-  "start": "You start accepting distance. Eating outside without a table. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave.",
-  "stop": "Dinner. You pick up a pølse from a corner kiosk on the way somewhere and it's enough. You stop planning the evening. The city doesn't require it.",
+  "start": "You start accepting distance. Eating outside without a table, and cycling twenty minutes to a swim you will be in the water for ten. Staying somewhere — a bench on the harbour, a patch of grass near Søerne — longer than you intended, because nothing in the aftensol suggests you should leave. You stop confirming plans and start turning up at the place people were at last time.",
+  "stop": "Dinner, as an event with a time attached. You pick up a pølse from a corner kiosk on the way somewhere and it's enough, and the somewhere turns out to be a dock. You stop planning the evening. Here the light does the scheduling and the city does not require anything else.",
   "returns": "Margin. Not more hours exactly. Just enough room in the day that nothing feels late. You wait for someone outside a café without looking at your phone. You sit on the harbour edge doing nothing in particular. In June it just feels like being in Copenhagen.",
   "remember": "The city doesn't ask you to do more. It convinces you there's more time.",
   "seasonalContrast": {
@@ -45,17 +45,17 @@
     "items": [
       {
         "label": "Winter",
-        "body": "People gather closer.",
+        "body": "People gather closer, indoors, and the evening ends when the meal does.",
         "current": false
       },
       {
         "label": "June",
-        "body": "People forget to go home.",
+        "body": "People forget to go home, because nothing in the light suggests it.",
         "current": true
       },
       {
         "label": "Autumn",
-        "body": "People start noticing sunset again.",
+        "body": "People start noticing sunset again, and the swimming stops without discussion.",
         "current": false
       }
     ]

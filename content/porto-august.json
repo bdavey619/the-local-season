@@ -13,31 +13,31 @@
     "comfort": 3,
     "momentum": 3
   },
-  "scene": "It's 4pm on a Sunday in Miragaia. The riverside is not empty but it is not loud. A woman is reading at one of the outdoor cafe tables. A fisherman is at the water below the retaining wall, which he does here every Sunday regardless of the month. A tuk-tuk passes going uphill. The tiles on the building opposite are the color of the hour.",
+  "scene": "It's 4pm on a Sunday in Miragaia. The riverside is not empty but it is not loud. A woman is reading at one of the outdoor cafe tables and has been at the same table long enough for the shade to have moved off her. A fisherman is at the water below the retaining wall, which he does here every Sunday regardless of the month. A tuk-tuk passes going uphill, and nobody on the terrace turns to look at it. The tiles on the building opposite are the color of the hour. Somewhere above, a window is open and a television is on for nobody.",
   "sceneAnchors": [
     {
       "place": "Ribeira after 3pm",
-      "text": "The riverside neighborhood that empties after tourist lunch and fills again at dusk with people who are staying. In August the afternoon gap is visible. The restaurants reset. The waiters eat."
+      "text": "The riverside neighborhood that empties after tourist lunch and fills again at dusk with people who are staying. In August the afternoon gap is visible from one end of the quay to the other. The restaurants reset. The waiters eat, at a table by the kitchen door, quickly."
     },
     {
       "place": "Serra do Pilar, Vila Nova de Gaia",
-      "text": "The monastery across the river where August evenings bring Porto residents over the bridge for the view back. They bring wine. They don't take photos. They have done this before."
+      "text": "The monastery across the river where August evenings bring Porto residents over the bridge for the view back. They bring wine. They don't take photos. They have done this before, and they arrive at the hour that suggests they know when the light goes."
     },
     {
       "place": "Foz do Douro",
-      "text": "Where the Douro meets the Atlantic and the swimming beach belongs mostly to people who live within a bus ride. On a weekday afternoon the families have the rocks and the water to themselves."
+      "text": "Where the Douro meets the Atlantic and the swimming beach belongs mostly to people who live within a bus ride. On a weekday afternoon the families have the rocks and the water to themselves, and the wind off the ocean makes it about five degrees cooler than the centre."
     }
   ],
-  "locals": "Swimming at Foz on a Tuesday. Taking the cable car for the view, not the photo. Going to the miradouros at dusk rather than midday. Eating dinner late, eating sardines, eating outside because it has not yet occurred to them to do otherwise.",
+  "locals": "Swimming at Foz on a Tuesday. Taking the cable car for the view, not the photo. Going to the miradouros at dusk rather than midday, which is the difference between a queue and a bench. Eating dinner late, eating sardines, eating outside because it has not yet occurred to them to do otherwise. The afternoons between two and five are given over to shade, and the streets that were full at noon are given back around six, to different people, walking slower.",
   "localWord": {
     "term": "pacato",
-    "translation": "unhurried, undisturbed",
-    "body": "Not a Porto-specific word, but August in Porto — past the peak of mid-month — has a specific pacato quality. The city is still open, the wine lodges still full, but the urgency has slowed. You can tell in how people walk."
+    "translation": "unhurried, and left alone enough to stay that way",
+    "body": "August past the first week has the quality exactly. The city is still open and the lodges still full, but the urgency has gone out of it. You can tell by how people walk."
   },
-  "changes": "The city shows its seams. The August tourists concentrate around the river and the bookshop. Everywhere else — the streets behind Santa Catarina, the Bonfim neighborhood, Rua de Cedofeita in the evening — belongs to the people who live here.",
-  "start": "Crossing the bridge to Gaia for the view back across the water. Taking the bus to Foz when the afternoon gets too hot for the tiles. Finding the local grocery because the tourist one is out of something.",
-  "stop": "The peak-hours plan. August in Porto rewards the margins — the early market, the late miradouro. The middle of the day is for shade.",
-  "returns": "The awareness of tile. Azulejos are everywhere but you only start seeing them — really seeing them — when you have slowed down enough to stop in front of one.",
+  "changes": "The city shows its seams. The August tourists concentrate around the river and the bookshop, in a footprint you could draw on a map. Everywhere else — the streets behind Santa Catarina, the Bonfim neighborhood, Rua de Cedofeita in the evening — belongs to the people who live here, and it takes about two days to find the edge.",
+  "start": "Crossing the bridge to Gaia for the view back across the water, on foot, on the lower deck. Taking the bus to Foz when the afternoon gets too hot for the tiles. Finding the local grocery because the tourist one is out of something, and then continuing to use it. You start eating at nine because eating at seven turns out to be an admission of where you are from.",
+  "stop": "The peak-hours plan. August in Porto rewards the margins — the early market, the late miradouro — and punishes the middle of the day, which is for shade and is not negotiable. You stop trying to see things between noon and four. The city is not available then, and neither are the people who live in it.",
+  "returns": "The awareness of tile. Azulejos are everywhere but you only start seeing them — really seeing them — when you have slowed down enough to stop in front of one, which August, past the first week, gives you time to do.",
   "remember": "The tourists came for the view. You stayed long enough to stop needing it.",
   "seasonalContrast": {
     "title": "Not always like this",

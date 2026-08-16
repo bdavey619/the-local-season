@@ -13,7 +13,7 @@
     "comfort": 4,
     "momentum": 5
   },
-  "scene": "It's 9pm on Saint-Laurent. Every restaurant has moved its tables to the sidewalk. A man is playing accordion near the corner. The terrasse at the bar across the street is full and there is a list and people are waiting outside on the pavement and not minding. The evening is warm. Everyone knows this will not last until November.",
+  "scene": "It's 9pm on Saint-Laurent. Every restaurant has moved its tables to the sidewalk. A man is playing accordion near the corner and has been there long enough that the servers step around him without looking. The terrasse at the bar across the street is full and there is a list and people are waiting outside on the pavement and not minding. Somebody has brought a chair out of an apartment doorway and is sitting in it, on the street, watching. The evening is warm and will still be warm at one. Everyone here knows this will not last until November, and nobody says so.",
   "sceneAnchors": [
     {
       "place": "Plateau-Mont-Royal on a July evening",
@@ -21,24 +21,24 @@
     },
     {
       "place": "Parc La Fontaine",
-      "text": "The park in the Plateau where July means outdoor concerts, people on the grass past dark, the unspoken agreement that the city has decided to be good to itself this month."
+      "text": "The park in the Plateau where July means outdoor concerts, people on the grass past dark, the unspoken agreement that the city has decided to be good to itself this month. The pond has pedal boats nobody is in a hurry to return. Groups arrive separately and merge without introduction."
     },
     {
       "place": "Mile End on a Sunday morning",
-      "text": "The stretch of Saint-Viateur and Fairmount where the bagels come out of the wood ovens at 5am and people queue in summer clothes, coffee in hand, before heading back to the park."
+      "text": "The stretch of Saint-Viateur and Fairmount where the bagels come out of the wood ovens at 5am and people queue in summer clothes, coffee in hand, before heading back to the park. The ovens do not stop in any season, but in July the queue is outside and talking."
     }
   ],
-  "locals": "Eating outside as a default, not an option. Staying on the terrasse past midnight. Walking to the park after dinner rather than taking the metro. Taking the bike over the train. Making the summer count with the specific urgency of a city that knows what comes after.",
+  "locals": "Eating outside as a default, not an option. Staying on the terrasse past midnight, on a weeknight, with work in the morning. Walking to the park after dinner rather than taking the metro, because the walk is the point and the metro is underground. Taking the bike over the train. Alleys behind the triplexes fill up with people who came out of their own back doors, and the balconies above them are occupied for the same reason. Making the summer count with the specific urgency of a city that knows exactly what comes after.",
   "localWord": {
     "term": "terrasse",
     "translation": "any outdoor seating, treated as non-negotiable in summer",
-    "body": "In Montreal the terrasse is a weather-dependent luxury that becomes a cultural obligation in July. To eat inside in July is to admit something you do not want to admit. Every restaurant in the city knows this."
+    "body": "A weather-dependent luxury that becomes an obligation in July. To eat inside is to admit something you would rather not. Every restaurant in the city knows this."
   },
-  "changes": "The urgency is audible. The city does not waste evenings in July. You stop making early plans because the evening will reorganize itself and the best version will happen after 8pm.",
-  "start": "Eating outside every meal. Taking the long route on foot. Staying for the next round because the night is warm enough to justify it.",
-  "stop": "The cautious version of July. Montreal does not reward restraint in summer. Come back in January for that.",
-  "returns": "The guilt-free lateness. The version of 11pm that feels like 8pm and gives you no reason to go home.",
-  "remember": "A Montreal winter earns this. So do you.",
+  "changes": "The urgency is audible. The city does not waste evenings in July, and the not-wasting is collective rather than personal — everyone is out on the same night for the same reason. You stop making early plans, because the evening will reorganize itself and the best version of it will happen after eight.",
+  "start": "Eating outside every meal, including the ones where it is not really warm enough. Taking the long route on foot because the long route goes past the terrasses. Staying for the next round because the night is warm enough to justify it and because going home ends something that is not finished. Within a week you are checking which side of the street has the sun at seven.",
+  "stop": "The cautious version of July. Montreal does not reward restraint in summer, and it is not subtle about this — the tables are already on the sidewalk and the list at the door is forty minutes and nobody is going home. Come back in January for the other thing. It will still be here.",
+  "returns": "The guilt-free lateness. The version of eleven that feels like eight and gives you no reason to go home. Nothing is being celebrated; it is a Tuesday. Montreal in July has simply decided, as a city, that the evening is the part of the day worth having, and has arranged the furniture accordingly.",
+  "remember": "A Montreal winter earns this. By July, so have you.",
   "seasonalContrast": {
     "title": "Not always like this",
     "items": [
