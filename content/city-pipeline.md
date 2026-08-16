@@ -663,6 +663,98 @@ crowds have gone, at the cost of being a quieter, less surprising claim.
 
 ---
 
+## Discovery batch — January, March, May
+
+Run after the energy set was cut to four. Every card had to fit Electric, Open,
+Local or Quiet without being forced, which ruled out several otherwise strong
+mechanisms — anything whose argument is endurance now has nowhere to sit.
+
+Each month already holds one city, so these had to differ from it in thesis:
+January has Osaka, March has Valencia, May has Dublin.
+
+---
+
+### Chennai — January · *The Music Season*
+
+**Archetype:** Electric
+**Season:** Margazhi
+
+**Thesis:** Chennai in January runs several hundred concerts a day for an
+audience that lives there.
+
+**Local word:** *Margazhi* — the Tamil month running from mid-December to
+mid-January, which is a set of obligations rather than a date: rice-flour kolam
+drawn on the ground before dawn, temple visits before the light, and a concert
+season that fills the city's sabhas from morning until night. People attend
+three in a day and have opinions about the canteens.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| September | The sabhas are dark and the halls are let out for weddings. |
+| January | Several hundred concerts a day, and the canteen queue is part of it. |
+| June | Forty degrees, and nobody is sitting in a hall for three hours. |
+
+**Confidence:** 5
+**Why this month:** Margazhi has a fixed start and end, and the season exists
+only inside it — the same halls are unused in September.
+
+---
+
+### Cape Town — March · *The Wind Drops*
+
+**Archetype:** Local
+**Season:** Secret Season
+
+**Thesis:** Cape Town in March stops checking the wind and discovers it has the
+city back.
+
+**Local word:** *the Cape Doctor* — the south-easter that runs the summer, named
+for scrubbing the air clean. From November it decides which beach is usable,
+whether you can eat outside, and which side of the mountain to be on. In March
+it stops, and the checking stops with it.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| January | The south-easter decides the day and the city is full of visitors. |
+| March | The wind drops, the visitors go, and the outdoors stops negotiating. |
+| July | The rain arrives and the city moves indoors for the winter. |
+
+**Confidence:** 4
+**Why this month:** The wind and the visitors leave within a fortnight of each
+other, and the page is about that coincidence rather than either half of it.
+
+---
+
+### Kyoto — May · *The River Grows a Floor*
+
+**Archetype:** Open
+**Season:** Kawayuka
+
+**Thesis:** Kyoto in May builds wooden floors out over the river and eats on
+them until September.
+
+**Local word:** *kawayuka* — the platforms the restaurants along the Kamo erect
+each May and dismantle in autumn. Not a terrace and not a view: a structure the
+city assembles and takes down, whose presence is how the year is dated.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| March | The bank is bare and the restaurants face inward. |
+| May | The platforms go up and the city eats above the water. |
+| November | They come down, and the river is a river again. |
+
+**Confidence:** 4
+**Why this month:** The platforms go up on a fixed date in May, and the season
+they open does not exist before it.
+
+---
+
 ## Build status
 
 Do not let the pipeline become the product. The pipeline exists only to help
@@ -692,21 +784,24 @@ Both were **Quiet**, which is still one of the thinnest archetypes.
 
 ### Gap to 24
 
-Twenty-four cities across twelve months means two per month. Seven months were
-short; the discovery batch above proposes one card for each, pending Stage 2
-approval.
+Twenty-four cities across twelve months means two per month. Twenty-one are
+built. January, March and May each hold one, and the batch above proposes a
+card for each, pending Stage 2 approval.
 
-| Month | Card | Confidence |
-|-------|------|-----------|
-| February | Vienna · *The Season of Borrowed Formality* | 4 |
-| March | Valencia · *Two O'Clock, Every Day* | 4 |
-| April | Seville · *The Week That Runs on Invitation* | 4 |
-| May | Bergen · *The Day the Country Dresses as Itself* | 3 |
-| August | Stockholm · *The Last Light* | 4 |
-| September | Tbilisi · *Everyone Goes to the Village* | 4 |
-| December | Reykjavík · *The Book Flood* | 5 |
+| Month | Card | Archetype | Confidence |
+|-------|------|-----------|-----------|
+| January | Chennai · *The Music Season* | Electric | 5 |
+| March | Cape Town · *The Wind Drops* | Local | 4 |
+| May | Kyoto · *The River Grows a Floor* | Open | 4 |
 
-Taking Stockholm for August retires the unbuilt **Stockholm — June** card, since
-a city gets one month. This is a deliberate trade: June already holds two
-cities, and the August mechanism scores higher than midsummer, which is both
-more expected and better covered elsewhere.
+### Retired
+
+- **Melbourne — January** · *How to Wait for the Breeze* — archetype Raw, removed
+- **Mexico City — March** · *Before the Heat* — archetype Slow, removed
+- **Bergen — May** · *The Day the Country Dresses as Itself* — card declined at confidence 3
+- **Stockholm — June** · *When the City Dissolves* — Stockholm took August instead
+- **Mexico City — February** · *The City's Own Audience* — city already used
+- **Lisbon — September** · *After the Gridlock* — city already used
+
+Melbourne and Mexico City are free again as cities, should either mechanism be
+worth rehoming to a month that is not January or March.
