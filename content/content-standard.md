@@ -26,7 +26,7 @@ Every one of these must be present. The build fails without them.
 | --- | --- |
 | `city`, `month` | strings; `month` must be a real calendar month |
 | `storyline` | the page's subtitle — a claim, not a label |
-| `archetype` | one of Electric, Open, Local, Quiet, Raw, Slow |
+| `archetype` | one of Electric, Open, Local, Quiet |
 | `season` | the local name for this stretch of the year |
 | `thesis` | the pull-quote; the whole page in one sentence |
 | `metadata` | exactly: energy, daylight, streetLife, socialHours, comfort, momentum — integers 1–5 |
@@ -77,9 +77,17 @@ purpose.
 | Open | `#4f8fa8` | blue — the city has moved outdoors |
 | Local | `#b05c35` | rust — the visitors have gone |
 | Quiet | `#7d7a70` | stone — the city is turned down |
-| Raw | `#8a6a4a` | umber — the season has teeth |
-| Slow | `#5f8a63` | sage — the city is unhurried |
 
 Chosen for separation on the paper background: minimum pairwise perceptual
-distance ΔE 19.7 (the 13 hand-picked colors this replaced had pairs as close as
-ΔE 4.5), and minimum contrast 2.79:1 against `--paper`.
+distance ΔE 28.6, and minimum contrast 2.79:1 against `--paper`.
+
+The set was six. **Raw** (the season has teeth) and **Slow** (the city is
+unhurried) were retired once each held a single page — a filter with one result
+behind it is a dead end. Both pages were retired with them rather than
+relabelled, because neither could wear a remaining label honestly: Mexico City —
+March argued in its own text that it was *"not slow in the sense of idle."*
+
+The cost is real. Some mechanisms no longer have a home — a season that is
+actively adversarial has nowhere to sit in a set that runs switched on, moved
+outdoors, visitors gone, turned down. Weigh that during Discover before
+proposing a city whose whole argument is endurance.

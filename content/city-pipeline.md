@@ -43,7 +43,7 @@ Each card contains only:
 |-------|-----------|
 | `city` + `month` | Identity |
 | `storyline` | The subtitle. One clause. Should be surprising. |
-| `archetype` | Electric · Quiet · Slow · Raw · Open · Local |
+| `archetype` | Electric · Open · Local · Quiet |
 | `season` | The local name for this moment in the year |
 | `thesis` | One sentence. What this month does to the way daily life feels. |
 | `local word` | One term that names something the city does this month |

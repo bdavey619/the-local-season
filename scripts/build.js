@@ -33,8 +33,6 @@ const ARCHETYPE_PALETTE = {
   Open:     '#4f8fa8',
   Local:    '#b05c35',
   Quiet:    '#7d7a70',
-  Raw:      '#8a6a4a',
-  Slow:     '#5f8a63',
 };
 
 const dimOf = (hex) => {

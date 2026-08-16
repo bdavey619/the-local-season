@@ -330,11 +330,9 @@
 
 <script>
   var PAGES = [
-    { month: "January", city: "Melbourne", storyline: "How to Wait for the Breeze", archetype: "Raw", season: "Heat Season", thesis: "Melbourne in January arranges its entire day around one meteorological event: the afternoon cool change.", accent: "#8a6a4a", href: "melbourne-january.html" },
     { month: "January", city: "Osaka", storyline: "The Warmest Table", archetype: "Quiet", season: "Deep Winter", thesis: "Osaka in January is a city that has moved the party indoors and convinced you the indoors is where you wanted to be all along.", accent: "#7d7a70", href: "osaka-january.html" },
     { month: "February", city: "Lisbon", storyline: "Before the Season", archetype: "Open", season: "Pre-Season", thesis: "Lisbon in February is a city still mostly its own.", accent: "#4f8fa8", href: "lisbon-february.html" },
     { month: "February", city: "Vienna", storyline: "The Season of Borrowed Formality", archetype: "Electric", season: "Ballsaison", thesis: "Vienna in February is when formality stops belonging to the elite and becomes an obligation of your trade.", accent: "#c08a2e", href: "vienna-february.html" },
-    { month: "March", city: "Mexico City", storyline: "Before the Heat", archetype: "Slow", season: "Dry Season", thesis: "Mexico City in March is a city at full capacity without being at full speed.", accent: "#5f8a63", href: "mexico-city-march.html" },
     { month: "March", city: "Valencia", storyline: "Two O'Clock, Every Day", archetype: "Electric", season: "Falles", thesis: "Valencia in March gives the entire city a standing two o'clock appointment with an explosion.", accent: "#c08a2e", href: "valencia-march.html" },
     { month: "April", city: "Seville", storyline: "The Week That Runs on Invitation", archetype: "Electric", season: "Feria de Abril", thesis: "Seville in April moves its social life into a temporary city most people cannot enter.", accent: "#c08a2e", href: "seville-april.html" },
     { month: "April", city: "Tokyo", storyline: "The Permission", archetype: "Electric", season: "Sakura", thesis: "Tokyo in April is when a city that does not usually permit itself becomes briefly, collectively, off-duty.", accent: "#c08a2e", href: "tokyo-april.html" },
@@ -432,7 +430,7 @@
   });
 
   // ── Archetype filter ──────────────────────────────────────────────
-  var ARCHETYPE_ORDER = ['Electric', 'Open', 'Local', 'Quiet', 'Raw', 'Slow'];
+  var ARCHETYPE_ORDER = ['Electric', 'Open', 'Local', 'Quiet'];
   var present = ARCHETYPE_ORDER.filter(function(a) {
     return PAGES.some(function(p) { return p.archetype === a; });
   });
