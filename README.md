@@ -63,7 +63,10 @@ Pages are not meant to determine the best time to visit. They explain why a mome
 | January | **Melbourne** (`melbourne-january.html`) | How to Wait for the Breeze | Raw |
 | January | **Osaka** (`osaka-january.html`) | The Warmest Table | Quiet |
 | February | **Lisbon** (`lisbon-february.html`) | Before the Season | Open |
+| February | **Vienna** (`vienna-february.html`) | The Season of Borrowed Formality | Electric |
 | March | **Mexico City** (`mexico-city-march.html`) | Before the Heat | Slow |
+| March | **Valencia** (`valencia-march.html`) | Two O'Clock, Every Day | Electric |
+| April | **Seville** (`seville-april.html`) | The Week That Runs on Invitation | Electric |
 | April | **Tokyo** (`tokyo-april.html`) | The Permission | Electric |
 | May | **Dublin** (`dublin-may.html`) | Everyone Comes Back Outside | Open |
 | June | **Copenhagen** (`copenhagen-june.html`) | The Longest Evenings | Electric |
@@ -71,11 +74,14 @@ Pages are not meant to determine the best time to visit. They explain why a mome
 | July | **Montreal** (`montreal-july.html`) | The City That Summers Hard | Electric |
 | July | **Vancouver** (`vancouver-july.html`) | The Payoff | Open |
 | August | **Porto** (`porto-august.html`) | After the Rush | Quiet |
+| August | **Stockholm** (`stockholm-august.html`) | The Last Light | Open |
 | September | **San Diego** (`san-diego-september.html`) | Summer After Summer | Local |
+| September | **Tbilisi** (`tbilisi-september.html`) | Everyone Goes to the Village | Local |
 | October | **Palermo** (`palermo-october.html`) | The Locals Return | Local |
 | October | **Seoul** (`seoul-october.html`) | The City Climbs | Local |
 | November | **Buenos Aires** (`buenos-aires-november.html`) | Before December | Electric |
 | November | **New Orleans** (`new-orleans-november.html`) | The Real Season | Local |
+| December | **Reykjavík** (`reykjavik-december.html`) | The Book Flood | Quiet |
 | December | **Sydney** (`sydney-december.html`) | The Holidays Move Outside | Open |
 <!-- pages:end -->
 

@@ -1,0 +1,63 @@
+{
+  "city": "Stockholm",
+  "month": "August",
+  "storyline": "The Last Light",
+  "archetype": "Open",
+  "season": "Kräftskiva",
+  "thesis": "Stockholm in August behaves like a city spending something it knows is about to run out.",
+  "metadata": {
+    "energy": 4,
+    "daylight": 4,
+    "streetLife": 4,
+    "socialHours": 4,
+    "comfort": 4,
+    "momentum": 3
+  },
+  "scene": "It's ten past nine and the paper lanterns have just started to be worth having. On a jetty on Södermalm, eleven people are wearing paper hats with crayfish printed on them, which nobody has commented on because commenting is not the arrangement. There is a bowl of them in the middle of the table, cold, in dill, and a stack of the small shells building up on the newspaper. Somebody starts a song and the table joins on the second line and there is a small glass involved at the end of it. It is noticeably darker than it was three weeks ago. Everyone at the table knows this.",
+  "sceneAnchors": [
+    {
+      "place": "Långholmen",
+      "text": "The small island off Södermalm with swimming rocks and a beach, reachable on foot over a bridge. In August the rocks hold people until the light goes, which is now happening earlier each evening and is discussed. The water is warmer in August than at any other point in the year, which is the argument for staying in it."
+    },
+    {
+      "place": "The archipelago ferries",
+      "text": "The boats out of Strandvägen to the islands, running full through August with people carrying bags for a night rather than a week. The last return sailing is the constraint everyone plans around. Conversation on the way out is about the weekend; on the way back it is about how many weekends are left."
+    },
+    {
+      "place": "Tantolunden",
+      "text": "The allotment park on the south side, where the small painted huts have gardens and the lawns fill after work. In August the barbecues run late and the light behind them goes orange at an hour that was full daylight in June. People stay anyway, in more layers than last month."
+    }
+  ],
+  "locals": "Everyone is back from the July holiday and nobody is behaving as though the summer is over. The crayfish parties happen outdoors on purpose, in August, with hats and lanterns and songs that require a small glass at the end, and the silliness is deliberate rather than accidental. Swimming continues because the water is at its warmest now. The subject that comes up at every table is how much light there was three weeks ago compared with tonight, said lightly, by people doing the arithmetic.",
+  "localWord": {
+    "term": "kräftskiva",
+    "pronunciation": "KREFT-shee-va",
+    "translation": "the crayfish party, held outdoors in August",
+    "body": "Paper hats, paper lanterns, and songs between drinks. Faintly ridiculous on purpose. It is the last outdoor gathering of the year and everyone at the table knows the arithmetic."
+  },
+  "changes": "You start noticing the light going, which nobody had to teach you. The evenings are still long enough to be useful and short enough to be counted, and the counting changes how they get used. Enjoyment acquires an edge of urgency that has nothing to do with the weather being good.",
+  "start": "Swimming in the evening rather than the afternoon, because the water is warmest now and the light is not. You start saying yes to things on weeknights. You wear a paper hat without discussing it. By the third week you are the one pointing out that it was still bright at ten in June, and you have started planning around the last ferry back.",
+  "stop": "Treating this as the beginning of something. It is the end, and the city is not pretending otherwise. Stockholm in August has done the sum, decided the answer is to eat outside anyway in a paper hat, and would rather you did not point out that it will be dark by three in November.",
+  "returns": "Silliness, in a country not much associated with it. There is no dignified way to wear a paper crayfish hat and that is the function. August is when a reserved city agrees, for a few weeks, that the correct response to the light leaving is to sit outside in it and sing.",
+  "remember": "They were not celebrating the summer. They were seeing it out.",
+  "seasonalContrast": {
+    "title": "Not always like this",
+    "items": [
+      {
+        "label": "June",
+        "body": "Midsummer, and the light feels infinite because it nearly is.",
+        "current": false
+      },
+      {
+        "label": "August",
+        "body": "The dark returns a few minutes a night and the tables stay outside.",
+        "current": true
+      },
+      {
+        "label": "November",
+        "body": "Afternoon is over by three and nobody eats outside.",
+        "current": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "city": "Vienna",
+  "month": "February",
+  "storyline": "The Season of Borrowed Formality",
+  "archetype": "Electric",
+  "season": "Ballsaison",
+  "thesis": "Vienna in February is when formality stops belonging to the elite and becomes an obligation of your trade.",
+  "metadata": {
+    "energy": 4,
+    "daylight": 2,
+    "streetLife": 3,
+    "socialHours": 5,
+    "comfort": 3,
+    "momentum": 4
+  },
+  "scene": "It's 11:20 on a Thursday night and the Kaffeesiederball is four hours old. The men who own the coffeehouses are here, and so are the people who work in them. A woman in a floor-length dress is holding her shoes in one hand and a glass in the other, on a staircase, mid-conversation with somebody she clearly sees every day. The orchestra has been playing quadrilles that require the floor to organise itself into squares, which it does, badly, with a great deal of laughing. Somebody's father is the best dancer in the room. Nobody here is a tourist and the ball has another five hours to run.",
+  "sceneAnchors": [
+    {
+      "place": "Rathaus",
+      "text": "The city hall, which between January and Ash Wednesday functions as a venue rather than a government building. Several of the largest balls are held in its halls, including ones thrown by trades that have no obvious business owning a ballroom. The cloakroom queue at nine is longer than any queue the building sees by day."
+    },
+    {
+      "place": "The Tanzschulen",
+      "text": "The dance schools, busiest in January, teaching adults who have left it too late again. The courses are short and unromantic and full of people learning the left turn because their profession's ball is in three weeks. Instructors count out loud. Nobody pretends to be there for pleasure."
+    },
+    {
+      "place": "Café Sperl",
+      "text": "One of the coffeehouses where the season gets discussed at length in the weeks before it: which ball, with whom, and whether the band is any good this year. In February the same rooms hold people recovering at eleven in the morning, in yesterday's shirt, ordering something small."
+    }
+  ],
+  "locals": "People book a dance course in January for a ball in February, and they are not embarrassed about it. The ball you attend is generally the one your occupation holds, which means the room is full of colleagues and the formality is aimed inward rather than at anyone watching. Dress is long and strictly enforced and rented as often as owned. Things begin at nine and end near four. The following morning is not taken off, which everyone regards as part of the arrangement.",
+  "localWord": {
+    "term": "Ballsaison",
+    "pronunciation": "BAL-zay-zohn",
+    "translation": "the ball season, running from January to Ash Wednesday",
+    "body": "Around four hundred and fifty of them, most thrown by trades rather than by society. The confectioners have one. So do the hunters, and the coffeehouse owners."
+  },
+  "changes": "Formality stops reading as exclusion. You had assumed the dressing up was a barrier and it turns out to be a uniform — everybody in the room is in it, including the people who poured your coffee this morning. The effort is the point, and the effort is shared, which is a different thing entirely from being impressive.",
+  "start": "Learning the left turn, badly, in a room of adults doing the same. You start owning an opinion about which orchestra is worth staying for. You go to a thing that begins at nine on a weeknight and ends at four, and then you go to work. Within a month you have stopped finding it strange that a city of two million schedules its winter around dancing.",
+  "stop": "Reading it as heritage. Nothing in the room is being preserved for anyone's benefit; the confectioners are not performing confectionery. The season is a working calendar that happens to involve floor-length dresses, and treating it as a museum piece is the one way to miss what it is for.",
+  "returns": "Occasion, which most cities have handed over to weddings. Vienna in February gives ordinary people several nights a year that require preparation, a specific standard of dress, and the company of everyone they work with. Nothing is being commemorated. The season simply exists, and then Ash Wednesday arrives and it stops.",
+  "remember": "The dressing up was never the barrier. It was the invitation.",
+  "seasonalContrast": {
+    "title": "Not always like this",
+    "items": [
+      {
+        "label": "November",
+        "body": "The dance schools fill with people who will not say why.",
+        "current": false
+      },
+      {
+        "label": "February",
+        "body": "Your trade holds a ball and you go, having practised.",
+        "current": true
+      },
+      {
+        "label": "April",
+        "body": "The same rooms are concert halls again and nobody dances.",
+        "current": false
+      }
+    ]
+  }
+}

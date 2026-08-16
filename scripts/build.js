@@ -66,7 +66,15 @@ const WORD_TARGETS = {
   remember: [ 9, 17],
 };
 
-const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+// City names keep their diacritics; slugs do not. Decompose what decomposes
+// (í → i), then hand-map the letters that have no combining form of their own.
+const TRANSLIT = { 'ø': 'o', 'æ': 'ae', 'œ': 'oe', 'ð': 'd', 'þ': 'th', 'ß': 'ss', 'ł': 'l', 'đ': 'd', 'ı': 'i' };
+const slugify = (s) =>
+  s.toLowerCase()
+    .replace(/[øæœðþßłđı]/g, (c) => TRANSLIT[c])
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
 const words   = (s) => String(s || '').trim().split(/\s+/).filter(Boolean).length;
 
 function validate(slug, page, seenCities) {

@@ -1,0 +1,63 @@
+{
+  "city": "Valencia",
+  "month": "March",
+  "storyline": "Two O'Clock, Every Day",
+  "archetype": "Electric",
+  "season": "Falles",
+  "thesis": "Valencia in March gives the entire city a standing two o'clock appointment with an explosion.",
+  "metadata": {
+    "energy": 5,
+    "daylight": 3,
+    "streetLife": 5,
+    "socialHours": 5,
+    "comfort": 3,
+    "momentum": 5
+  },
+  "scene": "It's 1:52 and the Plaça de l'Ajuntament is full of people who have to be back at work. Nobody is looking at anything; they are waiting to feel it. A man near the barrier is explaining to a colleague that today's is by a firm from Bunyol and that the ending has been disappointing two years running. At two exactly it starts low, and the sound arrives in the chest before the ears, and for four minutes the square is a single continuous percussion that shakes the shutters on the buildings behind. Then it stops. People check the time and start walking back.",
+  "sceneAnchors": [
+    {
+      "place": "Plaça de l'Ajuntament",
+      "text": "The square in front of the city hall, closed to traffic for the first nineteen days of March and given over to a daily five minutes of gunpowder. The crowd is largely local and largely on a break. Shopkeepers on the perimeter tape their windows and leave them taped until the twentieth."
+    },
+    {
+      "place": "The casals fallers",
+      "text": "The neighbourhood clubhouses, one per district, where the monuments are built across the rest of the year by people who do it for their street rather than for money. In March the casal is where the neighbourhood eats, and membership is inherited more often than joined."
+    },
+    {
+      "place": "Ruzafa",
+      "text": "The barrio south of the station, where the monuments stand in the middle of ordinary intersections for a fortnight and traffic simply routes around them. People walk their own district first and other districts later, in an order that is understood and never stated. On the nineteenth the whole thing is burned."
+    }
+  ],
+  "locals": "People go to the two o'clock several times a week, on a break, and have opinions about the pyrotechnic firm responsible. The judgement is on rhythm and on the ending, never on the light. Neighbourhood clubs cook and eat in the street outside their own casal, for their own district, most nights. Children are given small firecrackers and supervised loosely. Nobody sleeps much for a fortnight and the city does not pretend otherwise; on the twentieth the streets are swept and everyone goes back to work.",
+  "localWord": {
+    "term": "mascletà",
+    "pronunciation": "mas-kle-TA",
+    "translation": "a daytime firework display judged by sound, not light",
+    "body": "Two o'clock, every day, from the first to the nineteenth. You do not watch it. You stand in it, and afterwards you argue about whether the ending held."
+  },
+  "changes": "Noise stops being an interruption and becomes a timekeeper. You find you have organised the middle of the day around five minutes, the way the rest of the city has, and that the walk back to work is when the discussion happens. Loudness turns out to be something a place can be good at.",
+  "start": "Going at two. Then going at two again the next day, having said you would only go once. You start standing closer than you did the first time, because everyone around you is and because the point is the pressure rather than the view. You learn which district you are in and walk that one first. By the second week you have a firm you prefer.",
+  "stop": "Protecting your hearing and your sleep. Neither is available and both are being spent on purpose. Valencia in March has decided that a fortnight of noise is worth a year of building, and the correct response is to stand in the square at two rather than to plan around it.",
+  "returns": "Physical experience, which most cities have quietly removed. Nothing about the two o'clock is comfortable or photogenic and it is not designed to be looked at. It is designed to be felt in the sternum by several thousand people standing together on their lunch break, and then everyone goes back to the office.",
+  "remember": "They built it all year in order to burn it in one night.",
+  "seasonalContrast": {
+    "title": "Not always like this",
+    "items": [
+      {
+        "label": "January",
+        "body": "The neighbourhood workshops are building and the streets are quiet.",
+        "current": false
+      },
+      {
+        "label": "March",
+        "body": "The city stops at two every day for five minutes of noise.",
+        "current": true
+      },
+      {
+        "label": "May",
+        "body": "The same squares are ordinary and the ground has been swept.",
+        "current": false
+      }
+    ]
+  }
+}
