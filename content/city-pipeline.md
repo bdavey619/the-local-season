@@ -453,6 +453,216 @@ To begin: generate the `PAGE` object skeleton for Seoul — October. Use the con
 
 ---
 
+## Discovery batch — the seven open months
+
+Run against February, March, April, May, August, September and December, the
+months still holding only one city. Scored for confidence alone; archetype
+balance was explicitly not a constraint.
+
+Every card below had to answer the standing question — *what routine becomes
+possible here that isn't possible the rest of the year* — with a behavior, not
+a condition.
+
+---
+
+### Reykjavík — December · *The Book Flood*
+
+**Archetype:** Quiet
+**Season:** Jólabókaflóð
+
+**Thesis:** Reykjavík in December is a city where the shortest days produced a
+habit of reading together on a single night.
+
+**Local word:** *jólabókaflóð* — the Christmas book flood. Icelandic publishers
+release most of the year's titles in the weeks before Christmas, a catalogue
+arrives at every household, books are given on the evening of the 24th, and the
+country reads them that night. Not a marketing season. A distribution of
+attention that the darkness made sensible.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| October | The dark is arriving and the catalogue has not yet landed. |
+| December | Four hours of light, and an entire city that has agreed to stay in. |
+| June | The light never leaves and nobody is indoors to read anything. |
+
+**Confidence:** 5
+**Why this month:** The mechanism is causally tied to December and nothing else —
+the darkness is the reason the habit exists, and the night it resolves on is
+fixed. It is the rare concept where the behavior could not be lifted to another
+city or another month without collapsing.
+
+---
+
+### Vienna — February · *The Season of Borrowed Formality*
+
+**Archetype:** Electric
+**Season:** Ballsaison
+
+**Thesis:** Vienna in February is when formality stops belonging to the elite and
+becomes something your profession does.
+
+**Local word:** *Ballsaison* — the ball season. Roughly four hundred and fifty
+balls between January and Ash Wednesday, most of them thrown by trades and
+professional guilds rather than by society: the confectioners, the hunters, the
+coffeehouse owners. Adults book waltz courses in January in order to attend the
+one their occupation holds.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| November | Dance schools fill with people who will not say why. |
+| February | Your trade holds a ball and you go, having practised. |
+| April | The rooms return to being concert halls and nobody dances in them. |
+
+**Confidence:** 4
+**Why this month:** The season is bounded by Ash Wednesday, so February is when
+it is densest and most ordinary — the point at which a ball is a Tuesday
+obligation rather than an occasion.
+
+---
+
+### Valencia — March · *Two O'Clock, Every Day*
+
+**Archetype:** Electric
+**Season:** Falles
+
+**Thesis:** Valencia in March gives the whole city a standing two o'clock
+appointment with an explosion.
+
+**Local word:** *mascletà* — the daytime percussive firework display held at two
+in the afternoon in the Plaça de l'Ajuntament, every day from the first of March
+to the nineteenth. Judged on rhythm rather than light. People attend on a lunch
+break, several times a week, and argue afterwards about whether the ending was
+any good.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| January | The neighbourhood workshops are building and the streets are quiet. |
+| March | The city stops at two, every day, for five minutes of noise. |
+| May | The same squares are ordinary, and the ground has been swept. |
+
+**Confidence:** 4
+**Why this month:** A daily civic appointment attended on a lunch break is a
+routine, not a festival attendance — and it exists on exactly nineteen days of
+the year.
+
+---
+
+### Tbilisi — September · *Everyone Goes to the Village*
+
+**Archetype:** Local
+**Season:** Rtveli
+
+**Thesis:** Tbilisi in September empties toward the countryside because the grapes
+decide when, and the city arranges itself around the gap.
+
+**Local word:** *rtveli* — the grape harvest. Not an agricultural event so much
+as an obligation of descent: families return to the village they came from,
+work for several days, and press into buried clay vessels. Offices lose people
+for a week and nobody treats the absence as unusual.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| July | The heat empties the city toward the mountains, for relief rather than work. |
+| September | The city thins out because the harvest called, and returns carrying wine. |
+| December | Everyone is back and the year's wine is on every table. |
+
+**Confidence:** 4
+**Why this month:** The timing is set by the fruit rather than the calendar, which
+makes it the clearest case in the batch of conditions dictating routine.
+
+---
+
+### Stockholm — August · *The Last Light*
+
+**Archetype:** Open
+**Season:** Kräftskiva
+
+**Thesis:** Stockholm in August behaves like a city spending down something it
+knows is about to run out.
+
+**Local word:** *kräftskiva* — the crayfish party. Held outdoors in August,
+under paper lanterns, in paper hats, with singing between drinks. Faintly silly
+on purpose. The silliness is the point: it is the last outdoor gathering of the
+year and everyone present knows the arithmetic of what is coming.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| June | Midsummer, and the light feels infinite because it nearly is. |
+| August | The dark returns a few minutes a night and the parties move outdoors anyway. |
+| November | Afternoon is over by three and nobody eats outside. |
+
+**Confidence:** 4
+**Why this month:** August is the only month where the light is both still usable
+and visibly leaving, which is what gives the gathering its urgency.
+
+---
+
+### Seville — April · *The Week That Runs on Invitation*
+
+**Archetype:** Electric
+**Season:** Feria de Abril
+
+**Thesis:** Seville in April moves its entire social life to a temporary city
+that most people cannot enter.
+
+**Local word:** *caseta* — the private tent. Around a thousand of them, belonging
+to families, firms and associations, and the great majority are not public. The
+month's social geography is a question of whose caseta you have been asked into,
+which is why the fairground fills after midnight and not before.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| February | The city is ordinary and the fairground is an empty lot. |
+| April | Everyone works the day and goes to a tent at midnight for a week. |
+| August | Forty degrees, and the same streets are abandoned by three. |
+
+**Confidence:** 4
+**Why this month:** Access-by-invitation is a genuinely different mechanism from
+anything built so far, and the fairground exists for one week a year.
+
+---
+
+### Bergen — May · *The Day the Country Dresses as Itself*
+
+**Archetype:** Local
+**Season:** Syttende mai
+
+**Thesis:** Bergen in May hands the streets to children in inherited costume and
+puts no soldiers in the parade at all.
+
+**Local word:** *bunad* — the regional folk costume, made to a pattern specific to
+the district a family comes from, frequently inherited, and expensive enough to
+be a genuine possession. Worn in the street by ordinary adults on the
+seventeenth, without irony.
+
+**Seasonal contrast:**
+
+| | |
+|--|--|
+| March | Wet and dark, and the costume is in a cupboard. |
+| May | The children's parade takes the city and the adults dress by district. |
+| July | The light is long but the streets belong to visitors. |
+
+**Confidence:** 3
+**Why this month:** The strongest image in the batch, but it leans on a single
+date rather than a month-long routine, which is the weakness the score reflects.
+Kyoto — May is the safer alternative: the gardens become usable and the blossom
+crowds have gone, at the cost of being a quieter, less surprising claim.
+
+---
+
 ## Build status
 
 Do not let the pipeline become the product. The pipeline exists only to help
@@ -482,10 +692,21 @@ Both were **Quiet**, which is still one of the thinnest archetypes.
 
 ### Gap to 24
 
-Twenty-four cities across twelve months means two per month. Still needing one:
+Twenty-four cities across twelve months means two per month. Seven months were
+short; the discovery batch above proposes one card for each, pending Stage 2
+approval.
 
-**February · March · April · May · August · September · December**
+| Month | Card | Confidence |
+|-------|------|-----------|
+| February | Vienna · *The Season of Borrowed Formality* | 4 |
+| March | Valencia · *Two O'Clock, Every Day* | 4 |
+| April | Seville · *The Week That Runs on Invitation* | 4 |
+| May | Bergen · *The Day the Country Dresses as Itself* | 3 |
+| August | Stockholm · *The Last Light* | 4 |
+| September | Tbilisi · *Everyone Goes to the Village* | 4 |
+| December | Reykjavík · *The Book Flood* | 5 |
 
-Seven slots, one usable card between them. Discovery should weight toward the
-archetypes the built set is short on — **Raw**, **Slow**, and **Quiet** — rather
-than the Local/Open/Electric range that is already well covered.
+Taking Stockholm for August retires the unbuilt **Stockholm — June** card, since
+a city gets one month. This is a deliberate trade: June already holds two
+cities, and the August mechanism scores higher than midsummer, which is both
+more expected and better covered elsewhere.
