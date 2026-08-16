@@ -1,0 +1,63 @@
+{
+  "city": "New Orleans",
+  "month": "November",
+  "storyline": "The Real Season",
+  "archetype": "Local",
+  "season": "The Quiet Season",
+  "thesis": "New Orleans in November is when the city stops performing and becomes a neighborhood.",
+  "metadata": {
+    "energy": 3,
+    "daylight": 3,
+    "streetLife": 4,
+    "socialHours": 4,
+    "comfort": 5,
+    "momentum": 3
+  },
+  "scene": "It's 4:40 on a Sunday and the second line has been moving for three hours. The route came from WWOZ and from someone's cousin. A brass band is a block ahead, audible before visible, and the crowd behind it is mostly people who live within walking distance of where it started. A man selling beer from a cooler on a hand truck has not moved in twenty minutes because the parade keeps arriving. Two women in folding chairs on a porch have not gotten up; they will watch the whole thing pass and then go inside. Nobody is filming.",
+  "sceneAnchors": [
+    {
+      "place": "Bayou St. John",
+      "text": "The slow water that runs through Mid-City, with grass banks people treat as a shared backyard. In November the late afternoon is finally usable and the banks fill with folding chairs, dogs, and small groups who did not arrange to be there at the same time. Nobody swims. Everyone sits."
+    },
+    {
+      "place": "Tremé",
+      "text": "The neighborhood where the Sunday second line is a standing institution rather than an event. The parade is organized by a social aid and pleasure club, follows a route that changes weekly, and lasts about four hours. The crowd walks the whole thing. There is no ticket and no stage."
+    },
+    {
+      "place": "St. Claude Avenue",
+      "text": "The long avenue running downriver through the Bywater and the Ninth Ward, where the bars are small and the music starts late. In November the doors stay open because the temperature finally allows it, and the sound reaches the sidewalk. The people inside mostly walked there."
+    }
+  ],
+  "locals": "The porches come back. From June to September the block is empty at six because the air is unlivable; in November people are on the steps again, and the conversation is across the street rather than inside a room. Sunday afternoons belong to whichever club is parading. People know the route without checking, or they check WWOZ. Weeknight music happens at neighborhood volume, in rooms that hold forty, for people who came from six blocks away and will walk home.",
+  "localWord": {
+    "term": "lagniappe",
+    "pronunciation": "lan-yap",
+    "translation": "a little something extra, given without being asked",
+    "body": "Not a discount and not a gift. The thirteenth beignet. The song after the set ended. Something the city hands over because you were standing there."
+  },
+  "changes": "The calendar stops being the point. There is no festival to organize the week around, which means the week organizes itself around whatever is actually happening — a parade route, a porch, a room with a band in it. You stop asking what is on and start asking who is out.",
+  "start": "Walking places you would have driven in August. Sitting outside without deciding to. You start going to the same bar on the same night, not because it is the best one but because it is the one you can walk to, and after two weeks the bartender starts your order before you sit. You learn the second line route the way residents do, which is by asking someone.",
+  "stop": "Trying to see it. November has nothing scheduled for your benefit, so there is nothing to catch. The band is playing whether or not you are there, the parade would take the same route, and the porch would be occupied. You stop arriving on time to things that do not start.",
+  "returns": "The outdoors, after five months of negotiating with it. And the ordinary evening — the one with no occasion attached, spent on a step or a sidewalk with people who live there. New Orleans spends a great deal of the year being looked at. In November it goes back to being lived in, and you are standing in it.",
+  "remember": "The city was never performing for you. In November you can tell.",
+  "seasonalContrast": {
+    "title": "Not always like this",
+    "items": [
+      {
+        "label": "July",
+        "body": "The heat makes every outdoor decision a negotiation. Everyone is inside.",
+        "current": false
+      },
+      {
+        "label": "November",
+        "body": "The heat has gone, the visitors have gone, and the porches are occupied again.",
+        "current": true
+      },
+      {
+        "label": "February",
+        "body": "Mardi Gras. The city performs, for itself and for everyone who came.",
+        "current": false
+      }
+    ]
+  }
+}

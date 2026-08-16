@@ -50,11 +50,6 @@ const REQUIRED = [
   'start', 'stop', 'returns', 'remember', 'seasonalContrast',
 ];
 
-// Completeness: the renderer omits these cleanly, so the page is correct but
-// unfinished. Both reference pages carry them, so new work should too — but an
-// older page missing one is a backlog item, not a build failure.
-const EXPECTED = ['ritual'];
-
 const METADATA_KEYS = [
   'comfort', 'daylight', 'energy', 'momentum', 'socialHours', 'streetLife',
 ];
@@ -87,10 +82,6 @@ function validate(slug, page, seenCities) {
   }
   // Everything below reads fields that may be absent; bail while the shape is unknown.
   if (errors.length) return { errors, warnings };
-
-  for (const field of EXPECTED) {
-    if (!page[field]) warn(`no "${field}" — both reference pages have one`);
-  }
 
   if (!MONTH_ORDER.includes(page.month)) {
     err(`month "${page.month}" is not a calendar month`);
@@ -137,7 +128,6 @@ function validate(slug, page, seenCities) {
   for (const k of ['term', 'translation', 'body']) {
     if (!page.localWord[k]) err(`localWord.${k} is missing`);
   }
-  if (page.ritual && !page.ritual.body) err('ritual is present but has no body');
 
   const sc = page.seasonalContrast;
   if (!sc.items || sc.items.length !== 3) {
@@ -160,7 +150,7 @@ function validate(slug, page, seenCities) {
     const n = words(page[field]);
     if (n < lo || n > hi) warn(`${field} is ${n} words; target ${lo}–${hi}`);
   }
-  for (const [field, [lo, hi]] of [['localWord.translation', [5, 13]], ['localWord.body', [13, 35]], ['ritual.body', [9, 21]]]) {
+  for (const [field, [lo, hi]] of [['localWord.translation', [5, 13]], ['localWord.body', [13, 35]]]) {
     const [a, b] = field.split('.');
     if (!page[a]) continue;
     const n = words(page[a][b]);

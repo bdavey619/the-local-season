@@ -66,16 +66,6 @@
     );
   }
 
-  function ritual(p) {
-    if (!p.ritual) return '';
-    return (
-      '<div class="ritual">' +
-        '<p class="eyebrow ritual__label">Small ritual</p>' +
-        '<p class="ritual__body">' + esc(p.ritual.body) + '</p>' +
-      '</div>'
-    );
-  }
-
   function framing() {
     return (
       '<section class="framing">' +
@@ -209,7 +199,6 @@
         '<div class="container">' +
           section('The Scene', p.scene, sceneAnchors(p.sceneAnchors)) +
           section('What locals are doing', p.locals) +
-        ritual(p) +
         '</div>' +
 
         // Local word: full-bleed within its own container

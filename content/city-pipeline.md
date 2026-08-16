@@ -47,7 +47,6 @@ Each card contains only:
 | `season` | The local name for this moment in the year |
 | `thesis` | One sentence. What this month does to the way daily life feels. |
 | `local word` | One term that names something the city does this month |
-| `small ritual` | How food or drink extends a routine — not a recommendation |
 | `seasonal contrast` | Three behavioral beats: Before / This month / After |
 | `confidence` | 1–5. Editorial gut read. 5 = build it now. |
 | `why this month` | One sentence. Why this month and not the one next to it. |
@@ -76,7 +75,6 @@ Generic signs:
 - The thesis could apply to three other cities
 - The local word is decorative, not behavioral
 - The seasonal contrast is about temperature, not routine
-- The small ritual is a food recommendation with context added
 
 ---
 
@@ -87,7 +85,6 @@ Reject expansion if any of these are true.
 - **The month only changes weather.** Warmer, clearer, cooler — these are conditions, not behavioral mechanisms. A thesis built on weather is a postcard.
 - **The routine could apply to another city unchanged.** If the behavior described would be equally true of three other cities in the same month, it has not found its subject.
 - **The local word feels decorative rather than behavioral.** A local word that names a mood, a landscape, or a dish is atmosphere. A local word must name something people *do* — or the feeling that drives them to do it.
-- **The ritual could exist without the season.** If the food or drink described could happen any month, it is a recommendation, not a ritual. The ritual must be inseparable from the conditions that produce it.
 - **The page produces admiration but not yearning.** Admiration says: "That sounds nice." Yearning says: "I want to be there right now." A page that produces only admiration has not found the right emotional mechanism.
 - **The city-month feels like a postcard instead of a temporary routine.** If the concept is primarily visual — light, color, landscape — it belongs in a photograph. A page earns its existence by describing how behavior changes, not how things look.
 
@@ -103,11 +100,10 @@ Generate in this order:
 2. Scene anchors (2–3 named places + one specific observation each)
 3. Local word (term + translation + editorial body)
 4. Seasonal contrast (three behavioral beats)
-5. Small ritual (how food or drink extends a routine)
-6. Full prose for each section
+5. Full prose for each section
 
-Do not render automatically. Commit the `PAGE` object to a new `.html` file.
-Mark it `// draft` until it passes the editorial tests below.
+Write the result to `content/{city}-{month}.json` and run `npm run build`.
+See `content/content-standard.md` for required fields and length targets.
 
 **Editorial tests (run before marking a page ready):**
 

@@ -71,6 +71,7 @@ Pages are not meant to determine the best time to visit. They explain why a mome
 | September | **San Diego** (`san-diego-september.html`) | Summer After Summer | Local |
 | October | **Palermo** (`palermo-october.html`) | The Locals Return | Local |
 | October | **Seoul** (`seoul-october.html`) | The City Climbs | Local |
+| November | **New Orleans** (`new-orleans-november.html`) | The Real Season | Local |
 | December | **Sydney** (`sydney-december.html`) | The Holidays Move Outside | Open |
 <!-- pages:end -->
 
@@ -108,7 +109,6 @@ Key fields:
 | `scene` | Opening moment — specific place, time, observed behavior |
 | `sceneAnchors` | Exactly 3 named locations with specific observations |
 | `localWord` | One term that names something the city does this month |
-| `ritual` | How food or drink extends a routine |
 | `seasonalContrast` | Why this month, in three behavioral sentences |
 
 `accentColor` / `accentColorDim` are **derived from `archetype`** at build time
@@ -171,12 +171,6 @@ when its month comes around. No HTML to touch and no list to update by hand.
       { "label": "Month",      "body": "One sentence.", "current": true  },
       { "label": "After",      "body": "One sentence.", "current": false }
     ]
-  },
-
-  // Not a food recommendation — how food or drink extends a routine.
-  "ritual": {
-    "title": "Small ritual",
-    "body":  "One sentence."
   }
 }
 ```

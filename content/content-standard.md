@@ -34,7 +34,6 @@ Every one of these must be present. The build fails without them.
 | `sceneAnchors` | exactly 3, each `{place, text}` |
 | `locals` | what residents actually do, in the plural |
 | `localWord` | `{term, translation, body}`; `pronunciation` when the term is not English |
-| `ritual` | `{title, body}` — a single repeatable act |
 | `changes`, `start`, `stop`, `returns`, `remember` | the behavioral core |
 | `seasonalContrast` | `{title, items}` — exactly 3 items, exactly one `current: true`, and that item's label must equal `month` |
 
@@ -59,7 +58,6 @@ treat that as a question, not a verdict.
 | `remember` | 9–17 | 15 | 10 |
 | `localWord.translation` | 5–13 | 6 | 12 |
 | `localWord.body` | 13–35 | 15 | 31 |
-| `ritual.body` | 9–21 | 19 | 10 |
 | `sceneAnchors[].text` | 35–60 | 49 / 53 / 55 | 37 / 53 / 42 |
 | `seasonalContrast.items[].body` | 6–20 | 17 / 12 / 11 | 6 / 6 / 8 |
 
